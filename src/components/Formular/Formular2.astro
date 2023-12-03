@@ -12,11 +12,17 @@
   <p>Vi udleder I dag 8 - 10 millioner ton plastik til havet om året</p>
 </section>
 <section class="grid-1-1">
+  <p>Navn</p>
   <input type="text" class="border" placeholder="Liva" />
+  <p>Efternavn</p>
   <input type="text" class="border" placeholder="Sørensen" />
+  <p>Email</p>
   <input type="email" class="border" placeholder="liva@hej.dk" />
+  <p>Telefon</p>
   <input type="tel" class="border" placeholder="24508236" />
+  <p>Adresse</p>
   <input type="text" class="border" placeholder="Hurlumhejvej 84" />
+  <p>Postnummer</p>
   <input type="text" class="border" placeholder="3300" />
 </section>
 <section>
@@ -75,13 +81,54 @@
       width: 20%;
       border: 1px solid black;
     }
-    .grid-1-1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
+
     .border {
       border: 1px solid black;
       margin: 5px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .oval-container {
+      position: relative;
+      width: 200px;
+      height: 15px;
+      background-color: #fff;
+      border-radius: 7.5px; /* Halvdelen af højden for at lave en oval */
+      overflow: hidden;
+      border: 1px solid black;
+    }
+    .oval-section {
+      position: absolute;
+      height: 100%;
+    }
+
+    .section1 {
+      left: 0%;
+      width: 20%;
+      border: 1px solid black;
+    }
+    .section2 {
+      left: 20%;
+      width: 20%;
+
+      background-color: #db3463;
+    }
+    .section3 {
+      left: 40%;
+      width: 20%;
+      border: 1px solid black;
+    }
+    .section4 {
+      left: 60%;
+      width: 20%;
+      border: 1px solid black;
+    }
+
+    .section5 {
+      left: 80%;
+      width: 20%;
+      border: 1px solid black;
     }
   }
 </style>

@@ -23,12 +23,6 @@
 </section>
 
 <style>
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   @media (min-width: 900px) {
     .flex-container {
       display: flex;
@@ -52,6 +46,56 @@
       border-radius: 12.5px; /* Halvdelen af højden for at lave en oval */
       overflow: hidden;
       border: 1px solid black;
+    }
+
+    .oval-section {
+      position: absolute;
+      height: 100%;
+    }
+
+    .section1 {
+      left: 0%;
+      width: 20%;
+      background-color: #db3463;
+    }
+    .section2 {
+      left: 20%;
+      width: 20%;
+      border: 1px solid black;
+    }
+    .section3 {
+      left: 40%;
+      width: 20%;
+      border: 1px solid black;
+    }
+    .section4 {
+      left: 60%;
+      width: 20%;
+      border: 1px solid black;
+    }
+
+    .section5 {
+      left: 80%;
+      width: 20%;
+      border: 1px solid black;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .oval-container {
+      position: relative;
+      width: 200px;
+      height: 15px;
+      background-color: #fff;
+      border-radius: 7.5px; /* Halvdelen af højden for at lave en oval */
+      overflow: hidden;
+      border: 1px solid black;
+      margin-left: 75px;
     }
 
     .oval-section {
