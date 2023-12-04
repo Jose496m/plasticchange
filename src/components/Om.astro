@@ -1,0 +1,133 @@
+---
+import { Image } from "astro:assets";
+import omos from "../assets/images/omosbillede.png";
+import omos1 from "../assets/images/omos1.png";
+import omos2 from "../assets/images/omos2.png";
+import omos3 from "../assets/images/omos3.png";
+---
+
+<article>
+  <section class="baggrund">
+    <h2>Sådan opstod miljøorganisationen Plastic Change</h2>
+    <p>
+      “Plastik definerer vores kultur. Vi må ikke lade den definere vores
+      fremtid”(Henrik Beha Pedersen, 2014)
+    </p>
+  </section>
+  <div>
+    <Image class="omos" src={omos} alt="header" />
+  </div>
+  <p class="text">
+    Plastic Change blev grundlagt i april 2014. Initiativet til at stifte
+    Plastic Change blev taget af miljøbiolog Henrik Beha Pedersen i samarbejde
+    med en række frivillige kræfter. Organisationen blev stiftet som en forening
+    hjemme i Henriks dagligstue i Hellerup, hvor den holdt til de første år. I
+    2017 lykkedes det ved hjælp af fondsbevillinger at få råd til løn til en
+    håndfuld medarbejdere og husleje i rigtige kontorlokaler. Baggrunden for
+    Plastic Changes stiftelse er, at vi lever i en plastikkrise, hvor plastik
+    definerer vores kultur, men hvor vi ikke må lade den defineres vores
+    fremtid. I ly af de altoverskyggende klimaforandringer, der med rette har
+    krævet verdens opmærksomhed, er vores problem med plastik vokset og vokset,
+    så det i dag kan fremstå som en uoverskuelig udfordring. Vi har haft en
+    forbrugsfest med plastik, og nu kommer tømmermændene. Det meste af den
+    plastik, vi har udledt til naturen, siden vi begyndte at anvende materialet,
+    er stadig at finde derude. Lige så anvendeligt materialet er på grund af sin
+    styrke og holdbarhed, lige så problematisk er materialet, når det ender i
+    naturen. I dag er en lang række af planetens miljøer plastificerede. Vi
+    finder plastik på de dybeste steder i havet, og vi finder det i havfugle,
+    fisk, muslinger og plankton og sågar i honning, vin og øl. Plastikken kommer
+    tilbage til os mennesker gennem vores kost. En boomerang af vores
+    produktionsmønster, der kræver et svar. Det svar skal Plastic Change være en
+    del af.
+  </p>
+  <section class="baggrund grid_1-1-1">
+    <div class="baggrund1">
+      <h2>Plastikudfordringen</h2>
+      <p class="text">
+        Siden 1950’erne har vi produceret mere end 9 milliarder ton plastik.
+        Heraf er størstedelen blevet brugt til engangsemballager og -produkter
+        med kort levetid og lav markedsværdi. Disse emballager og produkter
+        forurener i hele deres livscyklus: fra udvindingen af olie, til
+        produktion, transport, forbrug, og når de ender til forbrænding eller i
+        naturen. Alt dette for kun at blive brugt én gang. Indenfor de næste 20
+        år forventes den globale plastikproduktion at fordobles, og i samme
+        periode forventes plastikforureningen at firedobles. Derfor skal vi have
+        lukket for hanen med engangsplastik nu.
+      </p>
+      <Image class="omos1" src={omos1} alt="omos1" />
+    </div>
+    <div class="baggrund1">
+      <h2>Vores vision</h2>
+      <p class="text">
+        Plastic Changes vision er et affaldsfrit samfund. Visionen handler ikke
+        kun om plastik, men plastik er blevet et symbol på vores engangskultur.
+        Derfor arbejder vi for et samfund, hvor alle ressourcer bruges optimalt
+        i lukkede cirkulære systemer. Et samfund, hvor vi har gjort op med
+        engangskulturen og etableret bæredygtige systemer, hvor vi kan bruge
+        vores produkter, emballager og materialer igen og igen. Et affaldsfrit
+        samfund er på den måde både et middel og samtidig et mål.
+      </p>
+      <Image class="omos2" src={omos2} alt="omos2" />
+    </div>
+    <div class="baggrund1">
+      <h2>Vores mission</h2>
+
+      <p class="text">
+        Vi vil arbejde for en verden uden plastikforurening. Det gør vi ved at
+        fokusere på løsninger, der reducerer produktion og forbrug af plastik
+        til gavn for både miljø, klima og sundhed. Da plastikforurening er en
+        global og grænseløs problemstilling, er vi desuden engagerede
+        internationalt som FN observatør, i vores samarbejde med Ellen MacArthur
+        Foundation og ikke mindst i den globale bevægelse BreakFreeFromPlastic,
+        hvor Plastic Change sidder i styregruppen. Vores internationale
+        engagement sikrer, at de globale løsninger når frem til Danmark og
+        omvendt.
+      </p>
+      <Image class="omos3" src={omos3} alt="omos3" />
+    </div>
+  </section>
+</article>
+<style>
+  body {
+    margin: 0;
+  }
+  @media (min-width: 900px) {
+    .baggrund {
+      background-color: #f5eaec;
+    }
+    .omos {
+    }
+  }
+
+  @media (max-width: 500px) {
+    .baggrund {
+      background-color: #f5eaec;
+      padding: 25px;
+    }
+    body {
+      display: flex;
+      align-items: center;
+    }
+    h2 {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+    .omos {
+      width: 70%;
+      height: auto;
+      margin-left: 50px;
+      margin-top: -30px;
+    }
+    .text {
+      text-align: left;
+    }
+    .baggrund1 {
+      background-color: white;
+      border-radius: 10px;
+      padding: 25px;
+      margin-top: 10px;
+    }
+  }
+</style>
