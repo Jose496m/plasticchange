@@ -9,7 +9,7 @@ import omos3 from "../assets/images/omos3.png";
 <article>
   <section class="baggrund">
     <h2>Sådan opstod miljøorganisationen Plastic Change</h2>
-    <p>
+    <p class="citat">
       “Plastik definerer vores kultur. Vi må ikke lade den definere vores
       fremtid”(Henrik Beha Pedersen, 2014)
     </p>
@@ -17,7 +17,7 @@ import omos3 from "../assets/images/omos3.png";
   <div>
     <Image class="omos" src={omos} alt="header" />
   </div>
-  <p class="text">
+  <p class="text1">
     Plastic Change blev grundlagt i april 2014. Initiativet til at stifte
     Plastic Change blev taget af miljøbiolog Henrik Beha Pedersen i samarbejde
     med en række frivillige kræfter. Organisationen blev stiftet som en forening
@@ -40,7 +40,7 @@ import omos3 from "../assets/images/omos3.png";
     produktionsmønster, der kræver et svar. Det svar skal Plastic Change være en
     del af.
   </p>
-  <section class="baggrund grid_1-1-1">
+  <section class="baggrund flex">
     <div class="baggrund1">
       <h2>Plastikudfordringen</h2>
       <p class="text">
@@ -89,13 +89,46 @@ import omos3 from "../assets/images/omos3.png";
 </article>
 <style>
   body {
-    margin: 0;
+    margin: 0%;
   }
   @media (min-width: 900px) {
+    body {
+      display: flex;
+      align-items: center;
+    }
     .baggrund {
       background-color: #f5eaec;
+      padding: 200px;
     }
     .omos {
+      width: 800px;
+      height: auto;
+      margin-left: 450px;
+      margin-top: -200px;
+    }
+    h2 {
+      text-align: center;
+      margin-top: -120px;
+    }
+
+    .text1 {
+      width: 600px;
+      margin-left: 550px;
+      text-align: left;
+    }
+    .text {
+      text-align: left;
+    }
+    .citat {
+      text-align: center;
+    }
+    .flex {
+      display: flex;
+      gap: 10px;
+    }
+    .baggrund1 {
+      background-color: white;
+      border-radius: 10px;
     }
   }
 
@@ -128,6 +161,9 @@ import omos3 from "../assets/images/omos3.png";
       border-radius: 10px;
       padding: 25px;
       margin-top: 10px;
+    }
+    .text1 {
+      text-align: left;
     }
   }
 </style>
