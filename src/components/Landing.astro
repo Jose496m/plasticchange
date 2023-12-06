@@ -28,7 +28,7 @@ import julekugler from "../assets/images/julekugler.svg";
     </div>
   </section>
 
-  <section>
+  <section class="stoette">
     <div>
       <h2>Hvad støtter du blandt andet til med din julegave</h2>
       <h3>Langt størstedelen af din støtte går til hav- og miljøindsatse</h3>
@@ -48,10 +48,10 @@ import julekugler from "../assets/images/julekugler.svg";
       Din støtte går til fundraising, indsamlinger samt <br /> et lillebidrag til at plastic change har et sted at bo.
     </h3>
     <p class="tekst">En mindre del går til fundraising og indsamlinger, så Plastic Changer bevægelsen kan blive ved med at vokse. Og så går en lille del til administration, og til at give Plastic Change et sted at bo.</p>
-    <div class="julekugler">
-      <Image class="julekugler" src={julekugler} alt="julekugler" />
-    </div>
   </section>
+  <div class="julekugler">
+    <Image class="julekugler" src={julekugler} alt="julekugler" />
+  </div>
 
   <section class="flex baggrund">
     <Image class="landingslide" src={landingslide} alt="landingslide" />
@@ -86,6 +86,14 @@ import julekugler from "../assets/images/julekugler.svg";
       width: 500px;
       margin-left: 330px;
     }
+
+    /* .stoette {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .julekugler {
+      grid-column: 1fr;
+    } */
   }
 
   @media (max-width: 500px) {
