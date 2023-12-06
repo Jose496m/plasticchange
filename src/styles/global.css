@@ -90,6 +90,7 @@
   }
 
   h2 {
+    font-family: "campton";
   }
 
   h3 {
@@ -114,8 +115,5 @@
   .citat {
     font-family: "rubik";
     font-size: 12px;
-  }
-  h2 {
-    font-family: "campton";
   }
 }
