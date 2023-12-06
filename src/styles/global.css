@@ -75,3 +75,12 @@
   --text-placeholder: var(--color-mud-300);
   --text-primary: var(--color-mud-700);
 }
+@font-face {
+  font-family: "rubik";
+  src: url("/fonts/Rubik-Variablefont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "campton";
+  src: url("/fonts/CamptonSemiBold.woof2");
+}
