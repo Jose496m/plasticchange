@@ -1,0 +1,77 @@
+:root {
+  /* Mode 1 */
+  /* colors */
+  --border-accent: var(--color-red-300);
+  --border-dark: var(--color-mud-700);
+  --color-mud-100: #b8b7b7;
+  --color-mud-200: #989797;
+  --color-mud-300: #7e7d7d;
+  --color-mud-400: #686767;
+  --color-mud-500: #565555;
+  --color-mud-600: #474646;
+  --color-mud-700: #3b3a3a;
+  --color-red-100: #f7e7ea;
+  --color-red-300: #ce3150;
+  --color-red-500: #6f303d;
+  --color-red-600: #532b33;
+  --color-red-700: #3e252a;
+  --color-white-100: #ffffff;
+  --color-white-100-30: #ffffff4d;
+  /* numbers */
+  --border-2: 0.125rem;
+  --border-4: 0.25rem;
+  --border-8: 0.5rem;
+  --border-16: 1rem;
+  --border-24: 1.5rem;
+  --border-32: 2rem;
+  --border-64: 4rem;
+  --border-128: 8rem;
+  --spacing-0: 0rem;
+  --spacing-2: 0.125rem;
+  --spacing-4: 0.25rem;
+  --spacing-8: 0.5rem;
+  --spacing-16: 1rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2rem;
+  --spacing-44: 2.75rem;
+  --spacing-64: 4rem;
+  --spacing-128: 8rem;
+}
+:root {
+  /* Mode 1 */
+  /* colors */
+  --button-primary-default-text: var(--color-white-100);
+  --button-primary-defsult-surface: var(--color-red-300);
+  --button-secondary-default-border: var(--color-red-300);
+  --button-secondary-default-surface: #ffffff;
+  --button-secondary-default-text: var(--color-red-300);
+  --button-secondary-hover-surface: var(--color-red-100);
+  --infocard-surface: var(--color-white-100);
+  --input-primary-active-border: var(--color-red-300);
+  --input-primary-active-text: var(--color-mud-700);
+  --input-primary-default-border: var(--color-mud-700);
+  --input-primary-default-text: var(--color-mud-700);
+  --input-primary-hover-surface: var(--color-white-100-30);
+  --input-secondary-default-border: var(--color-mud-200);
+  --input-secondary-hover-surface: var(--color-white-100);
+  --price-button-active-surface: var(--color-red-300);
+  --price-button-active-text: var(--color-white-100);
+  --price-button-default-border: var(--color-mud-700);
+  --price-button-default-surface: var(--color-white-100);
+  --price-button-default-text: var(--color-mud-700);
+  --price-button-hover-border: var(--color-mud-700);
+  --price-button-hover-surface: var(--color-white-100-30);
+  --price-button-hover-text: var(--color-mud-700);
+  --radio-button-active-surface: var(--color-red-300);
+  --radio-button-default-border: var(--color-mud-700);
+  --radio-button-inactive-surface: var(--color-white-100);
+  --radio-button-text: var(--color-mud-700);
+  --surface-brand: var(--color-red-300);
+  --surface-primary: var(--color-white-100);
+  --surface-secondary: var(--color-red-100);
+  --surface-tertiary: var(--color-mud-700);
+  --text-accent: var(--color-white-100);
+  --text-label: var(--color-mud-300);
+  --text-placeholder: var(--color-mud-300);
+  --text-primary: var(--color-mud-700);
+}
