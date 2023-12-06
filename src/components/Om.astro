@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import omos from "../assets/images/omosbillede.png";
+import omos from "../assets/images/headeromos.png";
 import omos1 from "../assets/images/omos1.png";
 import omos2 from "../assets/images/omos2.png";
 import omos3 from "../assets/images/omos3.png";
@@ -11,7 +11,7 @@ import omos3 from "../assets/images/omos3.png";
     <h2>Sådan opstod miljøorganisationen Plastic Change</h2>
     <p class="citat">
       “Plastik definerer vores kultur. Vi må ikke lade den definere vores
-      fremtid”(Henrik Beha Pedersen, 2014)
+      fremtid” (Henrik Beha Pedersen, 2014)
     </p>
   </section>
   <div>
@@ -42,7 +42,7 @@ import omos3 from "../assets/images/omos3.png";
   </p>
   <section class="baggrund flex">
     <div class="baggrund1">
-      <h2>Plastikudfordringen</h2>
+      <h3 class="overskrift">Plastikudfordringen</h3>
       <p class="text">
         Siden 1950’erne har vi produceret mere end 9 milliarder ton plastik.
         Heraf er størstedelen blevet brugt til engangsemballager og -produkter
@@ -54,10 +54,12 @@ import omos3 from "../assets/images/omos3.png";
         periode forventes plastikforureningen at firedobles. Derfor skal vi have
         lukket for hanen med engangsplastik nu.
       </p>
+    </div>
+    <div>
       <Image class="omos1" src={omos1} alt="omos1" />
     </div>
     <div class="baggrund1">
-      <h2>Vores vision</h2>
+      <h3 class="overskrift">Vores vision</h3>
       <p class="text">
         Plastic Changes vision er et affaldsfrit samfund. Visionen handler ikke
         kun om plastik, men plastik er blevet et symbol på vores engangskultur.
@@ -67,10 +69,12 @@ import omos3 from "../assets/images/omos3.png";
         vores produkter, emballager og materialer igen og igen. Et affaldsfrit
         samfund er på den måde både et middel og samtidig et mål.
       </p>
+    </div>
+    <div>
       <Image class="omos2" src={omos2} alt="omos2" />
     </div>
     <div class="baggrund1">
-      <h2>Vores mission</h2>
+      <h3 class="overskrift">Vores mission</h3>
 
       <p class="text">
         Vi vil arbejde for en verden uden plastikforurening. Det gør vi ved at
@@ -83,6 +87,8 @@ import omos3 from "../assets/images/omos3.png";
         engagement sikrer, at de globale løsninger når frem til Danmark og
         omvendt.
       </p>
+    </div>
+    <div>
       <Image class="omos3" src={omos3} alt="omos3" />
     </div>
   </section>
@@ -97,7 +103,7 @@ import omos3 from "../assets/images/omos3.png";
       align-items: center;
     }
     .baggrund {
-      background-color: #f5eaec;
+      background-color: var(--color-red-100);
       padding: 200px;
     }
     .omos {
@@ -134,8 +140,8 @@ import omos3 from "../assets/images/omos3.png";
 
   @media (max-width: 500px) {
     .baggrund {
-      background-color: #f5eaec;
-      padding: 25px;
+      background-color: var(--color-red-100);
+      padding: 70px;
     }
     body {
       display: flex;
@@ -148,22 +154,59 @@ import omos3 from "../assets/images/omos3.png";
       text-align: center;
     }
     .omos {
-      width: 70%;
+      width: 500px;
       height: auto;
-      margin-left: 50px;
-      margin-top: -30px;
+      margin-left: 55px;
+      margin-top: -60px;
+      border-radius: var(--border-16);
     }
     .text {
       text-align: left;
+      width: 250px;
+      line-height: 20px;
+      margin-left: 25px;
     }
     .baggrund1 {
       background-color: white;
-      border-radius: 10px;
-      padding: 25px;
+      border-radius: var(--spacing-16);
+      padding: 100px;
       margin-top: 10px;
     }
     .text1 {
       text-align: left;
+      width: 400px;
+      margin-left: 100px;
+      line-height: 20px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .omos1 {
+      margin-top: -70px;
+      margin-left: 60px;
+      margin-bottom: 25px;
+      width: 350px;
+      height: auto;
+      border-radius: var(--spacing-16);
+    }
+    .omos2 {
+      margin-top: -70px;
+      margin-left: 60px;
+      margin-bottom: 25px;
+      width: 350px;
+      height: auto;
+      border-radius: var(--spacing-16);
+    }
+    .omos3 {
+      margin-top: -70px;
+      margin-left: 60px;
+      margin-bottom: 25px;
+      width: 350px;
+      height: auto;
+      border-radius: var(--spacing-16);
+    }
+    .overskrift {
+      margin-top: -60px;
+      text-align: center;
     }
   }
 </style>

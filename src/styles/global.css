@@ -77,10 +77,23 @@
 }
 @font-face {
   font-family: "rubik";
-  src: url("/fonts/Rubik-Variablefont_wght.ttf") format("truetype");
+  src: url("/fonts/Rubik-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "campton";
   src: url("/fonts/CamptonSemiBold.woof2");
+}
+@media (max-width: 500px) {
+  p {
+    font-family: "rubik";
+    font-size: 12px;
+  }
+  .citat {
+    font-family: "rubik";
+    font-size: 12px;
+  }
+  h2 {
+    font-family: "campton";
+  }
 }
