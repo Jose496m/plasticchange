@@ -75,3 +75,23 @@
   --text-placeholder: var(--color-mud-300);
   --text-primary: var(--color-mud-700);
 }
+@media (max-width: 700px) {
+  h1 {
+    font: ;
+  }
+  h2 {
+  }
+  h3 {
+  }
+  h4 {
+  }
+
+  p {
+  }
+  a {
+  }
+  input::placeholder {
+  }
+  label {
+  }
+}
