@@ -4,9 +4,23 @@ import Button from "../components/Button.astro";
 
 <section>
   <ul>
-    <li>Tilmeld dig vores nyhedsbrev</li>
-    <li>Følg med i vores arbejde mod plastikforuening <br /> og hold dig opdateret <br /> med de sneeste nyheder</li>
-    <li><Button /></li>
+    <div class="tekst">
+      <li>Tilmeld dig vores nyhedsbrev</li>
+      <li>Følg med i vores arbejde mod plastikforuening <br /> og hold dig opdateret <br /> med de sneeste nyheder</li>
+    </div>
     <li><input type="text" placeholder="hej@email.dk" /></li>
+    <li><Button /></li>
   </ul>
 </section>
+
+<style>
+  section {
+    background-color: var(--color-red-100);
+    padding: --spacing-24;
+  }
+
+  input {
+    padding: --spacing-8;
+    margin-bottom: --spacing-32;
+  }
+</style>
