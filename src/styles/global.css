@@ -75,23 +75,47 @@
   --text-placeholder: var(--color-mud-300);
   --text-primary: var(--color-mud-700);
 }
+@font-face {
+  font-family: "rubik";
+  src: url("/fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "campton";
+  src: url("/fonts/CamptonSemiBold.woof2");
+}
 @media (max-width: 700px) {
   h1 {
     font: ;
   }
+
   h2 {
   }
+
   h3 {
   }
+
   h4 {
   }
 
-  p {
-  }
   a {
   }
+
   input::placeholder {
   }
+
   label {
+  }
+
+  p {
+    font-family: "rubik";
+    font-size: 12px;
+  }
+  .citat {
+    font-family: "rubik";
+    font-size: 12px;
+  }
+  h2 {
+    font-family: "campton";
   }
 }
