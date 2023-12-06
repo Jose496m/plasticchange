@@ -20,7 +20,7 @@ import julekugler from "../assets/images/julekugler.svg";
     </div>
     <div class="baggrund1">
       <Image class="omos" src={omos1} alt="header" />
-      <p>Et økologisk, ikke-gødet ødgran-juletræ, der er produceret lokalt, er det bedste</p>
+      <p>Et økologisk, ikke-gødet rødgran-juletræ, der er produceret lokalt, er det bedste</p>
     </div>
     <div class="baggrund1">
       <Image class="omos" src={omos1} alt="header" />
@@ -51,77 +51,75 @@ import julekugler from "../assets/images/julekugler.svg";
     </div>
   </section>
 
-  <Image class="julekugler" src={julekugler} alt="julekugler">
-    <section class="flex baggrund">
-      <Image class="landingslide" src={landingslide} alt="landingslide" />
-      <Image class="landingslide" src={landingslide} alt="landingslide" />
-      <Image class="landingslide" src={landingslide} alt="landingslide" />
-    </section>
-  </Image>
-
-  <style>
-    @media (min-width: 900px) {
-      .grid-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        text-align: center;
-      }
-
-      .header {
-        grid-column: span 4;
-      }
-      .baggrund {
-        background-color: #f5eaec;
-      }
-      h2 {
-        text-align: center;
-      }
-      h3 {
-        text-align: center;
-      }
-      .tekst {
-        text-align: left;
-        width: 500px;
-        margin-left: 630px;
-      }
-    }
-
-    @media (max-width: 500px) {
-      .grid-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Opretter to kolonner med lige bredde */
-        grid-gap: 20px; /* Afstand mellem gitterelementerne */
-      }
-      .header {
-        grid-column: span 2; /* Overskriften strækker sig over begge kolonner */
-        background-color: /* Din baggrundsfarve */ ;
-        /* Andre baggrundsstilarter kan tilføjes her */
-      }
-
-      .omos {
-        width: 130px;
-        height: auto;
-      }
-      .baggrund {
-        background-color: #f5eaec;
-        padding: 50px;
-      }
-      .baggrund1 {
-        background-color: white;
-      }
-      h2 {
-        text-align: center;
-      }
-      .flex {
-        display: flex;
-      }
-      .landingslide {
-        width: 100px;
-        height: 100px;
-      }
-      .baggrund {
-        background-color: #f5eaec;
-      }
-    }
-  </style>
+  <section class="flex baggrund">
+    <Image class="landingslide" src={landingslide} alt="landingslide" />
+    <Image class="landingslide" src={landingslide} alt="landingslide" />
+    <Image class="landingslide" src={landingslide} alt="landingslide" />
+  </section>
 </article>
+
+<style>
+  @media (min-width: 900px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+    }
+
+    .header {
+      grid-column: span 4;
+    }
+    .baggrund {
+      background-color: #f5eaec;
+    }
+    h2 {
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
+    }
+    .tekst {
+      text-align: left;
+      width: 500px;
+      margin-left: 630px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Opretter to kolonner med lige bredde */
+      grid-gap: 20px; /* Afstand mellem gitterelementerne */
+    }
+    .header {
+      grid-column: span 2; /* Overskriften strækker sig over begge kolonner */
+      background-color: /* Din baggrundsfarve */ ;
+      /* Andre baggrundsstilarter kan tilføjes her */
+    }
+
+    .omos {
+      width: 130px;
+      height: auto;
+    }
+    .baggrund {
+      background-color: #f5eaec;
+      padding: 50px;
+    }
+    .baggrund1 {
+      background-color: white;
+    }
+    h2 {
+      text-align: center;
+    }
+    .flex {
+      display: flex;
+    }
+    .landingslide {
+      width: 100px;
+      height: 100px;
+    }
+    .baggrund {
+      background-color: #f5eaec;
+    }
+  }
+</style>
