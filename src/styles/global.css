@@ -79,6 +79,14 @@
   font-family: "rubik";
   src: url("/fonts/Rubik-VariableFont_wght.ttf") format("truetype");
 }
+@font-face {
+  font-family: "rubikregular";
+  src: url("/fonts/Rubik-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "rubiksemibold";
+  src: url("/fonts/Rubik-SemiBold.ttf") format("truetype");
+}
 
 @font-face {
   font-family: "campton";
