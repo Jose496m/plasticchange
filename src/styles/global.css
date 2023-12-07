@@ -98,6 +98,10 @@ img {
   font-family: "rubiksemibold";
   src: url("/fonts/Rubik-SemiBold.ttf") format("truetype");
 }
+@font-face {
+  font-family: "rubikitalic";
+  src: url("/fonts/Rubik-Italic.ttf") format("truetype");
+}
 
 @font-face {
   font-family: "campton";
@@ -155,13 +159,12 @@ img {
     color: var(--text-primary);
   }
   .citat {
-    font-family: "rubik";
+    font-family: "rubikitalic";
     font-size: 12px;
   }
 }
 
-/************* Web ************/
-@media (min-width: 700px) {
+@media (min-witdh: 700px) {
   h1 {
     font-family: "campton";
     font-size: 60px;
@@ -208,5 +211,9 @@ img {
     font-family: "rubik";
     font-size: 18px;
     color: var(--text-primary);
+  }
+  .citat {
+    font-family: "rubikitalic";
+    font-size: 16px;
   }
 }
