@@ -147,7 +147,7 @@
   }
 }
 
-@media (min-witdh: 700px) {
+@media (min-width: 700px) {
   h1 {
     font-family: "campton";
     font-size: 60px;
