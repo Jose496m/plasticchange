@@ -7,12 +7,18 @@ import Button from "../Button.astro";
 <nav>
   <ul>
     <li><a href="/"><Image class="logo" src={logo} alt="logo" /></a></li>
-    <li><a href="om_os.astro">Om os</a></li>
-    <li><Button link="/om_os" title="Støt" /></li>
+    <li class="knap">
+      <li><a href="om_os.astro">Om os</a></li>
+      <li><Button link="/om_os" title="Støt" /></li>
+    </li>
   </ul>
 </nav>
 
 <style>
+  .logo {
+    width: 60%;
+    height: auto;
+  }
   ul {
     display: flex;
     align-items: top;
@@ -21,7 +27,10 @@ import Button from "../Button.astro";
     justify-content: space-between;
     list-style: none;
   }
-
-  li {
+  a {
+    color: var(--color-white-100);
+  }
+  .knap {
+    justify-content: end;
   }
 </style>
