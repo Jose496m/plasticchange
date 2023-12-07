@@ -46,6 +46,7 @@ img {
   --spacing-44: 2.75rem;
   --spacing-64: 4rem;
   --spacing-128: 8rem;
+  --spacing-252: 16rem;
 }
 :root {
   /* Mode 1 */
@@ -165,6 +166,7 @@ img {
   }
 }
 
+/************ Web ************/
 @media (min-width: 1025px) {
   h1 {
     font-family: "campton";
@@ -218,6 +220,8 @@ img {
     font-size: 16px;
   }
 }
+
+/************ Tablet ************/
 @media (min-width: 600px) and (max-width: 1024px) {
   h1 {
     font-family: "campton";

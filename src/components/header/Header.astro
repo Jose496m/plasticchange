@@ -10,6 +10,7 @@ const { titel, variant } = Astro.props;
   <FormHeader />
 </header>
 <style>
+  /************ Mobile ************/
   @media (max-width: 599px) {
     header.landingpage.mobil {
       background-image: url(../../assets/images/header_mobil.png);
@@ -20,7 +21,13 @@ const { titel, variant } = Astro.props;
       background-image: url(../../assets/images/om_os_mobile.png);
       background-size: cover;
     }
+    h1 {
+      padding-block: var(--spacing-128);
+      padding-right: var(--spacing-64);
+      padding-left: var(--spacing-24);
+    }
   }
+  /************ Tablet ************/
   @media (min-width: 600px) and (max-width: 1024px) {
     .landingpage.web {
       background-image: url(../../assets/images/header.png);
@@ -30,7 +37,14 @@ const { titel, variant } = Astro.props;
       background-image: url(../../assets/images/om_os.png);
       background-size: cover;
     }
+    h1 {
+      padding-block: var(--spacing-128);
+      padding-right: var(--spacing-252);
+      padding-left: var(--spacing-24);
+    }
   }
+
+  /************ Web ************/
   @media (min-width: 1025px) {
     .landingpage.web {
       background-image: url(../../assets/images/header.png);
@@ -39,6 +53,11 @@ const { titel, variant } = Astro.props;
     .om_os.web {
       background-image: url(../../assets/images/om_os.png);
       background-size: cover;
+    }
+    h1 {
+      padding-block: var(--spacing-252);
+      padding-right: var(--spacing-252);
+      padding-left: var(--spacing-24);
     }
   }
 </style>
