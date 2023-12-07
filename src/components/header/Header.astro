@@ -10,7 +10,7 @@ const { titel, variant } = Astro.props;
   <FormHeader />
 </header>
 <style>
-  @media (max-width: 700px) {
+  @media (max-width: 500px) {
     header .landingpage,
     .mobil {
       background-image: url(../../assets/images/header_mobil.png);
@@ -21,7 +21,17 @@ const { titel, variant } = Astro.props;
       background-size: cover;
     }
   }
-  @media (min-width: 700px) {
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .landingpage {
+      background-image: url(../../assets/images/header.png);
+      background-size: cover;
+    }
+    .om_os {
+      background-image: url(../../assets/images/om_os.png);
+      background-size: cover;
+    }
+  }
+  @media (min-width: 1200px) {
     .landingpage {
       background-image: url(../../assets/images/header.png);
       background-size: cover;
