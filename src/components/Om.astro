@@ -14,8 +14,10 @@ import omos3 from "../assets/images/omos3.png";
       fremtid” (Henrik Beha Pedersen, 2014)
     </p>
   </section>
-  <div>
-    <Image class="omos" src={omos} alt="header" />
+  <div class="container">
+    <div class="align">
+      <Image class="omos" src={omos} alt="header" />
+    </div>
   </div>
   <p class="text1">
     Plastic Change blev grundlagt i april 2014. Initiativet til at stifte
@@ -95,17 +97,28 @@ import omos3 from "../assets/images/omos3.png";
 </article>
 <style>
   @media (min-width: 1025px) {
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+
+    .align {
+      display: inline-block;
+    }
     .baggrund {
       background-color: var(--color-red-100);
       padding: 200px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px; /* Juster dette mellemrum efter behov */
     }
     .omos {
       width: 800px;
       height: auto;
-      margin-left: 450px;
       margin-top: -200px;
       border-radius: var(--spacing-16);
     }
