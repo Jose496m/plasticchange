@@ -111,7 +111,7 @@ img {
 
 /************ Mobile ************/
 
-@media (max-width: 700px) {
+@media (max-width: 599px) {
   h1 {
     font-family: "campton";
     font-size: 26px;
@@ -165,11 +165,11 @@ img {
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1025px) {
   h1 {
     font-family: "campton";
     font-size: 60px;
-    color: var(--text-primary);
+    color: var(--text-header);
   }
 
   h2 {
@@ -222,7 +222,7 @@ img {
   h1 {
     font-family: "campton";
     font-size: 26px;
-    color: var(--text-primary);
+    color: var(--text-header);
   }
 
   h2 {
