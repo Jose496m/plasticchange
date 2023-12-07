@@ -2,11 +2,11 @@
 import Button from "../components/Button.astro";
 ---
 
-<section>
+<section class="nyhedsbrev">
   <ul>
     <div class="tekst">
-      <li>Tilmeld dig vores nyhedsbrev</li>
-      <li>Følg med i vores arbejde mod plastikforuening <br /> og hold dig opdateret <br /> med de sneeste nyheder</li>
+      <h2>Tilmeld dig vores nyhedsbrev</h2>
+      <p>Følg med i vores arbejde mod plastikforuening og hold dig opdateret med de sneeste nyheder</p>
     </div>
     <div class="tekst_og_knap">
       <li><input type="text" placeholder="hej@email.dk" /></li>
@@ -17,9 +17,10 @@ import Button from "../components/Button.astro";
 
 <style>
   @media (min-width: 900px) {
-    section {
+    .nyhedsbrev {
       background-color: var(--color-red-100);
       padding: --spacing-24;
+      width: 100%;
     }
 
     input {
@@ -28,6 +29,23 @@ import Button from "../components/Button.astro";
     }
     .tekst_og_knap {
       display: flex;
+      justify-content: center;
+      margin-bottom: var(--spacing-44);
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: var(--spacing-16);
+      margin-top: var(--spacing-44);
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: var(--spacing-44);
     }
   }
 </style>
