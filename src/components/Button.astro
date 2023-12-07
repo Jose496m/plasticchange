@@ -1,0 +1,33 @@
+---
+const { title, link } = Astro.props;
+---
+
+<div class="center">
+  <a href={link}><span>{title}</span></a>
+</div>
+
+<style>
+  a {
+    width: 100%;
+    border: none;
+    background: transparent;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+  }
+
+  span {
+    color: white;
+    background-color: var(--button-primary-defsult-surface);
+    border-radius: var(--border-64);
+    padding: var(--spacing-16) var(--spacing-32);
+    cursor: pointer;
+    position: relative;
+    font-size: 22px;
+    box-sizing: border-box;
+  }
+
+  .primary {
+    text-transform: uppercase;
+  }
+</style>

@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
 :root {
   /* Mode 1 */
   /* colors */
@@ -97,6 +107,9 @@
   font-family: "campton";
   src: url("/fonts/CamptonSemiBold.woff2");
 }
+
+/************ Mobile ************/
+
 @media (max-width: 700px) {
   h1 {
     font-family: "campton";

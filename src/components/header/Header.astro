@@ -1,0 +1,13 @@
+---
+import { Image } from "astro:assets";
+import Menu from "./Menu.astro";
+import FormHeader from "./FormHeader.astro";
+import header from "../../assets/images/header.png";
+---
+
+<header>
+  <Menu class="menu" />
+  <Image class="img" src={header} alt="hero billede" />
+  <FormHeader />
+</header>
+<style></style>
