@@ -85,6 +85,7 @@ img {
   --text-link: var(--color-mud-300);
   --text-placeholder: var(--color-mud-300);
   --text-primary: var(--color-mud-700);
+  --text-header: var(--color-white-100);
 }
 @font-face {
   font-family: "rubik";
@@ -114,7 +115,7 @@ img {
   h1 {
     font-family: "campton";
     font-size: 26px;
-    color: var(--text-primary);
+    color: var(--text-header);
   }
 
   h2 {
