@@ -1,15 +1,11 @@
 ---
-import { Image } from "astro:assets";
-import header from "../assets/images/header.png";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Formular4 from "../components/Formular/Formular4.astro";
 import Header from "../components/header/Header.astro";
 ---
 
 <BaseLayout>
-  <Header variant="landingpage mobil web" titel="Juleglæde for en Bæredygtig Fremtid: Giv Dit Bidrag til en Verden uden Plastik!">
-    <Image class="img" src={header} alt="hero billede" />
-  </Header>
+  <Header variant="landingpage mobil web" titel="Juleglæde for en Bæredygtig Fremtid: Giv Dit Bidrag til en Verden uden Plastik!" />
   <Formular4 />
 </BaseLayout>
 
