@@ -1,13 +1,19 @@
 ---
-import { Image } from "astro:assets";
 import Menu from "./Menu.astro";
 import FormHeader from "./FormHeader.astro";
-import header from "../../assets/images/header.png";
 ---
 
-<header>
-  <Menu class="menu" />
-  <Image class="img" src={header} alt="hero billede" />
+<header class="landingpage mobil">
+  <Menu />
+  <h1>Juleglæde for en Bæredygtig Fremtid: Giv Dit Bidrag til en Verden uden Plastik!</h1>
   <FormHeader />
 </header>
-<style></style>
+<style>
+  @media (max-width: 700px) {
+    header .landingpage,
+    .mobil {
+      background-image: url(../../assets/images/header_mobil.png);
+      background-size: cover;
+    }
+  }
+</style>
