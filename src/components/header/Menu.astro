@@ -15,9 +15,28 @@ import Button from "../Button.astro";
 </nav>
 
 <style>
-  .logo {
-    width: 60%;
-    height: auto;
+  /************ Mobile ************/
+  @media (max-width: 599px) {
+    .logo {
+      width: 60%;
+      height: auto;
+    }
+  }
+
+  /************ Tablet ************/
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .logo {
+      width: 70%;
+      height: auto;
+    }
+  }
+
+  /************ Web ************/
+  @media (min-width: 1025px) {
+    .logo {
+      width: 80%;
+      height: auto;
+    }
   }
   ul {
     display: flex;
