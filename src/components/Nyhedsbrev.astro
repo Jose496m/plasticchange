@@ -24,10 +24,19 @@ import Button from "../components/Button.astro";
     }
 
     input {
-      padding: --spacing-8;
+      padding: var(--spacing-16);
       margin-bottom: --spacing-32;
+      border-radius: var(--border-16);
+      width: 450px;
+    }
+    input::placeholder {
+      font-family: "rubiksemibold";
+      font-size: 16px;
+      color: var(--text-placeholder);
+      padding-top: var(--spacing-16);
     }
     .tekst_og_knap {
+      box-sizing: border-box;
       display: flex;
       justify-content: center;
       margin-bottom: var(--spacing-44);
