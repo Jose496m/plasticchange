@@ -105,7 +105,7 @@ img {
 
 @font-face {
   font-family: "campton";
-  src: url("/fonts/CamptonSemiBold.woof2");
+  src: url("/fonts/CamptonSemiBold.woff2");
 }
 
 /************ Mobile ************/
@@ -210,6 +210,59 @@ img {
   p {
     font-family: "rubik";
     font-size: 18px;
+    color: var(--text-primary);
+  }
+  .citat {
+    font-family: "rubikitalic";
+    font-size: 16px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+  h1 {
+    font-family: "campton";
+    font-size: 26px;
+    color: var(--text-primary);
+  }
+
+  h2 {
+    font-family: "campton";
+    font-size: 32px;
+    color: var(--text-primary);
+  }
+
+  h3 {
+    font-family: "campton";
+    font-size: 28px;
+    color: var(--text-primary);
+  }
+
+  h4 {
+    font-family: "campton";
+    font-size: 16px;
+    color: var(--text-primary);
+  }
+
+  a {
+    font-family: "rubiksemibold";
+    font-size: 15px;
+    color: var(--text-link);
+  }
+
+  input::placeholder {
+    font-family: "rubiksemibold";
+    font-size: 16px;
+    color: var(--text-placeholder);
+  }
+
+  label {
+    font-family: "rubiksemibold";
+    font-size: 15px;
+    color: var(--text-label);
+  }
+
+  p {
+    font-family: "rubik";
+    font-size: 20px;
     color: var(--text-primary);
   }
   .citat {
