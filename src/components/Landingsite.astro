@@ -33,21 +33,21 @@ import julekugler from "../assets/images/julekugler.svg";
   </div>
   <article class="stoette">
     <section class="alt_tekst">
-      <div class="tekst1">
-        <h3>Langt størstedelen af din støtte går til hav- og miljøindsatse</h3>
-        <p class="tekst">Først og fremmest støtter du op om vores initiativer inden for hav- og miljøindsatser. Dette indebærer konkrete handlinger for at reducere plastikforurening, både lokalt i Danmark og på internationalt plan. Vi oplyser, deler viden og arrangerer events, undervisning og foredrag for at mobilisere og engagere en voksende Plastic Changer-bevægelse. Denne bevægelse er allerede i gang og arbejder aktivt for at skabe positive forandringer.</p>
-      </div>
+      <h3>Langt størstedelen af din støtte går til hav- og miljøindsatse</h3>
+      <p class="tekst">Først og fremmest støtter du op om vores initiativer inden for hav- og miljøindsatser. Dette indebærer konkrete handlinger for at reducere plastikforurening, både lokalt i Danmark og på internationalt plan. Vi oplyser, deler viden og arrangerer events, undervisning og foredrag for at mobilisere og engagere en voksende Plastic Changer-bevægelse. Denne bevægelse er allerede i gang og arbejder aktivt for at skabe positive forandringer.</p>
+      <a href="laes mere">læs mere</a>
 
       <h3>Din støtte går også til gennemførelsen af årlig oprydning.</h3>
-      <p class="tekst">For det andet støtter du vores lederskab i gennemførelsen af årlige oprydninger i naturen. Dette sker i samarbejde med andre organisationer fra hele verden. Din støtte bidrager dermed til konkrete handlinger, der hjælper med at bevare og beskytte vores naturområder.</p>
+      <p class="tekst">For det andet støtter du vores lederskab i gennemførelsen af årlige oprydninger i naturen. Dette sker i samarbejde med andre organisationer fra hele verden. Din støtte bidrager dermed til konkrete handlinger, der hjælper med at bevare og beskytte vores naturområder</p>
+      <a href="laes mere">læs mere</a>
 
       <h3>Din støtte går også til at lægge politisk pres.</h3>
       <p class="tekst">En del af din støtte går også til at lægge politisk pres for bedre miljølovgivning, der værner om kloden og dens ressourcer.</p>
+      <a href="laes mere">læs mere</a>
 
-      <h3>
-        Din støtte går til fundraising, indsamlinger samt <br /> et lillebidrag til at plastic change har et sted at bo.
-      </h3>
-      <p class="tekst">En mindre del går til fundraising og indsamlinger, så Plastic Changer bevægelsen kan blive ved med at vokse. Og så går en lille del til administration, og til at give Plastic Change et sted at bo.</p>
+      <h3>Din støtte går til fundraising, indsamlinger samt <br /> et lillebidrag til at plastic change har et sted at bo.</h3>
+      <p class="tekst">En mindre del går til fundraising og indsamlinger, så Plastic Changer bevægelsen kan blive ved med at vokse. Og så går en lille del til administration, og til at give Plastic Change et sted at bo</p>
+      <a href="laes mere">læs mere</a>
     </section>
     <div class="julekugler">
       <Image class="julekugler" src={julekugler} alt="julekugler" />
@@ -75,25 +75,42 @@ import julekugler from "../assets/images/julekugler.svg";
     .baggrund {
       background-color: #f5eaec;
     }
+    .alt_tekst {
+      margin-right: var(--spacing-64);
+    }
+
     h2 {
       text-align: center;
+      margin-top: var(--spacing-64);
     }
     /* h3 {
       text-align: center;
     } */
-    .tekst,
+    .tekst {
+      text-align: left;
+      width: 700px;
+      margin-bottom: var(--spacing-24);
+    }
+
     h3 {
       text-align: left;
       width: 700px;
+      margin-bottom: var(--spacing-8);
     }
 
     .stoette {
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: var(--spacing-128);
     }
     .julekugler {
       float: left;
+      margin-top: var(--spacing-24);
+    }
+
+    a {
+      display: none;
     }
   }
 
@@ -132,6 +149,41 @@ import julekugler from "../assets/images/julekugler.svg";
     }
     .baggrund {
       background-color: #f5eaec;
+    }
+
+    .alt_tekst {
+      margin-right: var(--spacing-64);
+      margin-left: var(--spacing-64);
+    }
+
+    .tekst {
+      display: none;
+    }
+    h2 {
+      text-align: center;
+      margin-top: var(--spacing-64);
+    }
+    /* h3 {
+      text-align: center;
+    } */
+
+    h3 {
+      text-align: left;
+      width: 200px;
+      margin-bottom: var(--spacing-8);
+    }
+
+    .stoette {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-16);
+    }
+    .julekugler {
+      width: 100px;
+      float: left;
+      margin-top: var(--spacing-24);
+      margin-right: var(--spacing-32);
     }
   }
 </style>
