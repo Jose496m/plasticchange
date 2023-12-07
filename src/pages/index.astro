@@ -1,10 +1,23 @@
 ---
+import { Image } from "astro:assets";
+import header from "../assets/images/header.png";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Formular4 from "../components/Formular/Formular4.astro";
 import Header from "../components/header/Header.astro";
 ---
 
 <BaseLayout>
-  <Header />
+  <Header>
+    <Image class="img" src={header} alt="hero billede" />
+  </Header>
   <Formular4 />
 </BaseLayout>
+
+<style>
+  .img {
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+</style>
