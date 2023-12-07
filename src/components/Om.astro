@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import omos from "../assets/images/headeromos.png";
+import omos from "../assets/images/omos.png";
 import omos1 from "../assets/images/omos1.png";
 import omos2 from "../assets/images/omos2.png";
 import omos3 from "../assets/images/omos3.png";
@@ -111,23 +111,35 @@ import omos3 from "../assets/images/omos3.png";
       height: auto;
       margin-left: 450px;
       margin-top: -200px;
+      border-radius: var(--spacing-16);
     }
+
     h2 {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       text-align: center;
-      margin-top: -120px;
+      margin-top: -160px;
+    }
+    .citat {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      margin-top: -50px;
     }
 
     .text1 {
-      width: 600px;
-      margin-left: 550px;
-      text-align: left;
+      width: 700px;
+      margin-left: 500px;
+      line-height: 25px;
+      margin-bottom: 25px;
+      margin-top: 25px;
     }
     .text {
       text-align: left;
     }
-    .citat {
-      text-align: center;
-    }
+
     .grid_1-1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -139,19 +151,18 @@ import omos3 from "../assets/images/omos3.png";
       padding: 50px; /* Juster dette padding efter behov */
     }
     .omos1 {
-      width: 300px; /* Opdateret denne linje */
-      height: auto;
       border-radius: var(--spacing-16); /* Juster dette efter behov */
+      margin-left: 50px;
+      margin-top: -70%;
     }
     .omos2 {
-      width: 250px; /* Opdateret denne linje */
-      height: auto;
       border-radius: var(--spacing-16); /* Juster dette efter behov */
+      margin-left: 50px;
     }
     .omos3 {
-      width: 240px; /* Opdateret denne linje */
-      height: auto;
       border-radius: var(--spacing-16); /* Juster dette efter behov */
+      margin-left: 50px;
+      margin-top: -19%;
     }
     .placering1 {
       display: grid;
