@@ -27,8 +27,11 @@ img {
   --color-red-700: #3e252a;
   --color-white-100: #ffffff;
   --color-white-100-30: #ffffff4d;
+  --color-green-100: #007c79;
+
   /* numbers */
   --border-2: 0.125rem;
+  --border-3: 0.1875rem;
   --border-4: 0.25rem;
   --border-8: 0.5rem;
   --border-16: 1rem;

@@ -6,10 +6,10 @@ import juletrae4 from "../assets/images/juletrae4.svg";
 import julegave1 from "../assets/images/julegave1.svg";
 ---
 
-<section>
+<section class="card_container">
   <article class="card">
     <div class="illu">
-      <Image class="julegave1" src={julegave1} alt="julegave1" />
+      <Image class="kolbe" src={kolbe} alt="kolbe" />
     </div>
     <div class="tekst">
       <h4>Danskere bruger 825 ton gavepapir hver evig eneste jul</h4>
@@ -18,7 +18,7 @@ import julegave1 from "../assets/images/julegave1.svg";
 
   <article class="card">
     <div class="illu">
-      <Image class="julesweater1" src={julesweater1} alt="julesweater1" />
+      <Image class="julegave1" src={julegave1} alt="julegave1" />
     </div>
     <div class="tekst">
       <h4>Julegaver købt i en netbutik udenfor EU kan nemlig indeholde skadelige kemikalier</h4>
@@ -26,20 +26,42 @@ import julegave1 from "../assets/images/julegave1.svg";
   </article>
 
   <article class="card">
-    <div class="illu">
+    <div class="illu3">
       <Image class="juletrae4" src={juletrae4} alt="juletrae4" />
     </div>
     <div class="tekst">
-      <h4>Et økologisk, ikke-gødet ødgran-juletræ, der er produceret lokalt, er det bedste</h4>
+      <h4>Et økologisk, ikke-gødet rødgran-juletræ, der er produceret lokalt, er det bedste</h4>
     </div>
   </article>
 
   <article class="card">
-    <div class="illu">
-      <Image class="kolbe" src={kolbe} alt="kolbe" />
+    <div class="illu4">
+      <Image class="julesweater1" src={julesweater1} alt="julesweater1" />
     </div>
     <div class="tekst">
       <h4>95% af alle julesweatre indeholder plastik, og 40% bruges kun én gang</h4>
     </div>
   </article>
 </section>
+
+<style>
+  .card_container {
+    display: flex;
+  }
+
+  .card {
+    border: var(--color-red-500);
+  }
+
+  .illu {
+    width: 50px;
+  }
+
+  .illu4 {
+    width: 100px;
+  }
+
+  .illu3 {
+    width: 70px;
+  }
+</style>
