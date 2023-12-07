@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
 :root {
   /* Mode 1 */
   /* colors */
@@ -88,11 +98,18 @@
   font-family: "rubiksemibold";
   src: url("/fonts/Rubik-SemiBold.ttf") format("truetype");
 }
+@font-face {
+  font-family: "rubikitalic";
+  src: url("/fonts/Rubik-Italic.ttf") format("truetype");
+}
 
 @font-face {
   font-family: "campton";
   src: url("/fonts/CamptonSemiBold.woof2");
 }
+
+/************ Mobile ************/
+
 @media (max-width: 700px) {
   h1 {
     font-family: "campton";
@@ -142,7 +159,7 @@
     color: var(--text-primary);
   }
   .citat {
-    font-family: "rubik";
+    font-family: "rubikitalic";
     font-size: 12px;
   }
 }
@@ -194,5 +211,9 @@
     font-family: "rubik";
     font-size: 18px;
     color: var(--text-primary);
+  }
+  .citat {
+    font-family: "rubikitalic";
+    font-size: 16px;
   }
 }

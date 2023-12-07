@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../assets/images/logo.png";
+import Button from "../Button.astro";
+---
+
+<nav>
+  <ul>
+    <li><a href="/"><Image class="logo" src={logo} alt="logo" /></a></li>
+    <li><a href="om_os.astro">Om os</a></li>
+    <li><Button link="/om_os" title="Støt" /></li>
+  </ul>
+</nav>
+
+<style>
+  ul {
+    display: flex;
+    align-items: top;
+    margin-top: 1rem;
+    margin: 20px;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  li {
+  }
+</style>
