@@ -10,33 +10,33 @@ const { titel, variant } = Astro.props;
   <FormHeader />
 </header>
 <style>
-  @media (max-width: 500px) {
-    header .landingpage,
-    .mobil {
+  @media (max-width: 599px) {
+    header.landingpage.mobil {
       background-image: url(../../assets/images/header_mobil.png);
       background-size: cover;
+      height: 100%;
     }
-    .om_os {
+    .om_os.mobil {
       background-image: url(../../assets/images/om_os_mobile.png);
       background-size: cover;
     }
   }
   @media (min-width: 600px) and (max-width: 1024px) {
-    .landingpage {
+    .landingpage.web {
       background-image: url(../../assets/images/header.png);
       background-size: cover;
     }
-    .om_os {
+    .om_os.web {
       background-image: url(../../assets/images/om_os.png);
       background-size: cover;
     }
   }
-  @media (min-width: 1200px) {
-    .landingpage {
+  @media (min-width: 1025px) {
+    .landingpage.web {
       background-image: url(../../assets/images/header.png);
       background-size: cover;
     }
-    .om_os {
+    .om_os.web {
       background-image: url(../../assets/images/om_os.png);
       background-size: cover;
     }
