@@ -217,7 +217,7 @@ img {
     font-size: 16px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
   h1 {
     font-family: "campton";
     font-size: 26px;
@@ -226,13 +226,13 @@ img {
 
   h2 {
     font-family: "campton";
-    font-size: 22px;
+    font-size: 32px;
     color: var(--text-primary);
   }
 
   h3 {
     font-family: "campton";
-    font-size: 18px;
+    font-size: 28px;
     color: var(--text-primary);
   }
 
@@ -262,11 +262,11 @@ img {
 
   p {
     font-family: "rubik";
-    font-size: 15px;
+    font-size: 20px;
     color: var(--text-primary);
   }
   .citat {
     font-family: "rubikitalic";
-    font-size: 12px;
+    font-size: 16px;
   }
 }
