@@ -1,22 +1,33 @@
 ---
 import VidsteduCard from "./Vidstedu_card.astro";
+import { Image } from "astro:assets";
+import julesweater1 from "../assets/images/julesweater1.svg";
+import kolbe from "../assets/images/kolbe.svg";
+import juletrae4 from "../assets/images/juletrae4.svg";
+import julegave1 from "../assets/images/julegave1.svg";
 ---
 
 <section class="card_container">
   <VidsteduCard text="Danskere bruger 825 ton gavepapir hver evig eneste jul">
-    <img src="../assets/images/kolbe.svg" alt="news_image" />
+    <img src="../assets/images/kolbe.svg" alt="kolbe" />
   </VidsteduCard>
-  <VidsteduCard title="BE A PART OF THE COMMUNITY" text="Her kan du nu se en masse workshops og lade dig inspirere, Her kan du nu se en masse workshops og lade dig inspirere, Her kan du nu se en masse workshops og lade dig inspirere">
-    <img src="/news2222.webp" alt="news_image" />
+  <VidsteduCard image="../assets/images/julegave1.svg" text="Julegaver købt i en netbutik udenfor EU kan nemlig indeholde skadelige kemikalier">
+    <img src="../assets/images/julegave1.svg" alt="julegave" />
   </VidsteduCard>
-  <VidsteduCard title="AMAZING FESTIVAL CUISINE" text="Her kan du nu se en masse workshops og lade dig inspirere, Her kan du nu se en masse workshops og lade dig inspirere, Her kan du nu se en masse workshops og lade dig inspirere">
-    <img src="/news3333.webp" alt="news_image" />
+  <VidsteduCard text="Et økologisk, ikke-gødet rødgran-juletræ, der er produceret lokalt, er det bedste">
+    <img src="../assets/images/juletrae4.svg" alt="juletrae" />
   </VidsteduCard>
-  <VidsteduCard title="A DAY AT THE FESTIVAL" text="Her kan du nu se en masse workshops og lade dig inspirere, Her kan du nu se en masse workshops og lade dig inspirere, Her kan du nu se en masse workshops og lade dig inspirere">
-    <img src="/news4444.webp" alt="news_image" />
+  <VidsteduCard text="95% af alle julesweatre indeholder plastik, og 40% bruges kun én gang">
+    <img src="../assets/images/julesweater1.svg" alt="julesweater" />
   </VidsteduCard>
 </section>
 
+<style>
+  .card_container {
+    display: flex;
+    margin: var(--spacing-16);
+  }
+</style>
 <!-- ---
 import { Image } from "astro:assets";
 import julesweater1 from "../assets/images/julesweater1.svg";

@@ -23,11 +23,11 @@ import julegave1 from "../assets/images/julegave1.svg";
       <p>Julegaver købt i en netbutik udenfor EU kan nemlig indeholde skadelige kemikalier</p>
     </div>
     <div class="baggrund1">
-      <Image class="omos" src={omos1} alt="header" />
+      <Image class="julegave" src={julegave1} alt="julegave" />
       <p>Et økologisk, ikke-gødet rødgran-juletræ, der er produceret lokalt, er det bedste</p>
     </div>
     <div class="baggrund1">
-      <Image class="omos" src={omos1} alt="header" />
+      <Image class="juletrae" src={juletrae4} alt="juletrae" />
       <p>95% af alle julesweatre indeholder plastik, og 40% bruges kun én gang</p>
     </div>
   </section>
@@ -116,6 +116,29 @@ import julegave1 from "../assets/images/julegave1.svg";
 
     a {
       display: none;
+    }
+
+    .card_container {
+      display: flex;
+    }
+
+    .card {
+      border-color: var(--color-red-500);
+      justify-content: center;
+    }
+
+    .juletrae,
+    .kolbe {
+      width: 50px;
+      justify-content: center;
+    }
+
+    .julesweater1 {
+      width: 100px;
+    }
+
+    .julegave {
+      width: 60px;
     }
   }
 
