@@ -140,7 +140,6 @@ img {
   a {
     font-family: "rubiksemibold";
     font-size: 15px;
-    color: var(--text-link);
   }
 
   input::placeholder {
@@ -195,7 +194,6 @@ img {
   a {
     font-family: "rubiksemibold";
     font-size: 20px;
-    color: var(--text-link);
   }
 
   input::placeholder {
@@ -250,7 +248,6 @@ img {
   a {
     font-family: "rubiksemibold";
     font-size: 15px;
-    color: var(--text-link);
   }
 
   input::placeholder {

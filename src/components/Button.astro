@@ -1,12 +1,15 @@
 ---
-const { title, link } = Astro.props;
+const { title, link, variant } = Astro.props;
 ---
 
-<div class="center">
+<div class={variant}>
   <a href={link}><span>{title}</span></a>
 </div>
 
 <style>
+  div {
+    margin: var(--spacing-16);
+  }
   a {
     width: 100%;
     border: none;
@@ -16,8 +19,7 @@ const { title, link } = Astro.props;
     text-decoration: none;
   }
 
-  span {
-    color: white;
+  .primary {
     background-color: var(--button-primary-defsult-surface);
     border-radius: var(--border-64);
     padding: var(--spacing-16) var(--spacing-32);
@@ -27,7 +29,68 @@ const { title, link } = Astro.props;
     box-sizing: border-box;
   }
 
-  .primary {
-    text-transform: uppercase;
+  span.arrow {
+    color: white;
+  }
+
+  span.primary {
+    color: white;
+  }
+
+  .arrow {
+    color: var(--button-primary-default-text);
+    background-color: var(--button-primary-defsult-surface);
+    border-radius: var(--border-64);
+    padding: var(--spacing-16) var(--spacing-32);
+    cursor: pointer;
+    position: relative;
+    font-size: 22px;
+    box-sizing: border-box;
+  }
+
+  .secondary {
+    color: var(--button-secondary-default-text);
+    background-color: var(--button-secondary-defsult-surface);
+    border-radius: var(--border-64);
+    border: 3px solid var(--button-secondary-default-border);
+    padding: var(--spacing-16) var(--spacing-32);
+    cursor: pointer;
+    position: relative;
+    font-size: 22px;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 599px) {
+    .primary {
+      background-color: var(--button-primary-defsult-surface);
+      border-radius: var(--border-64);
+      padding: var(--spacing-16) var(--spacing-24);
+      cursor: pointer;
+      position: relative;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    .secondary {
+      color: var(--button-secondary-default-text);
+      background-color: var(--button-secondary-defsult-surface);
+      border-radius: var(--border-64);
+      border: 3px solid var(--button-secondary-default-border);
+      padding: var(--spacing-16) var(--spacing-24);
+      cursor: pointer;
+      position: relative;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .arrow {
+      color: var(--button-primary-default-text);
+      background-color: var(--button-primary-defsult-surface);
+      border-radius: var(--border-64);
+      padding: var(--spacing-16) var(--spacing-24);
+      cursor: pointer;
+      position: relative;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
   }
 </style>
