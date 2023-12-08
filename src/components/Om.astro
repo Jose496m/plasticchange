@@ -44,7 +44,9 @@ import omos3 from "../assets/images/omos3.png";
   </p>
   <section class="baggrund grid_1-1-1">
     <div class="baggrund1">
-      <h3 class="overskrift">Plastikudfordringen</h3>
+      <div class="overskrift-container">
+        <h3 class="overskrift">Plastikudfordringen</h3>
+      </div>
       <p class="text">
         Siden 1950’erne har vi produceret mere end 9 milliarder ton plastik.
         Heraf er størstedelen blevet brugt til engangsemballager og -produkter
@@ -61,7 +63,9 @@ import omos3 from "../assets/images/omos3.png";
       <Image class="omos1" src={omos1} alt="omos1" />
     </div>
     <div class="baggrund1">
-      <h3 class="overskrift">Vores vision</h3>
+      <div class="overskrift-container">
+        <h3 class="overskrift">Vores vision</h3>
+      </div>
       <p class="text">
         Plastic Changes vision er et affaldsfrit samfund. Visionen handler ikke
         kun om plastik, men plastik er blevet et symbol på vores engangskultur.
@@ -76,7 +80,9 @@ import omos3 from "../assets/images/omos3.png";
       <Image class="omos2" src={omos2} alt="omos2" />
     </div>
     <div class="baggrund1">
-      <h3 class="overskrift">Vores mission</h3>
+      <div class="overskrift-container">
+        <h3 class="overskrift">Vores mission</h3>
+      </div>
 
       <p class="text">
         Vi vil arbejde for en verden uden plastikforurening. Det gør vi ved at
@@ -96,13 +102,12 @@ import omos3 from "../assets/images/omos3.png";
   </section>
 </article>
 <style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   @media (min-width: 1025px) {
-    body,
-    html {
-      height: 100%;
-      margin: 0;
-    }
-
     .container {
       width: 100%;
       height: 100%;
@@ -146,11 +151,16 @@ import omos3 from "../assets/images/omos3.png";
       margin-top: 25px;
     }
     h3 {
-      margin-bottom: 5px;
+      margin-bottom: 25px;
+      text-align: center;
+      margin-top: 20px;
     }
     .text {
       text-align: left;
       line-height: 23px;
+      margin-left: 25px;
+      width: 350px;
+      margin-top: 25px;
     }
 
     .grid_1-1-1 {
@@ -161,9 +171,9 @@ import omos3 from "../assets/images/omos3.png";
     .baggrund1 {
       background-color: white;
       border-radius: var(--spacing-16);
-      padding: 50px; /* Juster dette padding efter behov */
+      width: 400px; /* Juster dette padding efter behov */
       height: 550px;
-      margin: 5px;
+      margin: 15px;
     }
     .omos1 {
       border-radius: var(--spacing-16); /* Juster dette efter behov */
@@ -291,7 +301,7 @@ import omos3 from "../assets/images/omos3.png";
       text-align: center;
     }
     .omos {
-      width: 500px;
+      width: 300px;
       height: auto;
       margin-left: 55px;
       margin-top: -60px;
@@ -301,48 +311,52 @@ import omos3 from "../assets/images/omos3.png";
       text-align: left;
       width: 250px;
       line-height: 20px;
-      margin-left: 25px;
+      margin-left: 15px;
+      margin-top: -10px;
     }
     .baggrund1 {
       background-color: white;
       border-radius: var(--spacing-16);
-      padding: 100px;
+      width: 300px;
+      height: 500px;
       margin-top: 10px;
+      margin-left: -15px;
     }
     .text1 {
       text-align: left;
-      width: 400px;
-      margin-left: 100px;
+      width: 325px;
+      margin-left: 60px;
       line-height: 20px;
       margin-top: 30px;
       margin-bottom: 30px;
     }
     .omos1 {
       margin-top: -70px;
-      margin-left: 60px;
+      margin-left: 20px;
       margin-bottom: 25px;
-      width: 350px;
+      width: 200px;
       height: auto;
       border-radius: var(--spacing-16);
     }
     .omos2 {
       margin-top: -70px;
-      margin-left: 60px;
+      margin-left: 20px;
       margin-bottom: 25px;
-      width: 350px;
+      width: 200px;
       height: auto;
       border-radius: var(--spacing-16);
     }
     .omos3 {
       margin-top: -70px;
-      margin-left: 60px;
+      margin-left: 20px;
       margin-bottom: 25px;
-      width: 350px;
+      width: 200px;
       height: auto;
       border-radius: var(--spacing-16);
     }
-    .overskrift {
-      margin-top: -60px;
+
+    .overskrift-container {
+      padding: 25px;
       text-align: center;
     }
   }
