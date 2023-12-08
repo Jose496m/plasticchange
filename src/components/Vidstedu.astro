@@ -7,6 +7,7 @@ import juletrae4 from "../assets/images/juletrae4.svg";
 import julegave1 from "../assets/images/julegave1.svg";
 ---
 
+<h2 class="vidste_du">Vidste du?</h2>
 <section class="card_container">
   <VidsteduCard text="Danskere bruger 825 ton gavepapir hver evig eneste jul">
     <Image class="kolbe" src={kolbe} alt="kolbe" />
@@ -26,21 +27,28 @@ import julegave1 from "../assets/images/julegave1.svg";
   .card_container {
     display: flex;
     gap: var(--spacing-32);
+    margin-left: var(--spacing-128);
+    margin-right: var(--spacing-128);
   }
 
+  .vidste_du {
+    margin-block: var(--spacing-32);
+  }
   .julegave,
   .juletrae {
     width: 100px;
-    margin-block: var(--spacing-32);
+    margin-top: var(--spacing-24);
+    margin-bottom: var(--spacing-64);
   }
 
   .kolbe {
     width: 70px;
-    margin-block: var(--spacing-32);
+    margin-top: var(--spacing-24);
+    margin-bottom: var(--spacing-64);
   }
   .julesweater {
     width: 140px;
-    margin-block: var(--spacing-32);
+    margin-top: var(--spacing-24);
     margin-bottom: var(--spacing-64);
   }
 </style>
