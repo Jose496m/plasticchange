@@ -1,12 +1,11 @@
-<section>
-  <div class="oval-container">
-    <div class="oval-section section1"></div>
-    <div class="oval-section section2"></div>
-    <div class="oval-section section3"></div>
-    <div class="oval-section section4"></div>
-    <div class="oval-section section5"></div>
-  </div>
-</section>
+---
+import Button from "../Button.astro";
+import Menu from "../header/Menu.astro";
+import Stepbar from "./Stepbar.astro";
+---
+
+<Menu variant="form" />
+<Stepbar />
 <section>
   <h2>Støt os i kampen mod plastikforurening</h2>
   <p>Vi udleder I dag 8 - 10 millioner ton plastik til havet om året</p>
@@ -28,6 +27,8 @@
 <section>
   <p>Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores privatlivspolitik.</p>
 </section>
+<Button variant="secondary" title="← Tilbage" />
+<Button variant="arrow" title="Næste →" />
 <style>
   body {
     display: flex;

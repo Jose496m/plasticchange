@@ -9,23 +9,35 @@ import julegave1 from "../assets/images/julegave1.svg";
 
 <section class="card_container">
   <VidsteduCard text="Danskere bruger 825 ton gavepapir hver evig eneste jul">
-    <img src="../assets/images/kolbe.svg" alt="kolbe" />
+    <Image class="kolbe" src={kolbe} alt="kolbe" />
   </VidsteduCard>
-  <VidsteduCard image="../assets/images/julegave1.svg" text="Julegaver købt i en netbutik udenfor EU kan nemlig indeholde skadelige kemikalier">
-    <img src="../assets/images/julegave1.svg" alt="julegave" />
+  <VidsteduCard text="Julegaver købt i en netbutik udenfor EU kan nemlig indeholde skadelige kemikalier">
+    <Image class="julegave" src={julegave1} alt="julehave" />
   </VidsteduCard>
   <VidsteduCard text="Et økologisk, ikke-gødet rødgran-juletræ, der er produceret lokalt, er det bedste">
-    <img src="../assets/images/juletrae4.svg" alt="juletrae" />
+    <Image class="juletrae" src={juletrae4} alt="juletrae" />
   </VidsteduCard>
   <VidsteduCard text="95% af alle julesweatre indeholder plastik, og 40% bruges kun én gang">
-    <img src="../assets/images/julesweater1.svg" alt="julesweater" />
+    <Image class="julesweater" src={julesweater1} alt="julesweater" />
   </VidsteduCard>
 </section>
 
 <style>
   .card_container {
     display: flex;
-    margin: var(--spacing-16);
+    gap: var(--spacing-32);
+  }
+
+  .julegave,
+  .juletrae {
+    width: 100px;
+  }
+
+  .kolbe {
+    width: 80px;
+  }
+  .julesweater {
+    width: 140px;
   }
 </style>
 <!-- ---
