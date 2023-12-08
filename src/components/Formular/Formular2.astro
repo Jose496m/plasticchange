@@ -2,6 +2,7 @@
 import Button from "../Button.astro";
 import Menu from "../header/Menu.astro";
 import Stepbar from "./Stepbar.astro";
+import Input from "../Input.astro";
 ---
 
 <Menu variant="form" />
@@ -11,121 +12,37 @@ import Stepbar from "./Stepbar.astro";
   <p>Vi udleder I dag 8 - 10 millioner ton plastik til havet om året</p>
 </section>
 <section class="grid-1-1">
-  <label>Navn</label>
-  <input type="text" class="border" placeholder="Liva" />
-  <label>Efternavn</label>
-  <input type="text" class="border" placeholder="Sørensen" />
-  <label>Email</label>
-  <input type="email" class="border" placeholder="liva@hej.dk" />
-  <label>Telefon</label>
-  <input type="tel" class="border" placeholder="24508236" />
-  <label>Adresse</label>
-  <input type="text" class="border" placeholder="Hurlumhejvej 84" />
-  <label>Postnummer</label>
-  <input type="text" class="border" placeholder="3300" />
+  <Input label="Navn" placeholder="Liva">
+    <label>Efternavn</label>
+    <input type="text" class="border" placeholder="Sørensen" />
+    <label>Email</label>
+    <input type="email" class="border" placeholder="liva@hej.dk" />
+    <label>Telefon</label>
+    <input type="tel" class="border" placeholder="24508236" />
+    <label>Adresse</label>
+    <input type="text" class="border" placeholder="Hurlumhejvej 84" />
+    <label>Postnummer</label>
+    <input type="text" class="border" placeholder="3300" />
+  </Input>
+  <section>
+    <p>Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores privatlivspolitik.</p>
+  </section>
+  <Button variant="secondary" title="← Tilbage" />
+  <Button variant="arrow" title="Næste → " />
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (min-width: 900px) {
+      .border {
+        border: 1px solid black;
+        margin: 5px;
+      }
+    }
+
+    @media (max-width: 500px) {
+    }
+  </style>
 </section>
-<section>
-  <p>Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores privatlivspolitik.</p>
-</section>
-<Button variant="secondary" title="← Tilbage" />
-<Button variant="arrow" title="Næste →" />
-<style>
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  @media (min-width: 900px) {
-    .oval-container {
-      position: relative;
-      width: 200px;
-      height: 25px;
-      background-color: #fff;
-      border-radius: 12.5px; /* Halvdelen af højden for at lave en oval */
-      overflow: hidden;
-      border: 1px solid black;
-    }
-
-    .oval-section {
-      position: absolute;
-      height: 100%;
-    }
-
-    .section1 {
-      left: 0%;
-      width: 20%;
-      border: 1px solid black;
-    }
-    .section2 {
-      left: 20%;
-      width: 20%;
-
-      background-color: #db3463;
-    }
-    .section3 {
-      left: 40%;
-      width: 20%;
-      border: 1px solid black;
-    }
-    .section4 {
-      left: 60%;
-      width: 20%;
-      border: 1px solid black;
-    }
-
-    .section5 {
-      left: 80%;
-      width: 20%;
-      border: 1px solid black;
-    }
-
-    .border {
-      border: 1px solid black;
-      margin: 5px;
-    }
-  }
-
-  @media (max-width: 500px) {
-    .oval-container {
-      position: relative;
-      width: 200px;
-      height: 15px;
-      background-color: #fff;
-      border-radius: 7.5px; /* Halvdelen af højden for at lave en oval */
-      overflow: hidden;
-      border: 1px solid black;
-    }
-    .oval-section {
-      position: absolute;
-      height: 100%;
-    }
-
-    .section1 {
-      left: 0%;
-      width: 20%;
-      border: 1px solid black;
-    }
-    .section2 {
-      left: 20%;
-      width: 20%;
-
-      background-color: #db3463;
-    }
-    .section3 {
-      left: 40%;
-      width: 20%;
-      border: 1px solid black;
-    }
-    .section4 {
-      left: 60%;
-      width: 20%;
-      border: 1px solid black;
-    }
-
-    .section5 {
-      left: 80%;
-      width: 20%;
-      border: 1px solid black;
-    }
-  }
-</style>
