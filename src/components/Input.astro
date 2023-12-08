@@ -1,0 +1,14 @@
+---
+const { label, placeholder } = Astro.props;
+---
+
+<div>
+  <label>{label}</label>
+  <input type="text" class="border" placeholder={placeholder} />
+</div>
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
