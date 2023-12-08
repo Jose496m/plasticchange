@@ -1,16 +1,20 @@
 ---
-const { text, image } = Astro.props;
+const { text } = Astro.props;
 ---
 
 <section>
   <slot />
-  <img src={image} alt="image" />
   <p>{text}</p>
 </section>
 
 <style>
   section {
-    margin: var(--spacing-16);
+    margin-top: var(--spacing-64);
+    width: 330px;
+    height: 425px;
     text-align: center;
+    border-style: solid;
+    border-radius: var(--spacing-16);
+    border-color: var(--color-green-100);
   }
 </style>
