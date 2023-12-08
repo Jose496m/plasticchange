@@ -8,23 +8,43 @@ const { text } = Astro.props;
 </section>
 
 <style>
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--color-white-100);
-    margin-top: var(--spacing-64);
-    margin-bottom: var(--spacing-64);
-    text-align: center;
-    border-style: solid;
-    border-radius: var(--spacing-16);
-    border-color: var(--color-green-100);
-    padding-top: var(--spacing-24);
-    gap: var(--spacing-64);
+  @media (min-width: 900px) {
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--color-white-100);
+      margin-top: var(--spacing-64);
+      margin-bottom: var(--spacing-64);
+      text-align: center;
+      border-style: solid;
+      border-radius: var(--spacing-16);
+      border-color: var(--color-green-100);
+      padding-top: var(--spacing-24);
+      gap: var(--spacing-64);
+    }
+
+    .tekst {
+      width: 270px;
+      padding: var(--spacing-8, 8px) var(--spacing-16, 16px);
+    }
   }
 
-  .tekst {
-    width: 270px;
-    padding: var(--spacing-8, 8px) var(--spacing-16, 16px);
+  @media (max-width: 500px) {
+    section {
+      display: inline-flex;
+      width: 172px;
+      height: 222px;
+      border-style: solid;
+      border-radius: var(--spacing-16);
+      border-color: var(--color-green-100);
+      padding-top: var(--spacing-24);
+      text-align: center;
+    }
+
+    .tekst {
+      width: 270px;
+      padding: var(--spacing-8, 8px) var(--spacing-16, 16px);
+    }
   }
 </style>

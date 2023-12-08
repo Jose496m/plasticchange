@@ -9,32 +9,84 @@ import julegave1 from "../assets/images/julegave1.svg";
 
 <h2 class="vidste_du">Vidste du?</h2>
 <section class="card_container">
-  <VidsteduCard text="Danskere bruger 825 ton gavepapir hver evig eneste jul">
+  <VidsteduCard class="placering1" text="Danskere bruger 825 ton gavepapir hver evig eneste jul">
     <Image class="kolbe" src={kolbe} alt="kolbe" />
   </VidsteduCard>
-  <VidsteduCard text="Julegaver købt i en netbutik udenfor EU kan nemlig indeholde skadelige kemikalier">
+  <VidsteduCard class="placering2" text="Julegaver købt i en netbutik udenfor EU kan nemlig indeholde skadelige kemikalier">
     <Image class="julegave" src={julegave1} alt="julehave" />
   </VidsteduCard>
-  <VidsteduCard text="Et økologisk, ikke-gødet rødgran-juletræ, der er produceret lokalt, er det bedste">
+  <VidsteduCard class="placering3" text="Et økologisk, ikke-gødet rødgran-juletræ, der er produceret lokalt, er det bedste">
     <Image class="juletrae" src={juletrae4} alt="juletrae" />
   </VidsteduCard>
-  <VidsteduCard text="95% af alle julesweatre indeholder plastik, og 40% bruges kun én gang">
+  <VidsteduCard class="placering4" text="95% af alle julesweatre indeholder plastik, og 40% bruges kun én gang">
     <Image class="julesweater" src={julesweater1} alt="julesweater" />
   </VidsteduCard>
 </section>
 
 <style>
-  .card_container {
-    display: flex;
-    background-color: var(--color-red-100);
-    gap: var(--spacing-32);
-    margin-left: var(--spacing-128);
-    margin-right: var(--spacing-128);
+  @media (min-width: 900px) {
+    .card_container {
+      display: flex;
+      background-color: var(--color-red-100);
+      gap: var(--spacing-32);
+      margin-left: var(--spacing-128);
+      margin-right: var(--spacing-128);
+    }
+
+    .vidste_du {
+      margin-block: var(--spacing-32);
+    }
+    .julegave,
+    .juletrae {
+      width: 100px;
+      margin-top: var(--spacing-24);
+      margin-bottom: var(--spacing-64);
+    }
+
+    .kolbe {
+      width: 70px;
+      margin-top: var(--spacing-24);
+      margin-bottom: var(--spacing-64);
+    }
+    .julesweater {
+      width: 140px;
+      margin-top: var(--spacing-24);
+      margin-bottom: var(--spacing-64);
+    }
   }
 
-  .vidste_du {
-    margin-block: var(--spacing-32);
+  @media (max-width: 500px) {
+    h2 {
+      margin-bottom: var(--spacing-24);
+    }
+    .card_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: var(--spacing-16);
+    }
   }
+
+  .placering1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .placering2 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .placering3 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .placering4 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
   .julegave,
   .juletrae {
     width: 100px;
