@@ -8,7 +8,7 @@ import julegave1 from "../assets/images/julegave1.svg";
 
 <section class="card_container">
   <article class="card">
-    <div class="illu">
+    <div class="illu1">
       <Image class="kolbe" src={kolbe} alt="kolbe" />
     </div>
     <div class="tekst">
@@ -17,7 +17,7 @@ import julegave1 from "../assets/images/julegave1.svg";
   </article>
 
   <article class="card">
-    <div class="illu">
+    <div class="illu2">
       <Image class="julegave1" src={julegave1} alt="julegave1" />
     </div>
     <div class="tekst">
@@ -50,11 +50,14 @@ import julegave1 from "../assets/images/julegave1.svg";
   }
 
   .card {
-    border: var(--color-red-500);
+    border-color: var(--color-red-500);
+    justify-content: center;
   }
 
-  .illu {
+  .illu1,
+  .illu2 {
     width: 50px;
+    justify-content: center;
   }
 
   .illu4 {

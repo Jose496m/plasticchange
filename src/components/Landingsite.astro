@@ -3,6 +3,10 @@ import { Image } from "astro:assets";
 import omos1 from "../assets/images/omos1.png";
 import landingslide from "../assets/images/landingslide.png";
 import julekugler from "../assets/images/julekugler.svg";
+import julesweater1 from "../assets/images/julesweater1.svg";
+import kolbe from "../assets/images/kolbe.svg";
+import juletrae4 from "../assets/images/juletrae4.svg";
+import julegave1 from "../assets/images/julegave1.svg";
 ---
 
 <article>
@@ -11,11 +15,11 @@ import julekugler from "../assets/images/julekugler.svg";
       <h2>Vidste du at...?</h2>
     </div>
     <div class="baggrund1">
-      <Image class="omos" src={omos1} alt="header" />
+      <Image class="julesweater1" src={julesweater1} alt="sweater" />
       <p>Danskere bruger 825 ton gavepapir hver evig eneste jul</p>
     </div>
     <div class="baggrund1">
-      <Image class="omos" src={omos1} alt="header" />
+      <Image class="kolbe" src={kolbe} alt="kolbe" />
       <p>Julegaver købt i en netbutik udenfor EU kan nemlig indeholde skadelige kemikalier</p>
     </div>
     <div class="baggrund1">
@@ -127,8 +131,13 @@ import julekugler from "../assets/images/julekugler.svg";
       /* Andre baggrundsstilarter kan tilføjes her */
     }
 
-    .omos {
+    .julesweater1 {
       width: 130px;
+      height: auto;
+    }
+
+    .kolbe {
+      width: 100px;
       height: auto;
     }
     .baggrund {
@@ -185,6 +194,10 @@ import julekugler from "../assets/images/julekugler.svg";
       float: left;
       margin-top: var(--spacing-24);
       margin-right: var(--spacing-64);
+    }
+
+    a {
+      color: var(--text-link);
     }
   }
 </style>
