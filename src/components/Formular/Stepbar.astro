@@ -1,5 +1,4 @@
 ---
-const {} = Astro.props;
 ---
 
 <section>
@@ -19,6 +18,7 @@ const {} = Astro.props;
     }
     section {
       margin-top: var(--spacing-44);
+      margin-bottom: var(--spacing-32);
     }
     .oval-container {
       position: relative;
@@ -68,6 +68,11 @@ const {} = Astro.props;
   @media (min-width: 600px) and (max-width: 1024px) {
     .red {
       background-color: var(--surface-brand);
+    }
+
+    section {
+      margin-top: var(--spacing-32);
+      margin-bottom: var(--spacing-32);
     }
     .oval-container {
       position: relative;
