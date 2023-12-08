@@ -1,11 +1,10 @@
 ---
-const { image, text } = Astro.props;
+const { text } = Astro.props;
 ---
 
 <section>
   <slot />
   <p>{text}</p>
-  <img src={image} alt="image" />
 </section>
 
 <style></style>
