@@ -1,9 +1,11 @@
 ---
-const { title } = Astro.props;
+const { title, color } = Astro.props;
 ---
 
 <section>
-  <div class="circle"><span>{title}</span></div>
+  <div class="circle" style={`--circle-color: ${color};`}>
+    <span>{title}</span>
+  </div>
 </section>
 
 <style>
@@ -11,10 +13,15 @@ const { title } = Astro.props;
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #000000; /* Ændr tekstfarven efter behov */
+    background-color: var(--circle-color);
+    border: 1px solid black;
+  }
+
+  .circle[style*="--circle-color: var(--border-accent)"] {
+    border: none;
+    color: #ffffff;
   }
 </style>
