@@ -11,11 +11,11 @@ const { label, placeholder } = Astro.props;
     div {
       display: flex;
       flex-direction: column;
-      width: 325px;
       margin-inline: var(--spacing-32);
     }
 
     input {
+      min-width: 325px;
       padding-block: var(--spacing-4);
       padding-left: var(--spacing-4);
       border-radius: var(--border-4);
@@ -26,11 +26,11 @@ const { label, placeholder } = Astro.props;
     div {
       display: flex;
       flex-direction: column;
-      max-width: 450px;
-      margin-inline: var(--spacing-64);
+      margin-inline: var(--spacing-24);
     }
 
     input {
+      min-width: 280px;
       padding-block: var(--spacing-4);
       padding-left: var(--spacing-8);
       border-radius: var(--border-4);
@@ -40,9 +40,9 @@ const { label, placeholder } = Astro.props;
     div {
       display: flex;
       flex-direction: column;
-      max-width: 600px;
     }
     input {
+      min-width: 325px;
       padding-block: var(--spacing-4);
       padding-left: var(--spacing-8);
       border-radius: var(--border-4);

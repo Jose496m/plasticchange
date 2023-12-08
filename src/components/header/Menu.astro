@@ -8,10 +8,10 @@ const { variant } = Astro.props;
 <nav class={variant}>
   <ul>
     <li><a href="/"><Image class="logo" src={logo} alt="logo" /></a></li>
-    <li class="knap">
+    <div class="knap">
       <li><a href="/omos">Om os</a></li>
       <li><Button link="/" title="Støt" variant="primary" /></li>
-    </li>
+    </div>
   </ul>
 </nav>
 
@@ -61,8 +61,16 @@ const { variant } = Astro.props;
   }
   a {
     color: var(--color-white-100);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
   }
   .knap {
+    display: flex;
+    flex-direction: row;
     justify-content: end;
+    align-items: center;
+    gap: var(--spacing-24);
   }
 </style>

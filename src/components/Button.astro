@@ -17,9 +17,11 @@ const { title, link, variant } = Astro.props;
     align-items: center;
     gap: 1rem;
     text-decoration: none;
+    color: var(--button-primary-default-text);
   }
 
   .primary {
+    color: var(--button-primary-default-text);
     background-color: var(--button-primary-defsult-surface);
     border-radius: var(--border-64);
     padding: var(--spacing-16) var(--spacing-32);
@@ -27,6 +29,7 @@ const { title, link, variant } = Astro.props;
     position: relative;
     font-size: 22px;
     box-sizing: border-box;
+    text-align: center;
   }
 
   span.arrow {
@@ -64,6 +67,7 @@ const { title, link, variant } = Astro.props;
 
   @media (max-width: 599px) {
     .primary {
+      color: var(--button-primary-default-text);
       background-color: var(--button-primary-defsult-surface);
       border-radius: var(--border-64);
       padding: var(--spacing-16) var(--spacing-24);
