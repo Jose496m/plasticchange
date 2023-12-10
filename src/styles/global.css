@@ -165,7 +165,8 @@ img {
   p {
     font-family: "rubik";
     font-size: 15px;
-    color: var(--text-primary);
+    color: var(--color-mud-400);
+    font-weight: 200;
   }
   .citat {
     font-family: "rubikitalic";
@@ -223,7 +224,8 @@ img {
   p {
     font-family: "rubik";
     font-size: 18px;
-    color: var(--text-primary);
+    color: var(--color-mud-400);
+    font-weight: 200;
   }
   .citat {
     font-family: "rubikitalic";
@@ -281,7 +283,8 @@ img {
   p {
     font-family: "rubik";
     font-size: 20px;
-    color: var(--text-primary);
+    font-weight: 200;
+    color: var(--color-mud-400);
   }
   .citat {
     font-family: "rubikitalic";
