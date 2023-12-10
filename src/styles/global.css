@@ -143,6 +143,7 @@ img {
   a {
     font-family: "rubiksemibold";
     font-size: 15px;
+    text-decoration: none;
   }
 
   input::placeholder {

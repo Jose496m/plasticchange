@@ -3,10 +3,13 @@ const { label, placeholder } = Astro.props;
 ---
 
 <div>
-  <label>{label}</label>
+  <label>{label} <span>*</span></label>
   <input type="text" class="border" placeholder={placeholder} />
 </div>
 <style>
+  span {
+    color: var(--surface-brand);
+  }
   @media (max-width: 599px) {
     div {
       display: flex;
