@@ -20,7 +20,7 @@
     </div>
 
     <div class="spalte3">
-      <p class="bank">Bank</p>
+      <h4 class="bank">Bank</h4>
       <p>
         CVR: 35778985 <br />
         Konto. <br /> 8411 0002039618 <br />
@@ -36,6 +36,17 @@
     display: flex;
     justify-content: center;
     gap: 120px;
-    margin-top: 50px;
+    margin-top: var(--spacing-64);
+    background-color: var(--color-red-100);
+    padding: --spacing-24;
+    width: 100%;
+  }
+
+  .spalte1,
+  .spalte2,
+  .spalte3 {
+    width: 300px;
+    padding: var(--spacing-16);
+    margin: var(--spacing-44);
   }
 </style>
