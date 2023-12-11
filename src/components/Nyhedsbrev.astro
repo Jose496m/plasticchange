@@ -6,7 +6,10 @@ import Button from "./Button.astro";
   <ul>
     <div class="tekst">
       <h2>Tilmeld dig vores nyhedsbrev</h2>
-      <p>Følg med i vores arbejde mod plastikforuening og hold dig opdateret med de seneste nyheder</p>
+      <p>
+        Følg med i vores arbejde mod plastikforuening og hold dig opdateret med
+        de seneste nyheder
+      </p>
     </div>
     <div class="tekst_og_knap">
       <li><input type="text" placeholder="hej@email.dk" /></li>
@@ -19,9 +22,11 @@ import Button from "./Button.astro";
   @media (min-width: 1025px) {
     .nyhedsbrev {
       background-color: var(--color-red-100);
-      padding: --spacing-24;
+      padding: var(--spacing-24);
       width: 100%;
       padding-block: var(--spacing-32);
+
+      margin-top: var(--spacing-64);
     }
 
     input {
