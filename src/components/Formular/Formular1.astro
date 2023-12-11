@@ -11,10 +11,7 @@ import Prisbutton from "../Prisbutton.astro";
 
 <Menu variant="form" />
 <Stepbar />
-<FormOverskrift
-  titel="Giv en donation som en gave"
-  text="Er beløbet  300kr. eller over modtager du et krus som tak"
-/>
+<FormOverskrift titel="Giv en donation som en gave" text="Er beløbet  300kr. eller over modtager du et krus som tak" />
 
 <div>
   <p class="ptag">Vælg dit månedelige beløb <span class="farve">*</span></p>
@@ -35,7 +32,11 @@ import Prisbutton from "../Prisbutton.astro";
     <Button variant="arrow" title="Næste → " link="/formular/step2" />
   </div>
 </section>
-<section></section>
+<section>
+  <div>
+    <Image class="omos" src={pic1} alt="header" />
+  </div>
+</section>
 
 <style>
   @media (min-width: 1025px) {
