@@ -75,12 +75,27 @@ import Prisbutton from "./Prisbutton.astro";
     gap: var(--spacing-16);
   }
   @media (max-width: 599px) {
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-24);
+      background-color: rgba(255, 255, 255, 0.72);
+      padding-block: var(--spacing-24);
+      align-items: center;
+      justify-content: center;
+    }
+
     input[type="text"] {
-      padding: var(--spacing-8);
+      color: var(----text-primary);
+      padding: var(--spacing-16) var(--spacing-24);
       border-radius: var(--border-64);
       text-align: center;
       border: 2px solid var(--input-primary-default-border);
       max-width: 150px;
+      position: relative;
+      box-sizing: border-box;
+      background-color: transparent;
+      font-size: 16px;
     }
     input::placeholder {
       color: var(--color-mud-700);
@@ -89,6 +104,15 @@ import Prisbutton from "./Prisbutton.astro";
     }
   }
   @media (min-width: 600px) and (max-width: 1024px) {
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-44);
+      background-color: rgba(255, 255, 255, 0.72);
+      padding-block: var(--spacing-24);
+      align-items: center;
+      justify-content: center;
+    }
     input[type="text"] {
       padding: var(--spacing-16);
       border-radius: var(--border-64);
@@ -104,8 +128,16 @@ import Prisbutton from "./Prisbutton.astro";
   }
 
   @media (min-width: 1025px) {
+    section {
+      display: flex;
+      gap: var(--spacing-64);
+      background-color: rgba(255, 255, 255, 0.72);
+      padding-block: var(--spacing-64);
+      align-items: center;
+      justify-content: center;
+    }
     input[type="text"] {
-      min-height: var(--spacing-64);
+      min-height: var(--spacing-24);
       border-radius: var(--border-64);
       text-align: center;
       border: 2px solid var(--input-primary-default-border);
@@ -132,13 +164,5 @@ import Prisbutton from "./Prisbutton.astro";
   .pris {
     display: flex;
     gap: var(--spacing-24);
-  }
-  section {
-    display: flex;
-    gap: var(--spacing-64);
-    background-color: rgba(255, 255, 255, 0.72);
-    padding-block: var(--spacing-64);
-    align-items: center;
-    justify-content: center;
   }
 </style>
