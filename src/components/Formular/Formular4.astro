@@ -1,66 +1,57 @@
 ---
 import Stepbar from "./Stepbar.astro";
+import Menu from "../header/Menu.astro";
+import Button from "../Button.astro";
+import FormOverskrift from "./FormOverskrift.astro";
 ---
 
+<Menu variant="form" />
 <Stepbar />
+<FormOverskrift titel="Støt os i kampen mod plastikforurening" text="Mennesket har ret til et miljø uden plastikforurening." />
 <section>
-  <h2>Støt os i kampen mod plastikforurening</h2>
-  <p>Mennesket har ret til et miljø uden plastikforurening.</p>
   <p>Mange tak for din donation på 300 kr. eller mere. Som tak vil vi sende dig et eksklusivt krus inden for 1-2 hverdage. Samtidig har du modtaget et kort via e-mail – husk at tjekke din spam-mappe.</p>
+  <div class="buttons">
+    <Button variant="secondary" title="← Tilbage" link="/formular/step3" />
+    <Button variant="arrow" title="Næste → " link="/" />
+  </div>
 </section>
 <style>
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: var(--spacing-64);
+  }
   body {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  @media (min-width: 900px) {
-    .oval-container {
-      position: relative;
-      width: 200px;
-      height: 25px;
-      background-color: #fff;
-      border-radius: 12.5px; /* Halvdelen af højden for at lave en oval */
-      overflow: hidden;
-      border: 1px solid black;
+  section {
+    font-family: "rubikregular";
+    line-height: 20px;
+    color: var(--text-placeholder);
+    align-items: center;
+    gap: var(--spacing-16);
+    max-width: 800px;
+  }
+  @media (max-width: 599px) {
+    p {
+      margin-inline: var(--spacing-44);
+      margin-bottom: var(--spacing-128);
     }
+  }
 
-    .oval-section {
-      position: absolute;
-      height: 100%;
+  @media (min-width: 600px) and (max-width: 1024px) {
+    p {
+      margin-inline: var(--spacing-64);
+      font-size: 18px;
+      margin-bottom: var(--spacing-128);
     }
-
-    .section1 {
-      left: 0%;
-      width: 20%;
-      border: 1px solid black;
-    }
-    .section2 {
-      left: 20%;
-      width: 20%;
-      border: 1px solid black;
-    }
-    .section3 {
-      left: 40%;
-      width: 20%;
-      border: 1px solid black;
-    }
-    .section4 {
-      left: 60%;
-      width: 20%;
-      background-color: #db3463;
-    }
-
-    .section5 {
-      left: 80%;
-      width: 20%;
-      border: 1px solid black;
-    }
-    h2 {
-      text-align: center;
-    }
+  }
+  @media (min-width: 1025px) {
     p {
       text-align: center;
+      margin-bottom: var(--spacing-128);
     }
   }
 </style>

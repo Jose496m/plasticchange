@@ -85,9 +85,9 @@ img {
   --surface-secondary: var(--color-red-100);
   --surface-tertiary: var(--color-mud-700);
   --text-accent: var(--color-white-100);
-  --text-label: var(--color-mud-300);
+  --text-label: var(--color-mud-200);
   --text-link: var(--color-mud-300);
-  --text-placeholder: var(--color-mud-300);
+  --text-placeholder: var(--color-mud-200);
   --text-primary: var(--color-mud-700);
   --text-header: var(--color-white-100);
 }
@@ -143,24 +143,30 @@ img {
   a {
     font-family: "rubiksemibold";
     font-size: 15px;
+    text-decoration: none;
   }
 
   input::placeholder {
-    font-family: "rubikregular";
-    font-size: 16px;
+    font-family: "rubik";
+    font-weight: 200;
+    font-size: 15px;
     color: var(--text-placeholder);
   }
-
+  input {
+    border: 1px solid var(--input-secondary-default-border);
+  }
   label {
     font-family: "rubiksemibold";
     font-size: 15px;
     color: var(--text-label);
+    padding-bottom: var(--spacing-2);
   }
 
   p {
     font-family: "rubik";
     font-size: 15px;
-    color: var(--text-primary);
+    color: var(--color-mud-400);
+    font-weight: 200;
   }
   .citat {
     font-family: "rubikitalic";
@@ -200,21 +206,26 @@ img {
   }
 
   input::placeholder {
-    font-family: "rubikregular";
-    font-size: 20px;
+    font-family: "rubik";
+    font-weight: 200;
+    font-size: 16px;
     color: var(--text-placeholder);
   }
-
+  input {
+    border: 1px solid var(--input-secondary-default-border);
+  }
   label {
     font-family: "rubiksemibold";
-    font-size: 20px;
+    font-size: 18px;
     color: var(--text-label);
+    padding-bottom: var(--spacing-4);
   }
 
   p {
     font-family: "rubik";
     font-size: 18px;
-    color: var(--text-primary);
+    color: var(--color-mud-400);
+    font-weight: 200;
   }
   .citat {
     font-family: "rubikitalic";
@@ -254,21 +265,26 @@ img {
   }
 
   input::placeholder {
-    font-family: "rubikregular";
+    font-family: "rubik";
+    font-weight: 200;
     font-size: 16px;
     color: var(--text-placeholder);
   }
-
+  input {
+    border: 1px solid var(--input-secondary-default-border);
+  }
   label {
     font-family: "rubiksemibold";
-    font-size: 15px;
+    font-size: 18px;
     color: var(--text-label);
+    padding-bottom: var(--spacing-4);
   }
 
   p {
     font-family: "rubik";
     font-size: 20px;
-    color: var(--text-primary);
+    font-weight: 200;
+    color: var(--color-mud-400);
   }
   .citat {
     font-family: "rubikitalic";

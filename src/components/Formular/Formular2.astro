@@ -3,46 +3,75 @@ import Button from "../Button.astro";
 import Menu from "../header/Menu.astro";
 import Stepbar from "./Stepbar.astro";
 import Input from "../Input.astro";
+import FormOverskrift from "./FormOverskrift.astro";
 ---
 
 <Menu variant="form" />
 <Stepbar />
+<FormOverskrift titel="Støt os i kampen mod plastikforurening" text="Vi udleder I dag 8 - 10 millioner ton plastik til havet om året" />
+<div class="inputs">
+  <Input label="Navn" placeholder="Liva" />
+  <Input label="Efternavn" placeholder="Sørensen" />
+  <Input label="Email" placeholder="liva@hej.dk" />
+  <Input label="Telefon" placeholder="24508236" />
+  <Input label="Adresse" placeholder="Hurlumhejvej 84" />
+  <Input label="Postnummer" placeholder="3300" />
+</div>
 <section>
-  <h2>Støt os i kampen mod plastikforurening</h2>
-  <p>Vi udleder I dag 8 - 10 millioner ton plastik til havet om året</p>
+  <label id="checkbox">
+    <input type="checkbox" id="myCheckbox" />
+    Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores privatlivspolitik.
+  </label>
+  <div class="buttons">
+    <Button variant="secondary" title="← Tilbage" link="/formular/step1" />
+    <Button variant="arrow" title="Næste → " link="/formular/step3" />
+  </div>
 </section>
-<section class="grid-1-1">
-  <Input label="Navn" placeholder="">
-    <label>Efternavn</label>
-    <input type="text" class="border" placeholder="Sørensen" />
-    <label>Email</label>
-    <input type="email" class="border" placeholder="liva@hej.dk" />
-    <label>Telefon</label>
-    <input type="tel" class="border" placeholder="24508236" />
-    <label>Adresse</label>
-    <input type="text" class="border" placeholder="Hurlumhejvej 84" />
-    <label>Postnummer</label>
-    <input type="text" class="border" placeholder="3300" />
-  </Input>
-  <section>
-    <p>Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores privatlivspolitik.</p>
-  </section>
-  <Button variant="secondary" title="← Tilbage" />
-  <Button variant="arrow" title="Næste → " />
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    @media (min-width: 900px) {
-      .border {
-        border: 1px solid black;
-        margin: 5px;
-      }
-    }
 
-    @media (max-width: 500px) {
+<style>
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: var(--spacing-64);
+  }
+  #checkbox {
+    font-family: "rubikregular";
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 20px;
+    color: var(--text-placeholder);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-16);
+    max-width: 800px;
+    margin: var(--spacing-64);
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 599px) {
+    .inputs {
+      display: grid;
+      grid-column: 1fr;
+      row-gap: var(--spacing-24);
     }
-  </style>
-</section>
+  }
+  @media (min-width: 1025px) {
+    .inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: var(--spacing-128);
+      row-gap: var(--spacing-16);
+    }
+  }
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: var(--spacing-24);
+    }
+  }
+</style>
