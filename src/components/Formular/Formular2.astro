@@ -8,10 +8,7 @@ import FormOverskrift from "./FormOverskrift.astro";
 
 <Menu variant="form" />
 <Stepbar />
-<FormOverskrift
-  titel="Støt os i kampen mod plastikforurening"
-  text="Vi udleder I dag 8 - 10 millioner ton plastik til havet om året"
-/>
+<FormOverskrift titel="Støt os i kampen mod plastikforurening" text="Vi udleder I dag 8 - 10 millioner ton plastik til havet om året" />
 <div class="inputs">
   <Input label="Navn" placeholder="Liva" />
   <Input label="Efternavn" placeholder="Sørensen" />
@@ -23,8 +20,7 @@ import FormOverskrift from "./FormOverskrift.astro";
 <section>
   <label id="checkbox">
     <input type="checkbox" id="myCheckbox" />
-    Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger
-    til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores privatlivspolitik.
+    Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores privatlivspolitik.
   </label>
   <div class="buttons">
     <Button variant="secondary" title="← Tilbage" link="/formular/step1" />
@@ -61,6 +57,11 @@ import FormOverskrift from "./FormOverskrift.astro";
       display: grid;
       grid-column: 1fr;
       row-gap: var(--spacing-24);
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-inline: var(--spacing-44);
     }
   }
   @media (min-width: 1025px) {

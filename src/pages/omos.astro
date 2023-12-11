@@ -4,14 +4,13 @@ import Om from "../components/Om.astro";
 import Header from "../components/header/Header.astro";
 import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 import Footer from "../components/Footer.astro";
+import FormLanding from "../components/FormLanding.astro";
 ---
 
 <BaseLayout>
-  <Header
-    variant="om_os mobil web"
-    titel="“Vi kæmper for et affaldsfrit samfund, hvor plastik bruges igen og igen”"
-  />
+  <Header variant="om_os mobil web" titel="“Vi kæmper for et affaldsfrit samfund, hvor plastik bruges igen og igen”" />
   <Om />
+  <FormLanding />
   <Nyhedsbrev />
   <Footer />
 </BaseLayout>
