@@ -32,22 +32,47 @@
 </section>
 
 <style>
-  .spalter {
-    display: flex;
-    justify-content: center;
-    gap: 120px;
-    margin-top: var(--spacing-64);
-    margin-left: var(--spacing-128);
-    background-color: var(--color-red-100);
-    padding: --spacing-24;
-    width: 100%;
-  }
+  @media (min-width: 1025px) {
+    .spalter {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: var(--spacing-64);
+      margin-left: var(--spacing-128);
+      background-color: var(--color-red-100);
+      padding: --spacing-24;
+      padding-left: var(--spacing-128);
+      padding-left: var(--spacing-128);
+      width: 100%;
+    }
 
-  .spalte1,
-  .spalte2,
-  .spalte3 {
-    width: 300px;
-    padding: var(--spacing-16);
-    margin: var(--spacing-44);
+    .spalte1,
+    .spalte2,
+    .spalte3 {
+      width: 300px;
+      padding: var(--spacing-16);
+      margin: var(--spacing-44);
+    }
+    h4 {
+      margin-bottom: var(--spacing-8);
+    }
+  }
+  @media (max-width: 500px) {
+    .spalter {
+      display: block;
+      background-color: var(--color-red-100);
+      padding: 60px;
+      align-content: center;
+    }
+
+    .spalte2,
+    .spalte3,
+    .kontakt {
+      display: none;
+    }
+
+    p {
+      text-align: center;
+    }
   }
 </style>
