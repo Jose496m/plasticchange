@@ -31,27 +31,112 @@ import pic3 from "../../assets/images/pic3.png";
 <div class="border spacing">
   <Input placeholder="Andet beløb" />
 </div>
+<div class="buttons">
+  <Button variant="secondary" title="← Tilbage" link="/formular/step1" />
+  <Button variant="arrow" title="Næste → " link="/formular/step3" />
+</div>
 
 <section class="flex baggrund">
-  <Formularcard text="Lise har støttet change plastic med en julegave ">
-    <Image class="pic1" src={pic1} alt="pic1" />
-  </Formularcard>
-  <Formularcard text="Lise har støttet change plastic med en julegave ">
-    <Image class="pic2" src={pic2} alt="pic1" />
-  </Formularcard>
-  <Formularcard text="Lise har støttet change plastic med en julegave ">
-    <Image class="pic3" src={pic3} alt="pic1" />
-  </Formularcard>
+  <div>
+    <Formularcard text="Lise har støttet change plastic med en julegave ">
+      <Image class="pic1" src={pic1} alt="pic1" />
+    </Formularcard>
+    <Formularcard text="Lise har støttet change plastic med en julegave ">
+      <Image class="pic2" src={pic2} alt="pic1" />
+    </Formularcard>
+    <Formularcard text="Lise har støttet change plastic med en julegave ">
+      <Image class="pic3" src={pic3} alt="pic1" />
+    </Formularcard>
+  </div>
 </section>
 <style>
   @media (min-width: 1025px) {
+    .buttons {
+      display: grid;
+      gap: var(--spacing-64);
+    }
     .pic1 {
-      border-radius: var(--spacing-252);
+      border-radius: var(--spacing-16);
+      width: 427px;
+      height: 528px;
+      margin-top: -300px;
+    }
+    .pic2 {
+      border-radius: var(--spacing-16);
+      width: 427px;
+      height: 528px;
+      margin-top: -300px;
+    }
+    .pic3 {
+      border-radius: var(--spacing-16);
+      width: 427px;
+      height: 528px;
+      margin-top: -300px;
     }
     .flex {
       display: flex;
       margin-top: var(--spacing-64);
     }
+    .baggrund {
+      background-color: var(--color-red-100);
+      padding: 200px;
+      margin-top: var(--spacing-252);
+    }
+
+    .ptag {
+      color: var(--color-mud-200);
+    }
+    .inputs {
+      margin-top: var(--spacing-32);
+    }
+    .farve {
+      color: var(--color-red-300);
+    }
+    .flex-container {
+      display: flex;
+      gap: var(--spacing-24);
+
+      margin-top: var(--spacing-32);
+    }
+    h2,
+    p {
+      text-align: center;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .buttons {
+      justify-content: space-between;
+      margin-inline: var(--spacing-64);
+      margin-top: var(--spacing-64);
+      margin-bottom: var(--spacing-64);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .buttons {
+      display: grid;
+      gap: var(--spacing-64);
+    }
+    .pic1 {
+      border-radius: var(--spacing-16);
+      width: 263px;
+      height: 325px;
+    }
+    .pic2 {
+      border-radius: var(--spacing-16);
+      width: 263px;
+      height: 325px;
+    }
+    .pic3 {
+      border-radius: var(--spacing-16);
+      width: 263px;
+      height: 325px;
+    }
+
     .baggrund {
       background-color: var(--color-red-100);
       padding: 200px;
@@ -88,11 +173,5 @@ import pic3 from "../../assets/images/pic3.png";
       margin-top: var(--spacing-64);
       margin-bottom: var(--spacing-64);
     }
-    .spacing {
-      margin-top: var(--spacing-32);
-    }
-  }
-
-  @media (max-width: 500px) {
   }
 </style>
