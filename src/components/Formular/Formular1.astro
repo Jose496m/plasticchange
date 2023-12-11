@@ -1,128 +1,80 @@
 ---
+import { Image } from "astro:assets";
+import pic1 from "../assets/images/pic1.png";
 import Stepbar from "./Stepbar.astro";
+import Menu from "../header/Menu.astro";
+import FormOverskrift from "./FormOverskrift.astro";
+import Button from "../Button.astro";
+import Input from "../Input.astro";
+import Prisbutton from "../Prisbutton.astro";
 ---
 
+<Menu variant="form" />
 <Stepbar />
+<FormOverskrift
+  titel="Giv en donation som en gave"
+  text="Er beløbet  300kr. eller over modtager du et krus som tak"
+/>
+
+<div>
+  <p class="ptag">Vælg dit månedelige beløb <span class="farve">*</span></p>
+</div>
+
+<div class="flex-container">
+  <Prisbutton title="100" />
+  <Prisbutton title="200" />
+  <Prisbutton title="300" color="var(--border-accent)" />
+</div>
+<div class="border spacing">
+  <Input placeholder="Andet beløb" />
+</div>
+
 <section>
-  <h2>Giv en donation som gave</h2>
-  <p>Er beløbet 300kr. eller over modtager du et krus som tak</p>
+  <div class="buttons">
+    <Button variant="secondary" title="← Tilbage" link="../Landingsite" />
+    <Button variant="arrow" title="Næste → " link="/formular/step2" />
+  </div>
 </section>
-<section class="flex-container">
-  <p>50</p>
-  <p>75</p>
-  <p>125</p>
-  <p>300</p>
-</section>
-<section class="border">
-  <p>Andet beløb</p>
-</section>
+<section></section>
 
 <style>
-  @media (min-width: 900px) {
+  @media (min-width: 1025px) {
+    .ptag {
+      color: var(--color-mud-200);
+    }
+    .inputs {
+      margin-top: var(--spacing-32);
+    }
+    .farve {
+      color: var(--color-red-300);
+    }
     .flex-container {
       display: flex;
-      gap: 50px;
-      justify-content: center; /* Centrerer indholdet vandret */
+      gap: var(--spacing-24);
+
+      margin-top: var(--spacing-32);
     }
     h2,
     p {
       text-align: center;
     }
-    .border {
-      border: 1px solid black;
-      width: 10%;
-      margin: 0 auto; /* Centrerer elementet vandret */
-    }
-    .oval-container {
-      position: relative;
-      width: 200px;
-      height: 25px;
-      background-color: #fff;
-      border-radius: 12.5px; /* Halvdelen af højden for at lave en oval */
-      overflow: hidden;
-      border: 1px solid black;
-    }
 
-    .oval-section {
-      position: absolute;
-      height: 100%;
-    }
-
-    .section1 {
-      left: 0%;
-      width: 20%;
-      background-color: #db3463;
-    }
-    .section2 {
-      left: 20%;
-      width: 20%;
-      border: 1px solid black;
-    }
-    .section3 {
-      left: 40%;
-      width: 20%;
-      border: 1px solid black;
-    }
-    .section4 {
-      left: 60%;
-      width: 20%;
-      border: 1px solid black;
-    }
-
-    .section5 {
-      left: 80%;
-      width: 20%;
-      border: 1px solid black;
-    }
     body {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+    .buttons {
+      justify-content: space-between;
+      margin-inline: var(--spacing-64);
+      margin-top: var(--spacing-64);
+      margin-bottom: var(--spacing-64);
+    }
+    .spacing {
+      margin-top: var(--spacing-32);
+    }
   }
 
   @media (max-width: 500px) {
-    .oval-container {
-      position: relative;
-      width: 200px;
-      height: 15px;
-      background-color: #fff;
-      border-radius: 7.5px; /* Halvdelen af højden for at lave en oval */
-      overflow: hidden;
-      border: 1px solid black;
-      margin-left: 75px;
-    }
-
-    .oval-section {
-      position: absolute;
-      height: 100%;
-    }
-
-    .section1 {
-      left: 0%;
-      width: 20%;
-      background-color: #db3463;
-    }
-    .section2 {
-      left: 20%;
-      width: 20%;
-      border: 1px solid black;
-    }
-    .section3 {
-      left: 40%;
-      width: 20%;
-      border: 1px solid black;
-    }
-    .section4 {
-      left: 60%;
-      width: 20%;
-      border: 1px solid black;
-    }
-
-    .section5 {
-      left: 80%;
-      width: 20%;
-      border: 1px solid black;
-    }
   }
 </style>
