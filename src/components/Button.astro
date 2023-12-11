@@ -16,7 +16,7 @@ const { title, link, variant } = Astro.props;
     text-decoration: none;
   }
 
-  .primary {
+  a.primary {
     color: var(--button-primary-default-text);
     background-color: var(--button-primary-defsult-surface);
     border-radius: var(--border-64);
@@ -24,13 +24,15 @@ const { title, link, variant } = Astro.props;
     cursor: pointer;
     position: relative;
     font-size: 22px;
-    box-sizing: border-box;
     text-align: center;
     min-width: 180px;
     min-height: var(--spacing-64);
     transition: transform 0.2s ease;
   }
 
+  a.primary:hover {
+    transform: scale(1.1);
+  }
   .arrow {
     color: var(--button-primary-default-text);
     background-color: var(--button-primary-defsult-surface);
@@ -56,8 +58,8 @@ const { title, link, variant } = Astro.props;
     font-size: 22px;
     min-width: 180px;
     box-sizing: border-box;
-    transition: transform 0.2s ease;
   }
+
   .secondary:hover {
     background-color: var(--button-secondary-hover-surface);
     border: 3px solid var(--button-secondary-default-border);
