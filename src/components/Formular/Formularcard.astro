@@ -1,0 +1,19 @@
+---
+const { text } = Astro.props;
+---
+
+<section>
+  <slot />
+
+  <p class="tekst">{text}</p>
+</section>
+<style>
+  .tekst {
+    background-color: white;
+
+    border-radius: var(--spacing-16);
+
+    margin-left: var(--spacing-32);
+    margin-right: var(--spacing-32);
+  }
+</style>
