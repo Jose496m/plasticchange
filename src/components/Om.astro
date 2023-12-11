@@ -7,7 +7,7 @@ import omos3 from "../assets/images/omos3.png";
 ---
 
 <article>
-  <section class="baggrund">
+  <section class="baggrund2">
     <h2 class="overskrift1">Sådan opstod miljøorganisationen Plastic Change</h2>
     <p class="citat">
       “Plastik definerer vores kultur. Vi må ikke lade den definere vores
@@ -118,6 +118,12 @@ import omos3 from "../assets/images/omos3.png";
     align-items: center;
   }
   @media (min-width: 1025px) {
+    .baggrund2 {
+      background-color: var(--color-red-100);
+      padding: var(--spacing-24);
+      width: 1423px;
+      padding-block: var(--spacing-252);
+    }
     .readmoretext {
       display: none;
     }
@@ -132,7 +138,8 @@ import omos3 from "../assets/images/omos3.png";
     }
     .baggrund {
       background-color: var(--color-red-100);
-      padding: 165px;
+      width: 1423px;
+      padding: var(--spacing-44);
     }
     .omos {
       width: 800px;
@@ -304,6 +311,10 @@ import omos3 from "../assets/images/omos3.png";
   }
 
   @media (max-width: 599px) {
+    .baggrund2 {
+      background-color: var(--color-red-100);
+      padding: 70px;
+    }
     h3 {
       margin-top: var(--spacing-44);
       margin-bottom: var(--spacing-32);
