@@ -25,16 +25,24 @@ import julegave1 from "../assets/images/julegave1.svg";
 
 <style>
   @media (min-width: 900px) {
+    h2 {
+      margin-bottom: var(--spacing-24);
+    }
     .card_container {
       display: flex;
       background-color: var(--color-red-100);
+      width: 100%;
+      padding-left: 200px;
+      padding-right: var(--spacing-128);
       gap: var(--spacing-32);
       margin-left: var(--spacing-128);
       margin-right: var(--spacing-128);
+      background-size: cover;
     }
 
     .vidste_du {
       margin-block: var(--spacing-32);
+      text-align: center;
     }
     .julegave,
     .juletrae {
@@ -56,10 +64,12 @@ import julegave1 from "../assets/images/julegave1.svg";
   }
 
   @media (max-width: 500px) {
-    h2 {
-      margin-bottom: var(--spacing-24);
+    .vidste_du {
+      margin-block: var(--spacing-32);
+      text-align: center;
     }
     .card_container {
+      background-color: var(--color-red-100);
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
