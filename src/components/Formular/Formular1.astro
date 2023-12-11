@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import pic1 from "../assets/images/pic1.png";
 import Stepbar from "./Stepbar.astro";
 import Menu from "../header/Menu.astro";
 import FormOverskrift from "./FormOverskrift.astro";
@@ -11,7 +9,10 @@ import Prisbutton from "../Prisbutton.astro";
 
 <Menu variant="form" />
 <Stepbar />
-<FormOverskrift titel="Giv en donation som en gave" text="Er beløbet  300kr. eller over modtager du et krus som tak" />
+<FormOverskrift
+  titel="Giv en donation som en gave"
+  text="Er beløbet  300kr. eller over modtager du et krus som tak"
+/>
 
 <div>
   <p class="ptag">Vælg dit månedelige beløb <span class="farve">*</span></p>
@@ -33,9 +34,7 @@ import Prisbutton from "../Prisbutton.astro";
   </div>
 </section>
 <section>
-  <div>
-    <Image class="omos" src={pic1} alt="header" />
-  </div>
+  <div></div>
 </section>
 
 <style>
