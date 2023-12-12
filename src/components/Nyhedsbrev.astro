@@ -22,6 +22,7 @@ import Button from "./Button.astro";
       padding: --spacing-24;
       width: 100%;
       padding-block: var(--spacing-32);
+      margin-top: var(--spacing-32);
     }
 
     input {
@@ -57,6 +58,16 @@ import Button from "./Button.astro";
     p {
       text-align: center;
       margin-bottom: var(--spacing-44);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .nyhedsbrev {
+      text-align: center;
+      background-color: var(--color-red-100);
+      width: 100%;
+      margin-bottom: var(--spacing-16);
+      margin-top: var(--spacing-16);
     }
   }
 </style>
