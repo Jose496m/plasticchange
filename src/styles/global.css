@@ -22,6 +22,7 @@ img {
   --color-mud-700: #3b3a3a;
   --color-red-100: #f7e7ea;
   --color-red-300: #ce3150;
+  --color-red-400: #b02a45;
   --color-red-500: #6f303d;
   --color-red-600: #532b33;
   --color-red-700: #3e252a;
@@ -60,6 +61,7 @@ img {
   --button-secondary-default-surface: #ffffff;
   --button-secondary-default-text: var(--color-red-300);
   --button-secondary-hover-surface: var(--color-red-100);
+  --button-secondary-hover-text: var(--color-red-100);
   --infocard-surface: var(--color-white-100);
   --input-primary-active-border: var(--color-red-300);
   --input-primary-active-text: var(--color-mud-700);
@@ -205,12 +207,6 @@ img {
     font-size: 20px;
   }
 
-  input::placeholder {
-    font-family: "rubik";
-    font-weight: 200;
-    font-size: 16px;
-    color: var(--text-placeholder);
-  }
   input {
     border: 1px solid var(--input-secondary-default-border);
   }

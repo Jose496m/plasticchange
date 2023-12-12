@@ -7,7 +7,7 @@ import omos3 from "../assets/images/omos3.png";
 ---
 
 <article>
-  <section class="baggrund">
+  <section class="baggrund2">
     <h2 class="overskrift1">Sådan opstod miljøorganisationen Plastic Change</h2>
     <p class="citat">
       “Plastik definerer vores kultur. Vi må ikke lade den definere vores
@@ -18,6 +18,9 @@ import omos3 from "../assets/images/omos3.png";
     <div class="align">
       <Image class="omos" src={omos} alt="header" />
     </div>
+  </div>
+  <div>
+    <h3>Plastic Change blev grundlagt i april 2014.</h3>
   </div>
   <p class="text1">
     Plastic Change blev grundlagt i april 2014. Initiativet til at stifte
@@ -118,6 +121,12 @@ import omos3 from "../assets/images/omos3.png";
     align-items: center;
   }
   @media (min-width: 1025px) {
+    .baggrund2 {
+      background-color: var(--color-red-100);
+      padding: var(--spacing-24);
+      width: 1423px;
+      padding-block: var(--spacing-252);
+    }
     .readmoretext {
       display: none;
     }
@@ -132,12 +141,13 @@ import omos3 from "../assets/images/omos3.png";
     }
     .baggrund {
       background-color: var(--color-red-100);
-      padding: 200px;
+      width: 1423px;
+      padding: var(--spacing-44);
     }
     .omos {
       width: 800px;
       height: auto;
-      margin-top: -200px;
+      margin-top: -175px;
       border-radius: var(--spacing-16);
     }
 
@@ -146,22 +156,23 @@ import omos3 from "../assets/images/omos3.png";
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
-      margin-top: -160px;
+      margin-top: -130px;
     }
     .citat {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
-      margin-top: -50px;
+      margin-top: -30px;
     }
 
     .text1 {
       width: 700px;
-      margin-left: 500px;
+      margin-left: 370px;
+
       line-height: 25px;
-      margin-bottom: 25px;
-      margin-top: 25px;
+      margin-bottom: var(--spacing-44);
+      margin-top: var(--spacing-44);
     }
     h3 {
       margin-bottom: var(--spacing-32);
@@ -193,20 +204,19 @@ import omos3 from "../assets/images/omos3.png";
     .omos1 {
       border-radius: var(--spacing-16); /* Juster dette efter behov */
       margin-left: 80px;
-
+      margin-top: -70px;
       width: 30%;
-      margin-top: var(--spacing-32);
     }
     .omos2 {
       border-radius: var(--spacing-16); /* Juster dette efter behov */
       margin-left: 80px;
-      margin-top: var(--spacing-32);
+      margin-top: -70px;
       width: 60%;
     }
     .omos3 {
       border-radius: var(--spacing-16); /* Juster dette efter behov */
       margin-left: 80px;
-      margin-top: var(--spacing-32);
+      margin-top: -70px;
       width: 60%;
     }
     .placering1 {
@@ -305,6 +315,10 @@ import omos3 from "../assets/images/omos3.png";
   }
 
   @media (max-width: 599px) {
+    .baggrund2 {
+      background-color: var(--color-red-100);
+      padding: 70px;
+    }
     h3 {
       margin-top: var(--spacing-44);
       margin-bottom: var(--spacing-32);

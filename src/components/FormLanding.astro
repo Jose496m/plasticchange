@@ -1,9 +1,20 @@
 ---
-import Button from "../Button.astro";
-import Prisbutton from "../Prisbutton.astro";
+import Button from "./Button.astro";
+import Prisbutton from "./Prisbutton.astro";
 ---
 
+<h2>Støt os i kampen mod plastikforurening</h2>
 <section>
+  <div class="radiobuttons">
+    <div class="form-control">
+      <input type="radio" name="radio" />
+      <p>Månedligt</p>
+    </div>
+    <div class="form-control">
+      <input type="radio" name="radio" />
+      <p>Engangsbeløb</p>
+    </div>
+  </div>
   <div class="pris">
     <Prisbutton title="100" />
     <Prisbutton title="200" />
@@ -13,17 +24,68 @@ import Prisbutton from "../Prisbutton.astro";
   <Button variant="primary" title="STØT NU" link="/formular/step1" />
 </section>
 <style>
+  h2 {
+    text-align: center;
+    margin-top: var(--spacing-64);
+  }
+  p {
+    color: var(--text-primary);
+  }
+  input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+  }
+  input[type="radio"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: var(--spacing-24);
+    height: var(--spacing-24);
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+  input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--surface-brand);
+  }
+
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+
+  .form-control {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-16);
+  }
   @media (max-width: 599px) {
     section {
       display: flex;
       flex-direction: column;
       gap: var(--spacing-24);
       background-color: rgba(255, 255, 255, 0.72);
-      padding-block: var(--spacing-44);
+      padding-block: var(--spacing-24);
       align-items: center;
       justify-content: center;
     }
-    input {
+
+    input[type="text"] {
       color: var(----text-primary);
       padding: var(--spacing-16) var(--spacing-24);
       border-radius: var(--border-64);
@@ -47,17 +109,16 @@ import Prisbutton from "../Prisbutton.astro";
       flex-direction: column;
       gap: var(--spacing-44);
       background-color: rgba(255, 255, 255, 0.72);
-      padding-block: var(--spacing-44);
+      padding-block: var(--spacing-24);
       align-items: center;
       justify-content: center;
     }
-    input {
+    input[type="text"] {
       padding: var(--spacing-16);
       border-radius: var(--border-64);
       text-align: center;
       border: 2px solid var(--input-primary-default-border);
       max-width: 165px;
-      background-color: transparent;
     }
     input::placeholder {
       color: var(--color-mud-700);
@@ -75,8 +136,8 @@ import Prisbutton from "../Prisbutton.astro";
       align-items: center;
       justify-content: center;
     }
-    input {
-      min-height: var(--spacing-64);
+    input[type="text"] {
+      min-height: var(--spacing-24);
       border-radius: var(--border-64);
       text-align: center;
       border: 2px solid var(--input-primary-default-border);
@@ -87,6 +148,17 @@ import Prisbutton from "../Prisbutton.astro";
       color: var(--color-mud-700);
       font-size: 22px;
       font-family: "rubiksemibold";
+    }
+
+    .radio {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: var(--spacing-16);
+    }
+    .radiobuttons {
+      display: block;
+      gap: var(--spacing-16);
     }
   }
   .pris {

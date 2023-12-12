@@ -7,6 +7,12 @@ const { label, placeholder } = Astro.props;
   <input type="text" class="border" placeholder={placeholder} />
 </div>
 <style>
+  input::placeholder {
+    font-family: "rubik";
+    font-weight: 200;
+    font-size: 16px;
+    color: var(--text-placeholder);
+  }
   span {
     color: var(--surface-brand);
   }

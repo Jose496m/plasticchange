@@ -16,7 +16,7 @@ const { title, link, variant } = Astro.props;
     text-decoration: none;
   }
 
-  .primary {
+  a.primary {
     color: var(--button-primary-default-text);
     background-color: var(--button-primary-defsult-surface);
     border-radius: var(--border-64);
@@ -24,15 +24,19 @@ const { title, link, variant } = Astro.props;
     cursor: pointer;
     position: relative;
     font-size: 22px;
-    box-sizing: border-box;
     text-align: center;
     min-width: 180px;
     min-height: var(--spacing-64);
+    transition: transform 0.2s ease;
   }
 
+  a.primary:hover {
+    transform: scale(1.1);
+  }
   .arrow {
     color: var(--button-primary-default-text);
     background-color: var(--button-primary-defsult-surface);
+    border: 3px solid var(--button-secondary-default-border);
     border-radius: var(--border-64);
     padding: var(--spacing-16) var(--spacing-32);
     cursor: pointer;
@@ -56,12 +60,22 @@ const { title, link, variant } = Astro.props;
     box-sizing: border-box;
   }
 
+  .secondary:hover {
+    background-color: var(--button-secondary-hover-surface);
+    border: 3px solid var(--button-secondary-default-border);
+    color: var(--button-secondary-default-text);
+  }
+  .arrow:hover {
+    background-color: var(--color-red-400);
+    border: 3px solid var(--color-red-400);
+  }
+
   @media (max-width: 599px) {
     .primary {
       color: var(--button-primary-default-text);
       background-color: var(--button-primary-defsult-surface);
       border-radius: var(--border-64);
-      padding: var(--spacing-16) var(--spacing-24);
+      padding: var(--spacing-16) 40px;
       cursor: pointer;
       position: relative;
       font-size: 16px;

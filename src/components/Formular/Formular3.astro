@@ -15,12 +15,12 @@ import Menu from "../header/Menu.astro";
 <FormOverskrift titel="Støt os i kampen mod plastikforurening" text="Det er kun 5 % I overfladen de resterende 95% ligger langt nede I vandsøjlen" />
 <section>
   <label>Vælg betalingsform <span>*</span></label>
-  <div class="radiobutton">
+  <div class="form-control">
     <input type="radio" name="radio" />
     <h4 class="mobilepay">MobilePay</h4>
     <Image class="logo" src={mobilepay} alt="mobilepay logo" />
   </div>
-  <div class="radiobutton">
+  <div class="form-control">
     <input type="radio" name="radio" />
     <h4>Betalingskort</h4>
     <div class="kort_logo">
@@ -51,6 +51,49 @@ import Menu from "../header/Menu.astro";
     margin-block: var(--spacing-128);
     gap: var(--spacing-128);
   }
+  input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+  }
+  input[type="radio"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: var(--spacing-24);
+    height: var(--spacing-24);
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+  input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--surface-brand);
+  }
+
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+
+  .form-control {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-16);
+  }
   .radiobutton {
     display: flex;
     gap: var(--spacing-16);
@@ -75,8 +118,8 @@ import Menu from "../header/Menu.astro";
     .buttons {
       display: flex;
       justify-content: space-between;
-      margin-inline: var(--spacing-64);
-      margin-block: var(--spacing-44);
+      margin-inline: var(--spacing-44);
+      margin-block: var(--spacing-64);
       gap: var(--spacing-44);
     }
   }

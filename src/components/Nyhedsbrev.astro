@@ -10,7 +10,7 @@ import Button from "./Button.astro";
     </div>
     <div class="tekst_og_knap">
       <li><input type="text" placeholder="hej@email.dk" /></li>
-      <li><Button link="/" title="tilmeld" /></li>
+      <li><Button variant="primary" link="/" title="Tilmeld" /></li>
     </div>
   </ul>
 </section>
@@ -19,23 +19,25 @@ import Button from "./Button.astro";
   @media (min-width: 1025px) {
     .nyhedsbrev {
       background-color: var(--color-red-100);
-      padding: --spacing-24;
+      padding: var(--spacing-24);
       width: 100%;
       padding-block: var(--spacing-32);
+
+      margin-top: var(--spacing-64);
       margin-top: var(--spacing-32);
     }
 
     input {
       padding: var(--spacing-16);
-      margin-bottom: --spacing-32;
+      margin-bottom: var(--spacing-32);
       border-radius: var(--border-16);
       width: 450px;
     }
     input::placeholder {
-      font-family: "rubiksemibold";
+      font-family: "rubik";
+      font-weight: 200;
       font-size: 16px;
       color: var(--text-placeholder);
-      padding-top: var(--spacing-16);
     }
     .tekst_og_knap {
       box-sizing: border-box;
@@ -58,16 +60,6 @@ import Button from "./Button.astro";
     p {
       text-align: center;
       margin-bottom: var(--spacing-44);
-    }
-  }
-
-  @media (max-width: 500px) {
-    .nyhedsbrev {
-      text-align: center;
-      background-color: var(--color-red-100);
-      width: 100%;
-      margin-bottom: var(--spacing-16);
-      margin-top: var(--spacing-16);
     }
   }
 </style>
