@@ -9,28 +9,16 @@ import julegave1 from "../assets/images/julegave1.svg";
 
 <h2 class="vidste_du">Vidste du?</h2>
 <section class="card_container">
-  <VidsteduCard
-    class="placering1"
-    text="Danskere bruger 825 ton gavepapir hver evig eneste jul"
-  >
+  <VidsteduCard class="placering1" text="Danskere bruger 825 ton gavepapir hver evig eneste jul">
     <Image class="kolbe" src={kolbe} alt="kolbe" />
   </VidsteduCard>
-  <VidsteduCard
-    class="placering2"
-    text="Julegaver købt i en netbutik udenfor EU kan nemlig indeholde skadelige kemikalier"
-  >
-    <Image class="julegave" src={julegave1} alt="julehave" />
+  <VidsteduCard class="placering2" text="Julegaver købt i en netbutik udenfor EU kan nemlig indeholde skadelige kemikalier">
+    <Image class="img" src={julegave1} alt="julehave" />
   </VidsteduCard>
-  <VidsteduCard
-    class="placering3"
-    text="Et økologisk, ikke-gødet rødgran-juletræ, der er produceret lokalt, er det bedste"
-  >
-    <Image class="juletrae" src={juletrae4} alt="juletrae" />
+  <VidsteduCard class="placering3" text="Et økologisk, ikke-gødet rødgran-juletræ, der er produceret lokalt, er det bedste">
+    <Image class="img" src={juletrae4} alt="juletrae" />
   </VidsteduCard>
-  <VidsteduCard
-    class="placering4"
-    text="95% af alle julesweatre indeholder plastik, og 40% bruges kun én gang"
-  >
+  <VidsteduCard class="placering4" text="95% af alle julesweatre indeholder plastik, og 40% bruges kun én gang">
     <Image class="julesweater" src={julesweater1} alt="julesweater" />
   </VidsteduCard>
 </section>
@@ -44,23 +32,14 @@ import julegave1 from "../assets/images/julegave1.svg";
       display: flex;
       background-color: var(--color-red-100);
       width: 100%;
-      padding-left: 200px;
-      padding-right: var(--spacing-128);
       gap: var(--spacing-32);
-      margin-left: var(--spacing-128);
-      margin-right: var(--spacing-128);
+      justify-content: center;
       background-size: cover;
     }
 
     .vidste_du {
       margin-block: var(--spacing-32);
       text-align: center;
-    }
-    .julegave,
-    .juletrae {
-      width: 100px;
-      margin-top: var(--spacing-24);
-      margin-bottom: var(--spacing-64);
     }
 
     .kolbe {
@@ -86,6 +65,8 @@ import julegave1 from "../assets/images/julegave1.svg";
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       gap: var(--spacing-16);
+      justify-content: center;
+      align-items: center;
     }
 
     .placering1 {
@@ -107,23 +88,20 @@ import julegave1 from "../assets/images/julegave1.svg";
       grid-row: 2;
       grid-column: 2;
     }
-
-    .julegave,
-    .juletrae {
-      width: 100px;
-      margin-top: var(--spacing-24);
-      margin-bottom: var(--spacing-64);
+    .img {
+      width: 35%;
+      display: flex;
+      padding-top: var(--spacing-16);
     }
 
     .kolbe {
-      width: 70px;
-      margin-top: var(--spacing-24);
-      margin-bottom: var(--spacing-64);
+      width: 30%;
+      display: flex;
     }
     .julesweater {
-      width: 140px;
-      margin-top: var(--spacing-24);
-      margin-bottom: var(--spacing-64);
+      width: 65%;
+      display: flex;
+      padding-block: var(--spacing-16);
     }
   }
 </style>

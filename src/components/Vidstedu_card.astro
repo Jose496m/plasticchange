@@ -4,9 +4,8 @@ const { text } = Astro.props;
 
 <section>
   <slot />
-  <p class="tekst">{text}</p>
+  <p>{text}</p>
 </section>
-
 <style>
   @media (min-width: 900px) {
     section {
@@ -19,33 +18,33 @@ const { text } = Astro.props;
       text-align: center;
       border-style: solid;
       border-radius: var(--spacing-16);
-      border-color: var(--color-green-100);
+      border: 3px solid var(--color-green-100);
       padding-top: var(--spacing-24);
       gap: var(--spacing-64);
-    }
-
-    .tekst {
-      width: 270px;
-      padding: var(--spacing-8, 8px) var(--spacing-16, 16px);
+      justify-content: center;
+      align-items: center;
     }
   }
 
   @media (max-width: 500px) {
     section {
-      display: inline-flex;
+      display: flex;
+      flex-direction: column;
       width: 172px;
       height: 222px;
       background-color: var(--color-white-100);
       border-style: solid;
       border-radius: var(--spacing-16);
-      border-color: var(--color-green-100);
-      padding-top: var(--spacing-24);
+      border: 3px solid var(--color-green-100);
+      padding-top: var(--spacing-8);
       text-align: center;
+      justify-content: center;
+      align-items: center;
+      gap: var(--spacing-16);
     }
-
-    .tekst {
-      width: 270px;
-      padding: var(--spacing-8, 8px) var(--spacing-16, 16px);
+    p {
+      padding-inline: var(--spacing-4);
+      padding-block: var(--spacing-4);
     }
   }
 </style>
