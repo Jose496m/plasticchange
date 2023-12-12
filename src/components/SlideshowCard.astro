@@ -4,17 +4,25 @@ const { text } = Astro.props;
 
 <section>
   <slot />
-
   <p class="tekst">{text}</p>
 </section>
 
 <style>
-  .tekst {
-    background-color: white;
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-white-100);
+    margin-bottom: var(--spacing-64);
+    text-align: center;
     border-radius: var(--spacing-16);
-    padding: 38px;
-    margin: -10px;
-    margin-left: var(--spacing-32);
-    margin-right: var(--spacing-32);
+    gap: var(--spacing-24);
+    justify-content: center;
+    align-items: center;
+    max-width: 20%;
+    padding-bottom: var(--spacing-16);
+  }
+  p {
+    padding-inline: var(--spacing-8);
   }
 </style>
