@@ -3,7 +3,7 @@ import Stepbar from "./Stepbar.astro";
 import Menu from "../header/Menu.astro";
 import FormOverskrift from "./FormOverskrift.astro";
 import Button from "../Button.astro";
-import Input from "../Input.astro";
+import InputForm1 from "../InputForm1.astro";
 import Prisbutton from "../Prisbutton.astro";
 import Formularcard from "../Formular/Formularcard.astro";
 import { Image } from "astro:assets";
@@ -20,7 +20,7 @@ import pic3 from "../../assets/images/pic3.png";
 />
 
 <div>
-  <p class="ptag">Vælg dit månedelige beløb <span class="farve">*</span></p>
+  <label> Vælg dit månedelige beløb <span class="farve">*</span></label>
 </div>
 
 <div class="flex-container">
@@ -29,7 +29,7 @@ import pic3 from "../../assets/images/pic3.png";
   <Prisbutton title="300" color="var(--border-accent)" />
 </div>
 <div class="border spacing">
-  <Input placeholder="Andet beløb" />
+  <InputForm1 placeholder="Andet beløb" />
 </div>
 <div class="buttons">
   <Button variant="secondary" title="← Tilbage" link="/formular/step1" />
@@ -37,21 +37,24 @@ import pic3 from "../../assets/images/pic3.png";
 </div>
 
 <section class="flex baggrund">
-  <Formularcard text="Lise har støttet change plastic med en julegave ">
+  <Formularcard text="Karsten har støttet change plastic med en julegave ">
     <Image class="pic1" src={pic1} alt="pic1" />
   </Formularcard>
   <Formularcard text="Lise har støttet change plastic med en julegave ">
     <Image class="pic2" src={pic2} alt="pic1" />
   </Formularcard>
-  <Formularcard text="Lise har støttet change plastic med en julegave ">
+  <Formularcard text="Allan har støttet change plastic med en julegave ">
     <Image class="pic3" src={pic3} alt="pic1" />
   </Formularcard>
 </section>
 <style>
   @media (min-width: 1025px) {
     .buttons {
-      display: grid;
-      gap: var(--spacing-64);
+      display: flex;
+      justify-content: space-between;
+      margin-inline: var(--spacing-64);
+      margin-block: var(--spacing-128);
+      gap: var(--spacing-128);
     }
     .pic1 {
       border-radius: var(--spacing-16);
@@ -81,9 +84,6 @@ import pic3 from "../../assets/images/pic3.png";
       margin-top: var(--spacing-252);
     }
 
-    .ptag {
-      color: var(--color-mud-200);
-    }
     .inputs {
       margin-top: var(--spacing-32);
     }
@@ -106,11 +106,9 @@ import pic3 from "../../assets/images/pic3.png";
       flex-direction: column;
       align-items: center;
     }
-    .buttons {
-      justify-content: space-between;
-      margin-inline: var(--spacing-64);
-      margin-top: var(--spacing-64);
-      margin-bottom: var(--spacing-64);
+
+    .spacing {
+      margin-top: var(--spacing-32);
     }
   }
 

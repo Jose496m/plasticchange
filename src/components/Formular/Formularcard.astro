@@ -9,13 +9,15 @@ const { text } = Astro.props;
 </section>
 <style>
   .tekst {
-    background-color: white;
+    display: flex;
 
+    align-items: center;
+    background-color: var(--color-white-100);
+
+    margin-bottom: var(--spacing-64);
+    text-align: center;
     border-radius: var(--spacing-16);
-
-    padding: 38px;
-    margin: -10px;
-    margin-left: var(--spacing-32);
-    margin-right: var(--spacing-32);
+    padding-top: var(--spacing-24);
+    gap: var(--spacing-64);
   }
 </style>

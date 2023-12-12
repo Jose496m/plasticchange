@@ -1,0 +1,60 @@
+---
+const { label, placeholder } = Astro.props;
+---
+
+<div>
+  <label>{label}</label>
+  <input type="text" class="border" placeholder={placeholder} />
+</div>
+<style>
+  input::placeholder {
+    font-family: "rubik";
+    font-weight: 200;
+    font-size: 16px;
+    color: var(--text-placeholder);
+  }
+  span {
+    color: var(--surface-brand);
+  }
+  @media (max-width: 599px) {
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-inline: var(--spacing-32);
+    }
+
+    input {
+      min-width: 325px;
+      padding-block: var(--spacing-4);
+      padding-left: var(--spacing-4);
+      border-radius: var(--border-4);
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 1024px) {
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-inline: var(--spacing-24);
+    }
+
+    input {
+      min-width: 280px;
+      padding-block: var(--spacing-4);
+      padding-left: var(--spacing-8);
+      border-radius: var(--border-4);
+    }
+  }
+  @media (min-width: 1025px) {
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+    input {
+      min-width: 325px;
+      padding-block: var(--spacing-4);
+      padding-left: var(--spacing-8);
+      border-radius: var(--border-4);
+    }
+  }
+</style>
