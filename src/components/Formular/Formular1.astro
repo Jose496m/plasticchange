@@ -9,18 +9,16 @@ import Formularcard from "../Formular/Formularcard.astro";
 import { Image } from "astro:assets";
 import pic1 from "../../assets/images/støttebeviskop.png";
 import pic2 from "../../assets/images/støttebevis.png";
-
-import SlideshowCard from "../SlideshowCard.astro";
 ---
 
 <Menu variant="form" />
 <Stepbar />
-<FormOverskrift titel="Giv en donation som en gave" />
+<FormOverskrift titel="Giv støtte som en julegave." />
 <section>
   <div class="kort flex">
     <Formularcard
       class="card"
-      text=" Unikt Plastic Change emaljekrus - samt et print selv støttebevis.(Ramme medfølger ikke) 450kr. "
+      text=" Unikt emaljekrus fra Plastic Change - inklusive et print-selv støttebevis. (Bemærk: Ramme medfølger ikke.) "
     >
       <Image class="støttebeviskop" src={pic1} alt="pic1" />
     </Formularcard>
@@ -34,7 +32,12 @@ import SlideshowCard from "../SlideshowCard.astro";
   </div>
 </section>
 <div>
-  <label> Vælg dit engangs beløb <span class="farve">*</span></label>
+  <p class="ptag">
+    Ønsker du at bidrage med en anden donation? <br />Gør det nemt herunder
+  </p>
+  <label class="labeltag">
+    Vælg dit engangs beløb <span class="farve">*</span></label
+  >
 </div>
 
 <div class="border spacing">
@@ -53,9 +56,89 @@ import SlideshowCard from "../SlideshowCard.astro";
       flex-direction: row;
       justify-content: center;
     }
-    .kort {
-      border-radius: var(--spacing-16);
+    .labeltag {
+      margin-left: var(--spacing-64);
     }
+    .ptag {
+      margin-bottom: var(--spacing-44);
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-inline: var(--spacing-64);
+      margin-block: var(--spacing-128);
+      gap: var(--spacing-128);
+    }
+
+    .baggrund {
+      background-color: var(--color-red-100);
+      padding: 200px;
+      margin-top: var(--spacing-252);
+    }
+
+    .inputs {
+      margin-top: var(--spacing-32);
+    }
+    .farve {
+      color: var(--color-red-300);
+    }
+    .flex-container {
+      display: flex;
+      gap: var(--spacing-24);
+
+      margin-top: var(--spacing-32);
+    }
+    h2,
+    p {
+      text-align: center;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .spacing {
+      margin-top: var(--spacing-32);
+    }
+    .støttebeviskop {
+      border-top-right-radius: var(--spacing-16);
+      border-top-left-radius: var(--spacing-16);
+      opacity: 0.5;
+    }
+
+    .støttebeviskop:hover {
+      transform: scale(1);
+      opacity: 1;
+    }
+    .støttebevis {
+      border-top-right-radius: var(--spacing-16);
+      border-top-left-radius: var(--spacing-16);
+      opacity: 0.5;
+    }
+
+    .støttebevis:hover {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .flex {
+      display: flex;
+      gap: 10%;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .labeltag {
+      margin-left: var(--spacing-64);
+    }
+    .ptag {
+      margin-bottom: var(--spacing-44);
+    }
+
     .buttons {
       display: flex;
       justify-content: space-between;
@@ -100,6 +183,7 @@ import SlideshowCard from "../SlideshowCard.astro";
       border-top-right-radius: var(--spacing-16);
       border-top-left-radius: var(--spacing-16);
     }
+
     .støttebevis {
       border-top-right-radius: var(--spacing-16);
       border-top-left-radius: var(--spacing-16);
@@ -107,9 +191,17 @@ import SlideshowCard from "../SlideshowCard.astro";
   }
 
   @media (max-width: 500px) {
+    .flex {
+      display: flex;
+      gap: 5%;
+      flex-direction: row;
+      justify-content: center;
+    }
     .buttons {
-      display: grid;
-      gap: var(--spacing-64);
+      display: flex;
+      justify-content: space-between;
+      margin-inline: var(--spacing-44);
+      gap: var(--spacing-44);
     }
     .pic1 {
       border-radius: var(--spacing-16);
@@ -161,6 +253,20 @@ import SlideshowCard from "../SlideshowCard.astro";
       margin-inline: var(--spacing-64);
       margin-top: var(--spacing-64);
       margin-bottom: var(--spacing-64);
+    }
+    .støttebeviskop {
+      border-top-right-radius: var(--spacing-16);
+      border-top-left-radius: var(--spacing-16);
+    }
+    .støttebevis {
+      border-top-right-radius: var(--spacing-16);
+      border-top-left-radius: var(--spacing-16);
+    }
+    .labeltag {
+      margin-left: var(--spacing-64);
+    }
+    .ptag {
+      margin-bottom: var(--spacing-44);
     }
   }
 </style>
