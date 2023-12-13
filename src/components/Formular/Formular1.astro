@@ -34,7 +34,12 @@ import SlideshowCard from "../SlideshowCard.astro";
   </div>
 </section>
 <div>
-  <label> Vælg dit engangs beløb <span class="farve">*</span></label>
+  <p class="ptag">
+    Ønsker du at bidrage med en anden donation? <br />Gør det nemt herunder
+  </p>
+  <label class="labeltag">
+    Vælg dit engangs beløb <span class="farve">*</span></label
+  >
 </div>
 
 <div class="border spacing">
@@ -52,6 +57,12 @@ import SlideshowCard from "../SlideshowCard.astro";
       gap: 10%;
       flex-direction: row;
       justify-content: center;
+    }
+    .labeltag {
+      margin-left: var(--spacing-64);
+    }
+    .ptag {
+      margin-bottom: var(--spacing-44);
     }
 
     .buttons {
