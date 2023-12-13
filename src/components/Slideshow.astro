@@ -6,70 +6,33 @@ import pic2 from "../assets/images/pic2.png";
 ---
 
 <div class="carousel-container">
-  <div class="carousel-wrapper">
-    <div class="carousel-slide">
-      <SlideshowCard class="card" text="Karsten har støttet change plastic med en julegave ">
-        <Image class="pic1" src={pic1} alt="pic1" />
-      </SlideshowCard>
-    </div>
-    <div class="carousel-slide">
-      <SlideshowCard class="card" text="Karsten har støttet change plastic med en julegave ">
-        <Image class="pic2" src={pic2} alt="pic1" />
-      </SlideshowCard>
-    </div>
-    <div class="carousel-slide"></div>
-    <SlideshowCard class="card" text="Karsten har støttet change plastic med en julegave ">
-      <Image class="pic1" src={pic1} alt="pic1" />
-    </SlideshowCard>
-  </div>
+  <SlideshowCard class="card" text="Karsten har støttet change plastic med en julegave ">
+    <Image class="pic1" src={pic1} alt="pic1" />
+  </SlideshowCard>
+
+  <SlideshowCard class="card" text="Karsten har støttet change plastic med en julegave ">
+    <Image class="pic2" src={pic2} alt="pic1" />
+  </SlideshowCard>
+
+  <SlideshowCard class="card" text="Karsten har støttet change plastic med en julegave ">
+    <Image class="pic1" src={pic1} alt="pic1" />
+  </SlideshowCard>
 </div>
 
 <style>
   .carousel-container {
-    overflow: hidden;
     width: 100%;
     display: flex;
-    gap: var(--spacing-16);
-  }
-
-  .carousel-wrapper {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .carousel-slide {
-    flex: 0 0 100%;
-    max-width: 100%;
-    height: auto;
+    flex-direction: row;
+    gap: var(--spacing-24);
+    background-color: var(--color-red-100);
+    justify-content: center;
   }
 
   .pic1,
   .pic2 {
     border-top-right-radius: var(--spacing-16);
     border-top-left-radius: var(--spacing-16);
+    height: 300px;
   }
 </style>
-
-<!-- <style>
-  .carousel-container {
-    overflow: hidden;
-    width: 100%;
-    display: flex;
-    gap: var(--spacing-16);
-  }
-
-  .carousel-wrapper {
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .carousel-slide {
-    flex: 0 0 100%;
-    max-width: 100%;
-    height: auto;
-  }
-  .pic1,
-  .pic2 {
-    border-top-right-radius: var(--spacing-16);
-    border-top-left-radius: var(--spacing-16);
-  }
-</style> -->
