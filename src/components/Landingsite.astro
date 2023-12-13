@@ -33,9 +33,6 @@ import julegave1 from "../assets/images/julegave1.svg";
   </section>
   <div>
     <Image class="julekugler" src={julekugler} alt="julekugler" />
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-
-    <dotlottie-player src="https://lottie.host/13e52b99-5ec4-48bd-905a-c5c9147732b3/Wxw4wrfH1o.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
   </div>
 </article>
 
@@ -90,51 +87,63 @@ import julegave1 from "../assets/images/julegave1.svg";
   }
 
   @media (max-width: 599px) {
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 20px;
-    }
-
-    h2 {
+    article {
+      display: flex;
       text-align: center;
+      padding-inline: var(--spacing-24);
     }
 
-    .alt_tekst {
-      margin-top: var(--spacing-44);
+    .baggrund {
+      background-color: #f5eaec;
     }
 
+    /* h3 {
+      text-align: center;
+    } */
     .tekst {
-      display: none;
-    }
-    h2 {
-      text-align: center;
-      margin-top: var(--spacing-64);
+      text-align: left;
     }
 
     h4 {
       text-align: left;
-      width: 200px;
       margin-bottom: var(--spacing-8);
-      margin-top: var(--spacing-24);
     }
 
     .stoette {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: var(--spacing-16);
-      margin-bottom: var(--spacing-128);
+      margin-bottom: var(--spacing-64);
     }
     .julekugler {
-      width: 100px;
-      float: left;
+      width: 60%;
       margin-top: var(--spacing-24);
-      margin-right: var(--spacing-64);
     }
-
     a {
       color: var(--text-link);
+      text-align: left;
     }
+    .tekst {
+      display: none;
+    }
+    h4 {
+      text-align: left;
+      margin-bottom: var(--spacing-8);
+      margin-top: var(--spacing-24);
+    }
+  }
+
+  .tekst {
+    display: none;
+  }
+  h2 {
+    text-align: center;
+    margin-top: var(--spacing-64);
+  }
+
+  h4 {
+    text-align: left;
+    margin-bottom: var(--spacing-8);
+    margin-top: var(--spacing-24);
   }
 </style>
