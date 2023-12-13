@@ -4,10 +4,10 @@ const { text } = Astro.props;
 
 <section>
   <slot />
-  <p>{text}</p>
+  <h4>{text}</h4>
 </section>
 <style>
-  @media (min-width: 900px) {
+  @media (min-width: 1025px) {
     section {
       display: flex;
       flex-direction: column;
@@ -22,16 +22,39 @@ const { text } = Astro.props;
       padding-top: var(--spacing-24);
       gap: var(--spacing-64);
       justify-content: center;
+      justify-content: flex-end;
       align-items: center;
+      padding-bottom: var(--spacing-24);
+      padding-inline: var(--spacing-8);
+      max-width: 300px;
     }
   }
-
-  @media (max-width: 500px) {
+  @media (min-width: 600px) and (max-width: 1024px) {
     section {
       display: flex;
       flex-direction: column;
-      width: 172px;
-      height: 222px;
+      height: 350px;
+      background-color: var(--color-white-100);
+      border-style: solid;
+      border-radius: var(--spacing-16);
+      border: 3px solid var(--color-green-100);
+      padding-top: var(--spacing-8);
+      text-align: center;
+      justify-content: center;
+      justify-content: space-around;
+      padding-bottom: var(--spacing-24);
+      align-items: center;
+      gap: var(--spacing-16);
+    }
+    h4 {
+      padding-inline: var(--spacing-16);
+    }
+  }
+  @media (max-width: 599px) {
+    section {
+      display: flex;
+      flex-direction: column;
+      height: 250px;
       background-color: var(--color-white-100);
       border-style: solid;
       border-radius: var(--spacing-16);
@@ -42,9 +65,9 @@ const { text } = Astro.props;
       align-items: center;
       gap: var(--spacing-16);
     }
-    p {
+    h4 {
       padding-inline: var(--spacing-4);
-      padding-block: var(--spacing-4);
+      padding-block: var(--spacing-16);
     }
   }
 </style>
