@@ -7,27 +7,36 @@ import InputForm1 from "../InputForm1.astro";
 import Prisbutton from "../Prisbutton.astro";
 import Formularcard from "../Formular/Formularcard.astro";
 import { Image } from "astro:assets";
-import pic1 from "../../assets/images/pic1.png";
-import pic2 from "../../assets/images/pic2.png";
-import pic3 from "../../assets/images/pic3.png";
+import pic1 from "../../assets/images/støttebeviskop.png";
+import pic2 from "../../assets/images/støttebevis.png";
+
+import SlideshowCard from "../SlideshowCard.astro";
 ---
 
 <Menu variant="form" />
 <Stepbar />
-<FormOverskrift
-  titel="Giv en donation som en gave"
-  text="Er beløbet  300kr. eller over modtager du et krus som tak"
-/>
+<FormOverskrift titel="Giv en donation som en gave" />
+<section>
+  <div class="kort flex">
+    <Formularcard
+      class="card"
+      text=" Unikt Plastic Change emaljekrus - samt et print selv støttebevis.(Ramme medfølger ikke) 450kr. "
+    >
+      <Image class="støttebeviskop" src={pic1} alt="pic1" />
+    </Formularcard>
 
+    <Formularcard
+      class="card"
+      text=" Unikt Plastic Change emaljekrus - samt et print selv støttebevis.(Ramme medfølger ikke) 450kr. "
+    >
+      <Image class="støttebevis" src={pic2} alt="pic1" />
+    </Formularcard>
+  </div>
+</section>
 <div>
-  <label> Vælg dit månedelige beløb <span class="farve">*</span></label>
+  <label> Vælg dit engangs beløb <span class="farve">*</span></label>
 </div>
 
-<div class="flex-container">
-  <Prisbutton title="100" />
-  <Prisbutton title="200" />
-  <Prisbutton title="300" color="var(--border-accent)" />
-</div>
 <div class="border spacing">
   <InputForm1 placeholder="Andet beløb" />
 </div>
@@ -36,19 +45,17 @@ import pic3 from "../../assets/images/pic3.png";
   <Button variant="arrow" title="Næste → " link="/formular/step2" />
 </div>
 
-<section class="flex baggrund">
-  <Formularcard text="Karsten har støttet change plastic med en julegave ">
-    <Image class="pic1" src={pic1} alt="pic1" />
-  </Formularcard>
-  <Formularcard text="Lise har støttet change plastic med en julegave ">
-    <Image class="pic2" src={pic2} alt="pic1" />
-  </Formularcard>
-  <Formularcard text="Allan har støttet change plastic med en julegave ">
-    <Image class="pic3" src={pic3} alt="pic1" />
-  </Formularcard>
-</section>
 <style>
   @media (min-width: 1025px) {
+    .flex {
+      display: flex;
+      gap: 10%;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .kort {
+      border-radius: var(--spacing-16);
+    }
     .buttons {
       display: flex;
       justify-content: space-between;
@@ -56,28 +63,7 @@ import pic3 from "../../assets/images/pic3.png";
       margin-block: var(--spacing-128);
       gap: var(--spacing-128);
     }
-    .pic1 {
-      border-radius: var(--spacing-16);
-      width: 427px;
-      height: 528px;
-      margin-top: -300px;
-    }
-    .pic2 {
-      border-radius: var(--spacing-16);
-      width: 427px;
-      height: 528px;
-      margin-top: -300px;
-    }
-    .pic3 {
-      border-radius: var(--spacing-16);
-      width: 427px;
-      height: 528px;
-      margin-top: -300px;
-    }
-    .flex {
-      display: flex;
-      margin-top: var(--spacing-64);
-    }
+
     .baggrund {
       background-color: var(--color-red-100);
       padding: 200px;
@@ -109,6 +95,14 @@ import pic3 from "../../assets/images/pic3.png";
 
     .spacing {
       margin-top: var(--spacing-32);
+    }
+    .støttebeviskop {
+      border-top-right-radius: var(--spacing-16);
+      border-top-left-radius: var(--spacing-16);
+    }
+    .støttebevis {
+      border-top-right-radius: var(--spacing-16);
+      border-top-left-radius: var(--spacing-16);
     }
   }
 
