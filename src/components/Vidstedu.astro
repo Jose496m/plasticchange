@@ -8,7 +8,7 @@ import julegave1 from "../assets/images/julegave1.svg";
 ---
 
 <h2 class="vidste_du">Vidste du?</h2>
-<section class="card_container">
+<section class="card_container baggrund">
   <VidsteduCard class="placering1" text="Danskere bruger 825 ton gavepapir hver evig eneste jul">
     <Image class="kolbe" src={kolbe} alt="kolbe" />
   </VidsteduCard>
@@ -30,13 +30,15 @@ import julegave1 from "../assets/images/julegave1.svg";
     }
     .card_container {
       display: flex;
-      background-color: var(--color-red-100);
       width: 100%;
       gap: var(--spacing-32);
       justify-content: center;
-      background-size: cover;
+      margin-top: 10rem;
     }
 
+    .baggrund {
+      background-color: var(--color-red-100);
+    }
     .vidste_du {
       margin-block: var(--spacing-32);
       text-align: center;
