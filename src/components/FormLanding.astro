@@ -20,7 +20,7 @@ import Prisbutton from "./Prisbutton.astro";
     <Prisbutton title="200" />
     <Prisbutton title="300" color="var(--border-accent)" />
   </div>
-  <input type="text" placeholder="Andet beløb" />
+  <input class="text_input" type="text" placeholder="Andet beløb" />
   <Button variant="primary" title="STØT NU" link="/formular/step1" />
 </section>
 <style>
@@ -102,6 +102,24 @@ import Prisbutton from "./Prisbutton.astro";
       font-size: 16px;
       font-family: "rubiksemibold";
     }
+
+    input.text_input {
+      color: var(----text-primary);
+      padding: var(--spacing-16) var(--spacing-24);
+      border-radius: var(--border-64);
+      text-align: center;
+      border: 2px solid var(--input-primary-default-border);
+      max-width: 150px;
+      position: relative;
+      box-sizing: border-box;
+      background-color: transparent;
+      font-size: 16px;
+    }
+    input.text_input::placeholder {
+      color: var(--color-mud-700);
+      font-size: 16px;
+      font-family: "rubiksemibold";
+    }
   }
   @media (min-width: 600px) and (max-width: 1024px) {
     section {
@@ -121,6 +139,19 @@ import Prisbutton from "./Prisbutton.astro";
       max-width: 165px;
     }
     input::placeholder {
+      color: var(--color-mud-700);
+      font-size: 18px;
+      font-family: "rubiksemibold";
+    }
+    input.text_input {
+      padding: var(--spacing-16);
+      border-radius: var(--border-64);
+      text-align: center;
+      border: 2px solid var(--input-primary-default-border);
+      max-width: 165px;
+      background-color: transparent;
+    }
+    input.text_input::placeholder {
       color: var(--color-mud-700);
       font-size: 18px;
       font-family: "rubiksemibold";
@@ -159,6 +190,19 @@ import Prisbutton from "./Prisbutton.astro";
     .radiobuttons {
       display: block;
       gap: var(--spacing-16);
+    }
+    input.text_input {
+      min-height: var(--spacing-64);
+      border-radius: var(--border-64);
+      text-align: center;
+      border: 2px solid var(--input-primary-default-border);
+      min-width: 180px;
+      background-color: transparent;
+    }
+    input.text_input::placeholder {
+      color: var(--color-mud-700);
+      font-size: 22px;
+      font-family: "rubiksemibold";
     }
   }
   .pris {
