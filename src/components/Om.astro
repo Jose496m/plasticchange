@@ -50,10 +50,12 @@ import omos3 from "../assets/images/omos3.png";
       <div class="overskrift-container">
         <h3 class="overskrift">Plastikudfordringen</h3>
       </div>
-      <p class="text">
+      <p class="text" id="plastikudfordringen">
         Siden 1950’erne har vi produceret mere end 9 milliarder ton plastik.
         Heraf er størstedelen blevet brugt til engangsemballager og -produkter
-        med kort levetid og lav markedsværdi. <span class="text-hidden"
+        med kort levetid og lav markedsværdi. <span
+          class="text-hidden"
+          id="hiddenText"
           >Disse emballager og produkter forurener i hele deres livscyklus: fra
           udvindingen af olie, til produktion, transport, forbrug, og når de
           ender til forbrænding eller i naturen. Alt dette for kun at blive
@@ -63,7 +65,7 @@ import omos3 from "../assets/images/omos3.png";
           hanen med engangsplastik nu.</span
         >
       </p>
-      <p class="readmoretext">Læs mere</p>
+      <p class="readmoretext" id="readMoreBtn">Læs mere</p>
     </div>
     <div class="placering1">
       <Image class="omos1" src={omos1} alt="omos1" />
@@ -72,10 +74,11 @@ import omos3 from "../assets/images/omos3.png";
       <div class="overskrift-container">
         <h3 class="overskrift">Vores vision</h3>
       </div>
-      <p class="text">
+      <p class="text" id="plasticchange">
         Plastic Changes vision er et affaldsfrit samfund. Visionen handler ikke
         kun om plastik, men plastik er blevet et symbol på vores engangskultur.<span
           class="text-hidden"
+          id="hidden-Text"
         >
           Derfor arbejder vi for et samfund, hvor alle ressourcer bruges
           optimalt i lukkede cirkulære systemer. Et samfund, hvor vi har gjort
@@ -84,8 +87,9 @@ import omos3 from "../assets/images/omos3.png";
           affaldsfrit samfund er på den måde både et middel og samtidig et mål.</span
         >
       </p>
-      <p class="readmoretext">Læs mere</p>
+      <p class="readmoretext" id="readMore-Btn">Læs mere</p>
     </div>
+
     <div class="placering2">
       <Image class="omos2" src={omos2} alt="omos2" />
     </div>
@@ -94,10 +98,12 @@ import omos3 from "../assets/images/omos3.png";
         <h3 class="overskrift">Vores mission</h3>
       </div>
 
-      <p class="text">
+      <p class="text" id="plastikudfordring">
         Vi vil arbejde for en verden uden plastikforurening. Det gør vi ved at
         fokusere på løsninger, der reducerer produktion og forbrug af plastik
-        til gavn for både miljø, klima og sundhed. <span class="text-hidden"
+        til gavn for både miljø, klima og sundhed. <span
+          class="text-hidden"
+          id="hidden_Text"
           >Da plastikforurening er en global og grænseløs problemstilling, er vi
           desuden engagerede internationalt som FN observatør, i vores
           samarbejde med Ellen MacArthur Foundation og ikke mindst i den globale
@@ -106,7 +112,7 @@ import omos3 from "../assets/images/omos3.png";
           løsninger når frem til Danmark og omvendt.</span
         >
       </p>
-      <p class="readmoretext">Læs mere</p>
+      <p class="readmoretext" id="readMore_Btn">Læs mere</p>
     </div>
     <div class="placering3">
       <Image class="omos3" src={omos3} alt="omos3" />
@@ -114,6 +120,42 @@ import omos3 from "../assets/images/omos3.png";
   </section>
 </article>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hiddenTextElement1 = document.getElementById("hiddenText");
+    const readMoreButton1 = document.getElementById("readMoreBtn");
+
+    readMoreButton1.addEventListener("click", function () {
+      hiddenTextElement1.classList.toggle("text-hidden");
+      adjustContainerHeight(hiddenTextElement1);
+    });
+
+    const hiddenTextElement2 = document.getElementById("hidden-Text");
+    const readMoreButton2 = document.getElementById("readMore-Btn");
+
+    readMoreButton2.addEventListener("click", function () {
+      hiddenTextElement2.classList.toggle("text-hidden");
+      adjustContainerHeight(hiddenTextElement2);
+    });
+
+    const hiddenTextElement3 = document.getElementById("hidden_Text");
+    const readMoreButton3 = document.getElementById("readMore_Btn");
+
+    readMoreButton3.addEventListener("click", function () {
+      hiddenTextElement3.classList.toggle("text-hidden");
+      adjustContainerHeight(hiddenTextElement3);
+    });
+
+    function adjustContainerHeight(hiddenTextElement) {
+      const containerElement = hiddenTextElement.closest(".baggrund1");
+      if (hiddenTextElement.classList.contains("text-hidden")) {
+        containerElement.style.height = "400px";
+      } else {
+        containerElement.style.height = "600px";
+      }
+    }
+  });
+</script>
 <style>
   body {
     display: flex;
@@ -352,8 +394,8 @@ import omos3 from "../assets/images/omos3.png";
     .baggrund1 {
       background-color: white;
       border-radius: var(--spacing-16);
+      height: 400px;
       width: 300px;
-      height: 600px;
       margin-top: var(--spacing-32);
       margin-left: -15px;
     }
