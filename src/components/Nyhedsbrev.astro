@@ -6,10 +6,7 @@ import Button from "./Button.astro";
   <ul>
     <div class="tekst">
       <h2>Tilmeld dig vores nyhedsbrev</h2>
-      <p>
-        Følg med i vores arbejde mod plastikforuening og hold dig opdateret med
-        de seneste nyheder
-      </p>
+      <p>Følg med i vores arbejde mod plastikforuening og hold dig opdateret med de seneste nyheder</p>
     </div>
     <div class="tekst_og_knap">
       <li><input type="text" placeholder="hej@email.dk" /></li>
@@ -24,16 +21,14 @@ import Button from "./Button.astro";
       background-color: var(--color-red-100);
       padding: var(--spacing-24);
       width: 100%;
-      padding-block: var(--spacing-32);
-
+      padding-block: var(--spacing-24);
       margin-top: var(--spacing-64);
-      margin-top: var(--spacing-32);
     }
 
     input {
-      padding: var(--spacing-16);
+      padding: var(--spacing-8);
       margin-bottom: var(--spacing-32);
-      border-radius: var(--border-16);
+      border-radius: var(--border-8);
       width: 450px;
     }
     input::placeholder {
@@ -119,12 +114,14 @@ import Button from "./Button.astro";
       padding-block: var(--spacing-16);
       margin-bottom: var(--spacing-32);
       margin-top: var(--spacing-32);
+      align-items: center;
+      justify-content: center;
     }
 
     input {
-      padding: var(--spacing-16);
+      padding: var(--spacing-8);
       margin-bottom: var(--spacing-32);
-      border-radius: var(--border-16);
+      border-radius: var(--border-8);
       width: 300px;
     }
     input::placeholder {
@@ -134,10 +131,11 @@ import Button from "./Button.astro";
       color: var(--text-placeholder);
     }
     .tekst_og_knap {
-      display: grid;
-      box-sizing: border-box;
-      justify-content: center;
+      display: flex;
+      flex-direction: column;
       margin-bottom: var(--spacing-44);
+      align-items: center;
+      justify-content: center;
     }
 
     ul {

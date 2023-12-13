@@ -20,19 +20,42 @@ import pic2 from "../assets/images/pic2.png";
 </div>
 
 <style>
-  .carousel-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: var(--spacing-24);
-    background-color: var(--color-red-100);
-    justify-content: center;
+  @media (max-width: 500px) {
+    .carousel-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--color-red-100);
+      align-items: center;
+      justify-content: center;
+      padding-top: var(--spacing-24);
+    }
+
+    .pic1,
+    .pic2 {
+      border-top-right-radius: var(--border-16);
+      border-top-left-radius: var(--border-16);
+    }
   }
 
-  .pic1,
-  .pic2 {
-    border-top-right-radius: var(--spacing-16);
-    border-top-left-radius: var(--spacing-16);
-    height: 300px;
+  @media (min-width: 600px) and (max-width: 1024px) {
+  }
+  @media (min-width: 1025px) {
+    .carousel-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: var(--spacing-24);
+      background-color: var(--color-red-100);
+      justify-content: center;
+      margin-top: 200px;
+    }
+
+    .pic1,
+    .pic2 {
+      border-top-right-radius: var(--spacing-16);
+      border-top-left-radius: var(--spacing-16);
+      height: 300px;
+    }
   }
 </style>
