@@ -13,72 +13,41 @@ import julegave1 from "../assets/images/julegave1.svg";
 
 <article class="stoette">
   <section class="alt_tekst">
-    <h3>Langt størstedelen af din støtte går til hav- og miljøindsatse</h3>
-    <p class="tekst">
-      Først og fremmest støtter du op om vores initiativer inden for hav- og
-      miljøindsatser. Dette indebærer konkrete handlinger for at reducere
-      plastikforurening, både lokalt i Danmark og på internationalt plan. Vi
-      oplyser, deler viden og arrangerer events, undervisning og foredrag for at
-      mobilisere og engagere en voksende Plastic Changer-bevægelse. Denne
-      bevægelse er allerede i gang og arbejder aktivt for at skabe positive
-      forandringer.
-    </p>
+    <h4>Langt størstedelen af din støtte går til hav- og miljøindsatse</h4>
+    <p class="tekst">Først og fremmest støtter du op om vores initiativer inden for hav- og miljøindsatser. Dette indebærer konkrete handlinger for at reducere plastikforurening, både lokalt i Danmark og på internationalt plan. Vi oplyser, deler viden og arrangerer events, undervisning og foredrag for at mobilisere og engagere en voksende Plastic Changer-bevægelse. Denne bevægelse er allerede i gang og arbejder aktivt for at skabe positive forandringer.</p>
     <a href="laes mere">læs mere</a>
 
-    <h3>Din støtte går også til gennemførelsen af årlig oprydning.</h3>
-    <p class="tekst">
-      For det andet støtter du vores lederskab i gennemførelsen af årlige
-      oprydninger i naturen. Dette sker i samarbejde med andre organisationer
-      fra hele verden. Din støtte bidrager dermed til konkrete handlinger, der
-      hjælper med at bevare og beskytte vores naturområder
-    </p>
+    <h4>Din støtte går også til gennemførelsen af årlig oprydning.</h4>
+    <p class="tekst">For det andet støtter du vores lederskab i gennemførelsen af årlige oprydninger i naturen. Dette sker i samarbejde med andre organisationer fra hele verden. Din støtte bidrager dermed til konkrete handlinger, der hjælper med at bevare og beskytte vores naturområder</p>
     <a href="laes mere">læs mere</a>
 
-    <h3>Din støtte går også til at lægge politisk pres.</h3>
-    <p class="tekst">
-      En del af din støtte går også til at lægge politisk pres for bedre
-      miljølovgivning, der værner om kloden og dens ressourcer.
-    </p>
+    <h4>Din støtte går også til at lægge politisk pres.</h4>
+    <p class="tekst">En del af din støtte går også til at lægge politisk pres for bedre miljølovgivning, der værner om kloden og dens ressourcer.</p>
     <a href="laes mere">læs mere</a>
 
-    <h3>
-      Din støtte går til fundraising, indsamlinger samt <br /> et lillebidrag til
-      at plastic change har et sted at bo.
-    </h3>
-    <p class="tekst">
-      En mindre del går til fundraising og indsamlinger, så Plastic Changer
-      bevægelsen kan blive ved med at vokse. Og så går en lille del til
-      administration, og til at give Plastic Change et sted at bo
-    </p>
+    <h4>
+      Din støtte går til fundraising, indsamlinger samt <br /> et lillebidrag til at plastic change har et sted at bo.
+    </h4>
+    <p class="tekst">En mindre del går til fundraising og indsamlinger, så Plastic Changer bevægelsen kan blive ved med at vokse. Og så går en lille del til administration, og til at give Plastic Change et sted at bo</p>
     <a href="laes mere">læs mere</a>
   </section>
-  <div class="julekugler">
+  <div>
     <Image class="julekugler" src={julekugler} alt="julekugler" />
   </div>
 </article>
 
-<section class="flex baggrund">
-  <Image class="landingslide" src={landingslide} alt="landingslide" />
-  <Image class="landingslide" src={landingslide} alt="landingslide" />
-  <Image class="landingslide" src={landingslide} alt="landingslide" />
-</section>
+<section class="flex baggrund"></section>
 
 <style>
   @media (min-width: 900px) {
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+    article {
+      display: flex;
       text-align: center;
+      gap: var(--spacing-64);
     }
 
-    .header {
-      grid-column: span 4;
-    }
     .baggrund {
       background-color: #f5eaec;
-    }
-    .alt_tekst {
-      margin-right: var(--spacing-64);
     }
 
     h2 {
@@ -94,10 +63,11 @@ import julegave1 from "../assets/images/julegave1.svg";
       margin-bottom: var(--spacing-24);
     }
 
-    h3 {
+    h4 {
       text-align: left;
       width: 700px;
       margin-bottom: var(--spacing-8);
+      margin-top: var(--spacing-44);
     }
 
     .stoette {
@@ -107,85 +77,27 @@ import julegave1 from "../assets/images/julegave1.svg";
       margin-bottom: var(--spacing-128);
     }
     .julekugler {
-      width: 140px;
-      float: left;
+      width: 45%;
       margin-top: var(--spacing-24);
     }
 
     a {
       display: none;
     }
-
-    .card_container {
-      display: flex;
-    }
-
-    .card {
-      border-color: var(--color-red-500);
-      justify-content: center;
-    }
-
-    .juletrae,
-    .kolbe {
-      width: 50px;
-      justify-content: center;
-    }
-
-    .julesweater1 {
-      width: 100px;
-    }
-
-    .julegave {
-      width: 60px;
-    }
   }
 
   @media (max-width: 599px) {
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(
-        2,
-        1fr
-      ); /* Opretter to kolonner med lige bredde */
-      grid-gap: 20px; /* Afstand mellem gitterelementerne */
-    }
-    .header {
-      grid-column: span 2; /* Overskriften strækker sig over begge kolonner */
-      background-color: /* Din baggrundsfarve */ ;
-      /* Andre baggrundsstilarter kan tilføjes her */
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
     }
 
-    .julesweater1 {
-      width: 130px;
-      height: auto;
-    }
-
-    .kolbe {
-      width: 100px;
-      height: auto;
-    }
-    .baggrund {
-      background-color: #f5eaec;
-      padding: 50px;
-    }
-    .baggrund1 {
-      background-color: white;
-    }
     h2 {
       text-align: center;
     }
 
-    .landingslide {
-      width: 100px;
-      height: 100px;
-    }
-    .baggrund {
-      background-color: #f5eaec;
-    }
-
     .alt_tekst {
-      margin-right: var(--spacing-64);
-      margin-left: var(--spacing-64);
       margin-top: var(--spacing-44);
     }
 
@@ -197,7 +109,7 @@ import julegave1 from "../assets/images/julegave1.svg";
       margin-top: var(--spacing-64);
     }
 
-    h3 {
+    h4 {
       text-align: left;
       width: 200px;
       margin-bottom: var(--spacing-8);
