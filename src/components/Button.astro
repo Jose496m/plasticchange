@@ -7,70 +7,72 @@ const { title, link, variant } = Astro.props;
 </div>
 
 <style>
-  a {
-    width: 100%;
-    border: none;
-    background: transparent;
-    align-items: center;
-    gap: 1rem;
-    text-decoration: none;
+  @media (min-width: 1025px) {
+    a {
+      width: 100%;
+      border: none;
+      background: transparent;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+    }
+
+    a.primary {
+      color: var(--button-primary-default-text);
+      background-color: var(--button-primary-defsult-surface);
+      border-radius: var(--border-64);
+      padding: 19px var(--spacing-44);
+      cursor: pointer;
+      position: relative;
+      font-size: 22px;
+      text-align: center;
+      width: 180px;
+      min-height: var(--spacing-64);
+      transition: transform 0.2s ease;
+    }
+
+    a.primary:hover {
+      transform: scale(1.1);
+    }
+    .arrow {
+      color: var(--button-primary-default-text);
+      background-color: var(--button-primary-defsult-surface);
+      border: 3px solid var(--button-secondary-default-border);
+      border-radius: var(--border-64);
+      padding: var(--spacing-16) var(--spacing-32);
+      cursor: pointer;
+      position: relative;
+      font-size: 22px;
+      box-sizing: border-box;
+      width: 180px;
+      text-align: center;
+    }
+
+    .secondary {
+      color: var(--button-secondary-default-text);
+      background-color: var(--button-secondary-defsult-surface);
+      border-radius: var(--border-64);
+      border: 3px solid var(--button-secondary-default-border);
+      padding: var(--spacing-16) var(--spacing-32);
+      cursor: pointer;
+      position: relative;
+      font-size: 22px;
+      width: 180px;
+      box-sizing: border-box;
+    }
+
+    .secondary:hover {
+      background-color: var(--button-secondary-hover-surface);
+      border: 3px solid var(--button-secondary-default-border);
+      color: var(--button-secondary-default-text);
+    }
+    .arrow:hover {
+      background-color: var(--color-red-400);
+      border: 3px solid var(--color-red-400);
+    }
   }
 
-  a.primary {
-    color: var(--button-primary-default-text);
-    background-color: var(--button-primary-defsult-surface);
-    border-radius: var(--border-64);
-    padding: 19px var(--spacing-44);
-    cursor: pointer;
-    position: relative;
-    font-size: 22px;
-    text-align: center;
-    min-width: 180px;
-    min-height: var(--spacing-64);
-    transition: transform 0.2s ease;
-  }
-
-  a.primary:hover {
-    transform: scale(1.1);
-  }
-  .arrow {
-    color: var(--button-primary-default-text);
-    background-color: var(--button-primary-defsult-surface);
-    border: 3px solid var(--button-secondary-default-border);
-    border-radius: var(--border-64);
-    padding: var(--spacing-16) var(--spacing-32);
-    cursor: pointer;
-    position: relative;
-    font-size: 22px;
-    box-sizing: border-box;
-    min-width: 165px;
-    text-align: center;
-  }
-
-  .secondary {
-    color: var(--button-secondary-default-text);
-    background-color: var(--button-secondary-defsult-surface);
-    border-radius: var(--border-64);
-    border: 3px solid var(--button-secondary-default-border);
-    padding: var(--spacing-16) var(--spacing-32);
-    cursor: pointer;
-    position: relative;
-    font-size: 22px;
-    min-width: 180px;
-    box-sizing: border-box;
-  }
-
-  .secondary:hover {
-    background-color: var(--button-secondary-hover-surface);
-    border: 3px solid var(--button-secondary-default-border);
-    color: var(--button-secondary-default-text);
-  }
-  .arrow:hover {
-    background-color: var(--color-red-400);
-    border: 3px solid var(--color-red-400);
-  }
-
-  @media (max-width: 599px) {
+  @media (min-width: 600px) and (max-width: 1024px) {
     .primary {
       color: var(--button-primary-default-text);
       background-color: var(--button-primary-defsult-surface);
@@ -80,7 +82,7 @@ const { title, link, variant } = Astro.props;
       position: relative;
       font-size: 16px;
       box-sizing: border-box;
-      min-width: 150px;
+      width: 165px;
     }
     .secondary {
       color: var(--button-secondary-default-text);
@@ -92,7 +94,7 @@ const { title, link, variant } = Astro.props;
       position: relative;
       font-size: 16px;
       box-sizing: border-box;
-      min-width: 150px;
+      width: 165px;
     }
 
     .arrow {
@@ -106,7 +108,46 @@ const { title, link, variant } = Astro.props;
       font-size: 16px;
       box-sizing: border-box;
       text-align: center;
-      min-width: 150px;
+      width: 165px;
+    }
+  }
+  @media (max-width: 599px) {
+    .primary {
+      color: var(--button-primary-default-text);
+      background-color: var(--button-primary-defsult-surface);
+      border-radius: var(--border-64);
+      padding: var(--spacing-16) 40px;
+      cursor: pointer;
+      position: relative;
+      font-size: 16px;
+      box-sizing: border-box;
+      width: 150px;
+    }
+    .secondary {
+      color: var(--button-secondary-default-text);
+      background-color: var(--button-secondary-defsult-surface);
+      border-radius: var(--border-64);
+      border: 3px solid var(--button-secondary-default-border);
+      padding: var(--spacing-16) var(--spacing-24);
+      cursor: pointer;
+      position: relative;
+      font-size: 16px;
+      box-sizing: border-box;
+      width: 150px;
+    }
+
+    .arrow {
+      color: var(--button-primary-default-text);
+      background-color: var(--button-primary-defsult-surface);
+      border-radius: var(--border-64);
+      border: 3px solid var(--button-secondary-default-border);
+      padding: var(--spacing-16) var(--spacing-24);
+      cursor: pointer;
+      position: relative;
+      font-size: 16px;
+      box-sizing: border-box;
+      text-align: center;
+      width: 150px;
     }
   }
 </style>
