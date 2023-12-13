@@ -15,12 +15,12 @@ import SlideshowCard from "../SlideshowCard.astro";
 
 <Menu variant="form" />
 <Stepbar />
-<FormOverskrift titel="Giv en donation som en gave" />
+<FormOverskrift titel="Giv støtte som en julegave." />
 <section>
   <div class="kort flex">
     <Formularcard
       class="card"
-      text=" Unikt Plastic Change emaljekrus - samt et print selv støttebevis.(Ramme medfølger ikke) 450kr. "
+      text=" Unikt emaljekrus fra Plastic Change - inklusive et print-selv støttebevis. (Bemærk: Ramme medfølger ikke.) "
     >
       <Image class="støttebeviskop" src={pic1} alt="pic1" />
     </Formularcard>
@@ -53,9 +53,7 @@ import SlideshowCard from "../SlideshowCard.astro";
       flex-direction: row;
       justify-content: center;
     }
-    .kort {
-      border-radius: var(--spacing-16);
-    }
+
     .buttons {
       display: flex;
       justify-content: space-between;
@@ -99,17 +97,37 @@ import SlideshowCard from "../SlideshowCard.astro";
     .støttebeviskop {
       border-top-right-radius: var(--spacing-16);
       border-top-left-radius: var(--spacing-16);
+      opacity: 0.5;
+    }
+
+    .støttebeviskop:hover {
+      transform: scale(1);
+      opacity: 1;
     }
     .støttebevis {
       border-top-right-radius: var(--spacing-16);
       border-top-left-radius: var(--spacing-16);
+      opacity: 0.5;
+    }
+
+    .støttebevis:hover {
+      transform: scale(1);
+      opacity: 1;
     }
   }
 
   @media (max-width: 500px) {
+    .flex {
+      display: flex;
+      gap: 5%;
+      flex-direction: row;
+      justify-content: center;
+    }
     .buttons {
-      display: grid;
-      gap: var(--spacing-64);
+      display: flex;
+      justify-content: space-between;
+      margin-inline: var(--spacing-44);
+      gap: var(--spacing-44);
     }
     .pic1 {
       border-radius: var(--spacing-16);
@@ -161,6 +179,14 @@ import SlideshowCard from "../SlideshowCard.astro";
       margin-inline: var(--spacing-64);
       margin-top: var(--spacing-64);
       margin-bottom: var(--spacing-64);
+    }
+    .støttebeviskop {
+      border-top-right-radius: var(--spacing-16);
+      border-top-left-radius: var(--spacing-16);
+    }
+    .støttebevis {
+      border-top-right-radius: var(--spacing-16);
+      border-top-left-radius: var(--spacing-16);
     }
   }
 </style>
