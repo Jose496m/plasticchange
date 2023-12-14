@@ -29,6 +29,10 @@ const { variant } = Astro.props;
     li {
       text-wrap: nowrap;
     }
+    .knap {
+      gap: var(--spacing-16);
+      font-size: 14px;
+    }
   }
 
   /************ Tablet ************/
@@ -53,6 +57,9 @@ const { variant } = Astro.props;
       background-image: url(../../assets/images/form_bg.png);
       width: 100%;
     }
+    .knap {
+      gap: var(--spacing-24);
+    }
   }
   ul {
     display: flex;
@@ -73,6 +80,5 @@ const { variant } = Astro.props;
     flex-direction: row;
     justify-content: end;
     align-items: center;
-    gap: var(--spacing-24);
   }
 </style>

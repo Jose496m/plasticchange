@@ -1,42 +1,41 @@
-<section>
-  <div class="spalter">
-    <div class="spalte1">
-      <h4 class="kontakt">Kontakt information</h4>
-      <p>
-        Mail <br />info@plasticchange.org <br />Tlf. +45 42 66 72 46 <br />Telefontid: <br /> Mandag – Fredag, 10:00 – <br /> 15:00 <br />
-        Website af Savage Studio <br />
-        © 2023 Plastic Change
-      </p>
-    </div>
+<section class="spalter">
+  <div class="spalte1">
+    <h4 class="kontakt">Kontakt information</h4>
+    <p>
+      Mail <br />info@plasticchange.org <br />Tlf. +45 42 66 72 46 <br />Telefontid: <br /> Mandag – Fredag, 10:00 – <br /> 15:00 <br />
+      Website af Savage Studio <br />
+      © 2023 Plastic Change
+    </p>
+  </div>
 
-    <div class="spalte2">
-      <h4 class="stoet_nu">STØT NU</h4>
-      <p>
-        Giv et bidrag <br />
-        Bliv medlem <br />
-        Lav et testamente <br />
-        Støt som virksomhed
-      </p>
-    </div>
+  <div class="spalte2">
+    <h4 class="stoet_nu">STØT NU</h4>
+    <p>
+      Giv et bidrag <br />
+      Bliv medlem <br />
+      Lav et testamente <br />
+      Støt som virksomhed
+    </p>
+  </div>
 
-    <div class="spalte3">
-      <h4 class="bank">Bank</h4>
-      <p>
-        CVR: 35778985 <br />
-        Konto. <br /> 8411 0002039618 <br />
-        MobilePay. 304961 <br /> SWIFT. FAELDKK1 <br />
-        IBAN: <br /> DK3584110002039618
-      </p>
-    </div>
+  <div class="spalte3">
+    <h4 class="bank">Bank</h4>
+    <p>
+      CVR: 35778985 <br />
+      Konto. <br /> 8411 0002039618 <br />
+      MobilePay. 304961 <br /> SWIFT. FAELDKK1 <br />
+      IBAN: <br /> DK3584110002039618
+    </p>
   </div>
 </section>
 
 <style>
   @media (min-width: 1025px) {
-    .spalter {
+    section {
       display: flex;
       justify-content: center;
       gap: 40px;
+      width: 100%;
       margin-top: var(--spacing-64);
       background-color: var(--color-red-100);
       padding: var(--spacing-16);
@@ -53,12 +52,14 @@
     }
   }
   @media (max-width: 500px) {
-    .spalter {
-      display: block;
+    section {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      width: 100%;
+      margin-top: var(--spacing-64);
       background-color: var(--color-red-100);
-      padding: 60px;
-      align-content: center;
-      margin-top: var(--spacing-24);
+      padding: var(--spacing-64);
     }
 
     .spalte2,
@@ -72,12 +73,12 @@
     }
   }
   @media (min-width: 600px) and (max-width: 1024px) {
-    .spalter {
+    section {
       display: flex;
+      width: 100%;
       justify-content: center;
       gap: 20px;
       margin-top: var(--spacing-64);
-
       background-color: var(--color-red-100);
       padding: var(--spacing-24);
     }
@@ -85,7 +86,6 @@
     .spalte1,
     .spalte2,
     .spalte3 {
-      width: 222px;
       padding: var(--spacing-16);
       margin: var(--spacing-44);
     }
