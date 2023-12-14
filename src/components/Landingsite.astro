@@ -153,7 +153,7 @@ import julekugler from "../assets/images/julekugler.svg";
     a {
       display: none;
     }
-    /* .tekst1 {
+    .tekst1 {
       animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s both;
     }
 
@@ -178,7 +178,7 @@ import julekugler from "../assets/images/julekugler.svg";
         transform: translateY(0);
         opacity: 1;
       }
-    } */
+    }
   }
 
   @media (max-width: 599px) {
@@ -229,7 +229,7 @@ import julekugler from "../assets/images/julekugler.svg";
       color: var(--text-link);
     }
 
-    /* .tekst1 {
+    .tekst1 {
       animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s both;
     }
 
@@ -253,15 +253,14 @@ import julekugler from "../assets/images/julekugler.svg";
       100% {
         transform: translateY(0);
         opacity: 1;
-      } 
-      
-      
-        import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";*/
+      }
+    }
   }
 </style>
 
 <script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
