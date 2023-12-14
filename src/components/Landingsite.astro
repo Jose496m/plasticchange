@@ -253,13 +253,15 @@ import julekugler from "../assets/images/julekugler.svg";
       100% {
         transform: translateY(0);
         opacity: 1;
-      } */
+      } 
+      
+      
+        import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";*/
   }
 </style>
 
 <script>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {

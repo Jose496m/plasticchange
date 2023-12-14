@@ -7,6 +7,28 @@ const { title, link, variant } = Astro.props;
 </div>
 
 <style>
+  a.primary:hover {
+    background-position: 100% 0;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  .arrow:hover {
+    background-position: 100% 0;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    border: 3px solid transparent;
+  }
+  .secondary:hover {
+    background-position: 100% 0;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
   @media (min-width: 1025px) {
     a {
       width: 100%;
@@ -19,7 +41,6 @@ const { title, link, variant } = Astro.props;
 
     a.primary {
       color: var(--button-primary-default-text);
-      background-color: var(--button-primary-defsult-surface);
       border-radius: var(--border-64);
       padding: 19px var(--spacing-44);
       cursor: pointer;
@@ -29,15 +50,17 @@ const { title, link, variant } = Astro.props;
       width: 180px;
       min-height: var(--spacing-64);
       transition: transform 0.2s ease;
+      background-image: linear-gradient(to right, var(--color-red-300), #ef676c, #e24449, #e02e36);
+      box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+      background-size: 300% 100%;
+      moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
     }
 
-    a.primary:hover {
-      transform: scale(1.1);
-    }
     .arrow {
       color: var(--button-primary-default-text);
-      background-color: var(--button-primary-defsult-surface);
-      border: 3px solid var(--button-secondary-default-border);
       border-radius: var(--border-64);
       padding: var(--spacing-16) var(--spacing-32);
       cursor: pointer;
@@ -46,36 +69,41 @@ const { title, link, variant } = Astro.props;
       box-sizing: border-box;
       width: 180px;
       text-align: center;
+      transition: transform 0.2s ease;
+      background-image: linear-gradient(to right, var(--color-red-300), #ef676c, #e24449, #e02e36);
+      box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+      background-size: 300% 100%;
+      moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      border: 3px solid transparent;
     }
 
     .secondary {
       color: var(--button-secondary-default-text);
-      background-color: var(--button-secondary-defsult-surface);
       border-radius: var(--border-64);
-      border: 3px solid var(--button-secondary-default-border);
-      padding: var(--spacing-16) var(--spacing-32);
+      padding: var(--spacing-16) 28px;
       cursor: pointer;
       position: relative;
       font-size: 22px;
       width: 180px;
       box-sizing: border-box;
-    }
-
-    .secondary:hover {
-      background-color: var(--button-secondary-hover-surface);
-      border: 3px solid var(--button-secondary-default-border);
-      color: var(--button-secondary-default-text);
-    }
-    .arrow:hover {
-      background-color: var(--color-red-400);
-      border: 3px solid var(--color-red-400);
+      transition: transform 0.2s ease;
+      background-image: linear-gradient(to right, var(--color-red-100), var(--color-red-100), #f9c7c7);
+      box-shadow: 0 5px 15px rgba(232, 157, 160, 0.3);
+      background-size: 300% 100%;
+      moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      border: 3px solid transparent;
     }
   }
 
   @media (min-width: 600px) and (max-width: 1024px) {
     .primary {
       color: var(--button-primary-default-text);
-      background-color: var(--button-primary-defsult-surface);
       border-radius: var(--border-64);
       padding: var(--spacing-16) 40px;
       cursor: pointer;
@@ -83,23 +111,39 @@ const { title, link, variant } = Astro.props;
       font-size: 16px;
       box-sizing: border-box;
       width: 165px;
+      transition: transform 0.2s ease;
+      background-image: linear-gradient(to right, var(--color-red-300), #f15e64, #e14e53, #e2373f);
+      box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+      background-size: 300% 100%;
+      moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      border: 3px solid transparent;
     }
     .secondary {
       color: var(--button-secondary-default-text);
-      background-color: var(--button-secondary-defsult-surface);
       border-radius: var(--border-64);
-      border: 3px solid var(--button-secondary-default-border);
+      border: 3px solid transparent;
       padding: var(--spacing-16) var(--spacing-24);
       cursor: pointer;
       position: relative;
       font-size: 16px;
       box-sizing: border-box;
       width: 165px;
+      transition: transform 0.2s ease;
+      background-image: linear-gradient(to right, var(--color-red-300), #f15e64, #e14e53, #e2373f);
+      box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+      background-size: 300% 100%;
+      moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      border: 3px solid transparent;
     }
 
     .arrow {
       color: var(--button-primary-default-text);
-      background-color: var(--button-primary-defsult-surface);
       border-radius: var(--border-64);
       border: 3px solid var(--button-secondary-default-border);
       padding: var(--spacing-16) var(--spacing-24);
@@ -109,6 +153,15 @@ const { title, link, variant } = Astro.props;
       box-sizing: border-box;
       text-align: center;
       width: 165px;
+      transition: transform 0.2s ease;
+      background-image: linear-gradient(to right, var(--color-red-300), #f15e64, #e14e53, #e2373f);
+      box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+      background-size: 300% 100%;
+      moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      border: 3px solid transparent;
     }
   }
   @media (max-width: 599px) {
@@ -122,18 +175,36 @@ const { title, link, variant } = Astro.props;
       font-size: 16px;
       box-sizing: border-box;
       width: 150px;
+      transition: transform 0.2s ease;
+      background-image: linear-gradient(to right, var(--color-red-300), #f15e64, #e14e53, #e2373f);
+      box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+      background-size: 300% 100%;
+      moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      border: 3px solid transparent;
     }
     .secondary {
       color: var(--button-secondary-default-text);
       background-color: var(--button-secondary-defsult-surface);
       border-radius: var(--border-64);
-      border: 3px solid var(--button-secondary-default-border);
+      border: 3px solid transparent;
       padding: var(--spacing-16) var(--spacing-24);
       cursor: pointer;
       position: relative;
       font-size: 16px;
       box-sizing: border-box;
       width: 150px;
+      transition: transform 0.2s ease;
+      background-image: linear-gradient(to right, var(--color-red-300), #f15e64, #e14e53, #e2373f);
+      box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+      background-size: 300% 100%;
+      moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      border: 3px solid transparent;
     }
 
     .arrow {
@@ -148,6 +219,15 @@ const { title, link, variant } = Astro.props;
       box-sizing: border-box;
       text-align: center;
       width: 150px;
+      transition: transform 0.2s ease;
+      background-image: linear-gradient(to right, var(--color-red-300), #f15e64, #e14e53, #e2373f);
+      box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+      background-size: 300% 100%;
+      moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      border: 3px solid transparent;
     }
   }
 </style>
