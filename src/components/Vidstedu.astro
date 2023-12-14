@@ -10,20 +10,46 @@ import julegave1 from "../assets/images/julegave1.svg";
 <h2 class="vidste_du">Vidste du?</h2>
 <section class="card_container baggrund">
   <VidsteduCard class="placering1" text="Danskere bruger 825 ton gavepapir hver evig eneste jul">
-    <Image class="kolbe" src={kolbe} alt="kolbe" />
+    <Image class="kolbe wobble-hor-bottom" src={kolbe} alt="kolbe" />
   </VidsteduCard>
   <VidsteduCard class="placering2" text="Julegaver købt i en netbutik udenfor EU kan nemlig indeholde skadelige kemikalier">
-    <Image class="img" src={julegave1} alt="julehave" />
+    <Image class="img wobble-hor-bottom" src={julegave1} alt="julehave" />
   </VidsteduCard>
   <VidsteduCard class="placering3" text="Et økologisk, ikke-gødet rødgran-juletræ, der er produceret lokalt, er det bedste">
-    <Image class="img" src={juletrae4} alt="juletrae" />
+    <Image class="img wobble-hor-bottom" src={juletrae4} alt="juletrae" />
   </VidsteduCard>
   <VidsteduCard class="placering4" text="95% af alle julesweatre indeholder plastik, og 40% bruges kun én gang">
-    <Image class="julesweater" src={julesweater1} alt="julesweater" />
+    <Image class="julesweater wobble-hor-bottom" src={julesweater1} alt="julesweater" />
   </VidsteduCard>
 </section>
 
 <style>
+  .wobble-hor-bottom:hover {
+    animation: wobble-hor-bottom 0.8s both;
+  }
+  @keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      transform: translateX(0%);
+      transform-origin: 50% 50%;
+    }
+    15% {
+      transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
   @media (min-width: 900px) {
     h2 {
       margin-bottom: var(--spacing-24);
