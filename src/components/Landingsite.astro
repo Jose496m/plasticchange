@@ -84,19 +84,19 @@ import julekugler from "../assets/images/julekugler.svg";
       display: none;
     }
     .tekst1 {
-      animation: fade-in-bottom 4s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s both;
+      animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s both;
     }
 
     .tekst2 {
-      animation: fade-in-bottom 8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s both;
+      animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.3s both;
     }
 
     .tekst3 {
-      animation: fade-in-bottom 12s cubic-bezier(0.39, 0.575, 0.565, 1) 0.4s both;
+      animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.4s both;
     }
 
     .tekst4 {
-      animation: fade-in-bottom 16s cubic-bezier(0.39, 0.575, 0.565, 1) 0.6s both;
+      animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s both;
     }
 
     @keyframes fade-in-bottom {
@@ -153,20 +153,20 @@ import julekugler from "../assets/images/julekugler.svg";
     a {
       display: none;
     }
-    .tekst1 {
-      animation: fade-in-bottom 4s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s both;
+    /* .tekst1 {
+      animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s both;
     }
 
     .tekst2 {
-      animation: fade-in-bottom 8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s both;
+      animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.3s both;
     }
 
     .tekst3 {
-      animation: fade-in-bottom 12s cubic-bezier(0.39, 0.575, 0.565, 1) 0.4s both;
+      animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.4s both;
     }
 
     .tekst4 {
-      animation: fade-in-bottom 16s cubic-bezier(0.39, 0.575, 0.565, 1) 0.6s both;
+      animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s both;
     }
 
     @keyframes fade-in-bottom {
@@ -178,7 +178,7 @@ import julekugler from "../assets/images/julekugler.svg";
         transform: translateY(0);
         opacity: 1;
       }
-    }
+    } */
   }
 
   @media (max-width: 599px) {
@@ -228,20 +228,91 @@ import julekugler from "../assets/images/julekugler.svg";
     a {
       color: var(--text-link);
     }
-    .tekst1 {
-      animation: fade-in-bottom 4s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s both;
+
+    /* .tekst1 {
+      animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s both;
     }
 
     .tekst2 {
-      animation: fade-in-bottom 8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s both;
+      animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.3s both;
     }
 
     .tekst3 {
-      animation: fade-in-bottom 12s cubic-bezier(0.39, 0.575, 0.565, 1) 0.4s both;
+      animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.4s both;
     }
 
     .tekst4 {
-      animation: fade-in-bottom 16s cubic-bezier(0.39, 0.575, 0.565, 1) 0.6s both;
+      animation: fade-in-bottom 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s both;
     }
+
+    @keyframes fade-in-bottom {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      } */
   }
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+    gsap.from(".tekst1", {
+      xPercent: 50,
+      opacity: 3,
+      duration: 1,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".tekst1",
+        start: "start 100%",
+        end: "bottom 20%",
+        scrub: true,
+      },
+    });
+
+    gsap.from(".tekst2", {
+      xPercent: 50,
+      opacity: 3,
+      duration: 1,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".tekst1",
+        start: "start 95%",
+        end: "bottom 20%",
+        scrub: true,
+      },
+    });
+
+    gsap.from(".tekst3", {
+      xPercent: 50,
+      opacity: 3,
+      duration: 1,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".tekst1",
+        start: "start 90%",
+        end: "bottom 20%",
+        scrub: true,
+      },
+    });
+
+    gsap.from(".tekst4", {
+      xPercent: 50,
+      opacity: 3,
+      duration: 1,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".tekst1",
+        start: "start 85%",
+        end: "bottom 20%",
+        scrub: true,
+      },
+    });
+  });
+</script>
