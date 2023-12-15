@@ -3,7 +3,7 @@ import Stepbar from "./Stepbar.astro";
 import Menu from "../header/Menu.astro";
 import FormOverskrift from "./FormOverskrift.astro";
 import Button from "../Button.astro";
-import InputForm1 from "../InputForm1.astro";
+import Input from "../Input.astro";
 import Prisbutton from "../Prisbutton.astro";
 import Formularcard from "../Formular/Formularcard.astro";
 import { Image } from "astro:assets";
@@ -23,18 +23,12 @@ import pic2 from "../../assets/images/støttebevis.png";
 <FormOverskrift titel="Giv støtte som en julegave." />
 <section>
   <div class="kort flex">
-    <Formularcard
-      class="card"
-      text=" Unikt emaljekrus fra Plastic Change - inklusive et print-selv støttebevis. (Bemærk: Ramme medfølger ikke.) "
-    >
-      <Image class="støttebeviskop" src={pic1} alt="pic1" />
+    <Formularcard class="card" overskrift="Unikt emaljekrus fra Plastic Change" text="- inklusive et print-selv støttebevis. (Bemærk: Ramme medfølger ikke.)" pris="450.-">
+      <Image class="stoettebeviskop" src={pic1} alt="pic1" />
     </Formularcard>
 
-    <Formularcard
-      class="card"
-      text=" Unikt Plastic Change emaljekrus - samt et print selv støttebevis.(Ramme medfølger ikke) 450kr. "
-    >
-      <Image class="støttebevis" src={pic2} alt="pic1" />
+    <Formularcard class="card" overskrift="Et fint print-selv-støttebevis" text="- der kan printes ud og lægges under juletræet (ramme medfølger ikke)." pris="350.-">
+      <Image class="stoettebevis" src={pic2} alt="pic1" />
     </Formularcard>
   </div>
 </section>
@@ -42,13 +36,10 @@ import pic2 from "../../assets/images/støttebevis.png";
   <p class="ptag">
     Ønsker du at bidrage med en anden donation? <br />Gør det nemt herunder
   </p>
-  <label class="labeltag">
-    Vælg dit engangs beløb <span class="farve">*</span></label
-  >
 </div>
 
 <div class="border spacing">
-  <InputForm1 placeholder="Andet beløb" />
+  <Input label="Vælg dit engangs beløb" placeholder="Andet beløb" />
 </div>
 <div class="buttons">
   <Button variant="secondary" title="← Tilbage" link="/formular/step1" />
@@ -58,9 +49,10 @@ import pic2 from "../../assets/images/støttebevis.png";
 <style>
   @media (min-width: 1025px) {
     section {
-      margin-top: var(--spacing-44);
+      margin-top: var(--spacing-24);
       margin-bottom: var(--spacing-32);
     }
+
     .oval-container {
       position: relative;
       width: 700px;
@@ -116,9 +108,8 @@ import pic2 from "../../assets/images/støttebevis.png";
     .buttons {
       display: flex;
       justify-content: space-between;
-      margin-inline: var(--spacing-64);
-      margin-block: var(--spacing-128);
-      gap: var(--spacing-128);
+      gap: var(--spacing-252);
+      margin-block: var(--spacing-64);
     }
 
     .baggrund {
@@ -128,7 +119,7 @@ import pic2 from "../../assets/images/støttebevis.png";
     }
 
     .inputs {
-      margin-top: var(--spacing-32);
+      margin-top: var(--spacing-24);
     }
     .farve {
       color: var(--color-red-300);
@@ -153,25 +144,21 @@ import pic2 from "../../assets/images/støttebevis.png";
     .spacing {
       margin-top: var(--spacing-32);
     }
-    .støttebeviskop {
-      border-top-right-radius: var(--spacing-16);
-      border-top-left-radius: var(--spacing-16);
-      opacity: 0.5;
+    .stoettebeviskop {
+      border-top-right-radius: 13px;
+      border-top-left-radius: 13px;
     }
 
-    .støttebeviskop:hover {
+    .stoettebeviskop:hover {
       transform: scale(1);
-      opacity: 1;
     }
-    .støttebevis {
-      border-top-right-radius: var(--spacing-16);
-      border-top-left-radius: var(--spacing-16);
-      opacity: 0.5;
+    .stoettebevis {
+      border-top-right-radius: 13px;
+      border-top-left-radius: 13px;
     }
 
-    .støttebevis:hover {
+    .stoettebevis:hover {
       transform: scale(1);
-      opacity: 1;
     }
   }
 
@@ -238,7 +225,7 @@ import pic2 from "../../assets/images/støttebevis.png";
       display: flex;
       justify-content: space-between;
       margin-inline: var(--spacing-64);
-      margin-block: var(--spacing-128);
+      margin-block: var(--spacing-64);
       gap: var(--spacing-128);
     }
 
@@ -274,12 +261,12 @@ import pic2 from "../../assets/images/støttebevis.png";
     .spacing {
       margin-top: var(--spacing-32);
     }
-    .støttebeviskop {
+    .stoettebeviskop {
       border-top-right-radius: var(--spacing-16);
       border-top-left-radius: var(--spacing-16);
     }
 
-    .støttebevis {
+    .stoettebevis {
       border-top-right-radius: var(--spacing-16);
       border-top-left-radius: var(--spacing-16);
     }
@@ -346,14 +333,13 @@ import pic2 from "../../assets/images/støttebevis.png";
     .buttons {
       justify-content: space-between;
       margin-inline: var(--spacing-64);
-      margin-top: var(--spacing-64);
-      margin-bottom: var(--spacing-64);
+      margin-top: var(--spacing-44);
     }
-    .støttebeviskop {
+    .stoettebeviskop {
       border-top-right-radius: var(--spacing-16);
       border-top-left-radius: var(--spacing-16);
     }
-    .støttebevis {
+    .stoettebevis {
       border-top-right-radius: var(--spacing-16);
       border-top-left-radius: var(--spacing-16);
     }

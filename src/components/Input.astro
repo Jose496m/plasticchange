@@ -4,7 +4,7 @@ const { label, placeholder } = Astro.props;
 
 <div>
   <label>{label} <span>*</span></label>
-  <input type="text" class="border" placeholder={placeholder} />
+  <input type="text" class="border" placeholder={placeholder} onfocus="this.placeholder=''" onblur="this.placeholder='Andet beløb'" />
 </div>
 <style>
   input::placeholder {

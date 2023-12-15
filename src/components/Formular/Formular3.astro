@@ -19,20 +19,17 @@ import Menu from "../header/Menu.astro";
     <div class="oval-section section4"></div>
   </div>
 </section>
-<FormOverskrift
-  titel="Støt os i kampen mod plastikforurening"
-  text="Det er kun 5 % I overfladen de resterende 95% ligger langt nede I vandsøjlen"
-/>
-<section>
+<FormOverskrift titel="Støt os i kampen mod plastikforurening" text="Det er kun 5 % I overfladen de resterende 95% ligger langt nede I vandsøjlen" />
+<section class="form">
   <label>Vælg betalingsform <span>*</span></label>
   <div class="form-control">
     <input type="radio" name="radio" />
-    <h4 class="mobilepay">MobilePay</h4>
+    <p class="mobilepay">MobilePay</p>
     <Image class="logo" src={mobilepay} alt="mobilepay logo" />
   </div>
   <div class="form-control">
     <input type="radio" name="radio" />
-    <h4>Betalingskort</h4>
+    <p>Betalingskort</p>
     <div class="kort_logo">
       <Image src={visa} alt="visa logo" />
       <Image src={mastercard} alt="mobilepay logo" />
@@ -97,7 +94,9 @@ import Menu from "../header/Menu.astro";
   input[type="radio"]:checked::before {
     transform: scale(1);
   }
-
+  .form {
+    max-width: 300px;
+  }
   .form-control {
     margin-top: 1em;
     display: flex;
@@ -110,7 +109,7 @@ import Menu from "../header/Menu.astro";
     margin-bottom: var(--spacing-16);
     margin-top: var(--spacing-16);
   }
-  h4 {
+  p {
     margin-right: var(--spacing-32);
   }
   .mobilepay {
