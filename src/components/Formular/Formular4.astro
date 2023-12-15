@@ -26,7 +26,7 @@ import FormOverskrift from "./FormOverskrift.astro";
   </p>
   <div class="buttons">
     <Button variant="secondary" title="← Tilbage" link="/formular/step3" />
-    <Button variant="arrow" title="Næste → " link="/" />
+    <Button variant="arrow" title="Afslut → " link="/" />
   </div>
 </section>
 <style>
@@ -48,54 +48,55 @@ import FormOverskrift from "./FormOverskrift.astro";
     gap: var(--spacing-16);
     max-width: 800px;
   }
-  section {
-    margin-top: var(--spacing-44);
-    margin-bottom: var(--spacing-32);
-  }
-  .oval-container {
-    position: relative;
-    width: 700px;
-    height: 16px;
-    overflow: hidden;
-    border: var(--border-1) solid var(--border-dark);
-  }
-
-  .oval-section {
-    position: absolute;
-    height: 100%;
-  }
-
-  .section1 {
-    left: 0%;
-    width: 20%;
-    border: 1px solid var(--border-dark);
-    border-bottom-left-radius: var(--border-16);
-    border-top-left-radius: var(--border-16);
-  }
-  .section2 {
-    left: 20%;
-    width: 20%;
-    border: 1px solid var(--border-dark);
-  }
-  .section3 {
-    left: 40%;
-    width: 20%;
-    border: 1px solid var(--border-dark);
-  }
-  .section4 {
-    left: 60%;
-    width: 20%;
-    border: 1px solid var(--border-dark);
-    background-color: var(--color-red-300);
-    border-bottom-right-radius: var(--border-16);
-    border-top-right-radius: var(--border-16);
-  }
 
   @media (max-width: 599px) {
-    p {
-      margin-inline: var(--spacing-44);
-      margin-bottom: var(--spacing-128);
+    section {
+      margin-top: var(--spacing-44);
+      margin-bottom: var(--spacing-32);
     }
+    .oval-container {
+      position: relative;
+      width: 340px;
+      height: 8px;
+      overflow: hidden;
+      border: var(--border-1) solid var(--border-dark);
+    }
+
+    .oval-section {
+      position: absolute;
+      height: 100%;
+    }
+
+    .section1 {
+      left: 0%;
+      width: 20%;
+      border: 1px solid var(--border-dark);
+      border-bottom-left-radius: var(--border-16);
+      border-top-left-radius: var(--border-16);
+      background-color: var(--color-red-300);
+    }
+    .section2 {
+      left: 20%;
+      width: 20%;
+      border: 1px solid var(--border-dark);
+    }
+    .section3 {
+      left: 40%;
+      width: 20%;
+      border: 1px solid var(--border-dark);
+    }
+    .section4 {
+      left: 60%;
+      width: 20%;
+      border: 1px solid var(--border-dark);
+      border-bottom-right-radius: var(--border-16);
+      border-top-right-radius: var(--border-16);
+    }
+  }
+
+  p {
+    margin-inline: var(--spacing-44);
+    margin-bottom: var(--spacing-128);
   }
 
   @media (min-width: 600px) and (max-width: 1024px) {
@@ -104,11 +105,97 @@ import FormOverskrift from "./FormOverskrift.astro";
       font-size: 18px;
       margin-bottom: var(--spacing-128);
     }
+
+    section {
+      margin-top: var(--spacing-32);
+      margin-bottom: var(--spacing-32);
+    }
+    .oval-container {
+      position: relative;
+      width: 500px;
+      height: 13px;
+      border-radius: var(--border-16);
+      overflow: hidden;
+      border: var(--border-1) solid var(--border-dark);
+    }
+
+    .oval-section {
+      position: absolute;
+      height: 100%;
+    }
+
+    .section1 {
+      left: 0%;
+      width: 20%;
+      border: 1px solid var(--border-dark);
+      border-bottom-left-radius: var(--border-16);
+      border-top-left-radius: var(--border-16);
+    }
+    .section2 {
+      left: 20%;
+      width: 20%;
+      border: 1px solid var(--border-dark);
+    }
+    .section3 {
+      left: 40%;
+      width: 20%;
+      border: 1px solid var(--border-dark);
+    }
+    .section4 {
+      left: 60%;
+      width: 20%;
+      border: 1px solid var(--border-dark);
+      background-color: var(--color-red-300);
+      border-bottom-right-radius: var(--border-16);
+      border-top-right-radius: var(--border-16);
+    }
   }
   @media (min-width: 1025px) {
     p {
       text-align: center;
       margin-bottom: var(--spacing-128);
+    }
+    section {
+      margin-top: var(--spacing-44);
+      margin-bottom: var(--spacing-32);
+    }
+    .oval-container {
+      position: relative;
+      width: 700px;
+      height: 16px;
+      overflow: hidden;
+      border: var(--border-1) solid var(--border-dark);
+    }
+
+    .oval-section {
+      position: absolute;
+      height: 100%;
+    }
+
+    .section1 {
+      left: 0%;
+      width: 20%;
+      border: 1px solid var(--border-dark);
+      border-bottom-left-radius: var(--border-16);
+      border-top-left-radius: var(--border-16);
+    }
+    .section2 {
+      left: 20%;
+      width: 20%;
+      border: 1px solid var(--border-dark);
+    }
+    .section3 {
+      left: 40%;
+      width: 20%;
+      border: 1px solid var(--border-dark);
+    }
+    .section4 {
+      left: 60%;
+      width: 20%;
+      border: 1px solid var(--border-dark);
+      border-bottom-right-radius: var(--border-16);
+      border-top-right-radius: var(--border-16);
+      background-color: var(--color-red-300);
     }
   }
 </style>
