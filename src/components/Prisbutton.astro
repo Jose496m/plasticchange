@@ -46,4 +46,21 @@ const { title, color } = Astro.props;
       color: #ffffff;
     }
   }
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--circle-color);
+      border: 2px solid var(--price-button-default-border);
+    }
+
+    .circle[style*="--circle-color: var(--border-accent)"] {
+      border: none;
+      color: #ffffff;
+    }
+  }
 </style>
