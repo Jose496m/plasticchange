@@ -11,8 +11,18 @@ import Menu from "../header/Menu.astro";
 ---
 
 <Menu variant="form" />
-<Stepbar />
-<FormOverskrift titel="Støt os i kampen mod plastikforurening" text="Det er kun 5 % I overfladen de resterende 95% ligger langt nede I vandsøjlen" />
+<section>
+  <div class="oval-container">
+    <div class="oval-section section1"></div>
+    <div class="oval-section section2"></div>
+    <div class="oval-section section3"></div>
+    <div class="oval-section section4"></div>
+  </div>
+</section>
+<FormOverskrift
+  titel="Støt os i kampen mod plastikforurening"
+  text="Det er kun 5 % I overfladen de resterende 95% ligger langt nede I vandsøjlen"
+/>
 <section>
   <label>Vælg betalingsform <span>*</span></label>
   <div class="form-control">
@@ -110,6 +120,49 @@ import Menu from "../header/Menu.astro";
     display: inline-flex;
     gap: var(--spacing-8);
   }
+  section {
+    margin-top: var(--spacing-44);
+    margin-bottom: var(--spacing-32);
+  }
+  .oval-container {
+    position: relative;
+    width: 700px;
+    height: 16px;
+    overflow: hidden;
+    border: var(--border-1) solid var(--border-dark);
+  }
+
+  .oval-section {
+    position: absolute;
+    height: 100%;
+  }
+
+  .section1 {
+    left: 0%;
+    width: 20%;
+    border: 1px solid var(--border-dark);
+    border-bottom-left-radius: var(--border-16);
+    border-top-left-radius: var(--border-16);
+  }
+  .section2 {
+    left: 20%;
+    width: 20%;
+    border: 1px solid var(--border-dark);
+  }
+  .section3 {
+    left: 40%;
+    width: 20%;
+    border: 1px solid var(--border-dark);
+    background-color: var(--color-red-300);
+  }
+  .section4 {
+    left: 60%;
+    width: 20%;
+    border: 1px solid var(--border-dark);
+    border-bottom-right-radius: var(--border-16);
+    border-top-right-radius: var(--border-16);
+  }
+
   @media (max-width: 599px) {
     .logo {
       width: 5%;
