@@ -8,11 +8,14 @@ import FormLanding from "../components/FormLanding.astro";
 import Landingsite from "../components/Landingsite.astro";
 import Slideshow from "../components/Slideshow.astro";
 import GaveGivertekst from "../components/GaveGivertekst.astro";
+import { Image } from "astro:assets";
+import plastic_gaver3 from "../assets/images/plastic_gaver3.svg";
 ---
 
 <BaseLayout>
   <Header variant="landingpage mobil web" titel="Giv en gave med god samvittighed, der gavner alle!" />
   <GaveGivertekst />
+  <Image class="Gavegiver_billede" src={plastic_gaver3} alt="plastic_gaver" />
   <Vidstedu />
   <Landingsite />
   <FormLanding />
