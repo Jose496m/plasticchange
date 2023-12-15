@@ -1,8 +1,8 @@
 <section>
-  <h4>
+  <h3>
     Bliv årets mest mindeværdige gavegiver under juletræet ved at bekæmpe
     plastikforurening!
-  </h4>
+  </h3>
   <p>
     Plastikforureningen tager ingen julepause, men du kan være med til at gøre
     en forskel. Overrask din miljøbevidste veninde, den person, der hævder ikke
@@ -20,19 +20,48 @@
   </p>
 </section>
 <style>
-  section {
-    justify-content: center;
-    align-items: center;
+  @media (min-width: 1025px) {
+    p {
+      width: 500px;
+      margin: 0;
+      margin-top: var(--spacing-44);
+      margin-left: var(--spacing-128);
+    }
+    h3 {
+      width: 500px;
+      margin: 0;
+      margin-top: var(--spacing-44);
+      margin-left: var(--spacing-128);
+    }
   }
 
-  p {
-    width: 500px;
-    margin: 0;
-    margin-top: var(--spacing-44);
+  @media (max-width: 599px) {
+    p {
+      width: 300px;
+      margin: 0;
+      margin-top: var(--spacing-44);
+      margin-left: var(--spacing-64);
+    }
+    h3 {
+      width: 300px;
+      margin: 0;
+      margin-top: var(--spacing-44);
+      margin-left: var(--spacing-64);
+    }
   }
-  h4 {
-    width: 500px;
-    margin: 0;
-    margin-top: var(--spacing-44);
+
+  @media (min-width: 600px) and (max-width: 1024px) {
+    p {
+      width: 500px;
+      margin: 0;
+      margin-top: var(--spacing-44);
+      margin-left: var(--spacing-252);
+    }
+    h3 {
+      width: 500px;
+      margin: 0;
+      margin-top: var(--spacing-44);
+      margin-left: var(--spacing-252);
+    }
   }
 </style>
