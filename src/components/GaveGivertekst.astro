@@ -3,54 +3,114 @@ import { Image } from "astro:assets";
 import plastic_gaver3 from "../assets/images/plastic_gaver3.svg";
 ---
 
-<section>
-  <h3>Bliv årets mest mindeværdige gavegiver under juletræet ved at bekæmpe plastikforurening!</h3>
-  <p>Plastikforureningen tager ingen julepause, men du kan være med til at gøre en forskel. Overrask din miljøbevidste veninde, den person, der hævder ikke at mangle noget, eller forkæl dig selv med en meningsfuld julegave, der beskytter havet og dyrene mod plastikforurening. Nu har du chancen for at sprede juleglæde og samtidig støtte Plastic Change med en unik julegave, der bidrager til bevarelse af vores miljø. Vælg blot den gave, du ønsker at give, og vi tager os af resten.</p>
-  <p>Et julestøttebevis fås allerede fra 100 kr. Ønsker du at inkludere et flot krus, koster det 450 kr., og hele beløbet går direkte til kampen mod plastikforurening i verdenshavene og naturen. Gør din julegave meningsfuld og bæredygtig – vær med til at skabe en positiv forskel for vores planet.</p>
+<section class="grid">
+  <h3 class="placering">
+    Bliv årets mest mindeværdige gavegiver under juletræet ved at bekæmpe
+    plastikforurening!
+  </h3>
+  <p class="placering1">
+    Plastikforureningen tager ingen julepause, men du kan være med til at gøre
+    en forskel. Overrask din miljøbevidste veninde, den person, der hævder ikke
+    at mangle noget, eller forkæl dig selv med en meningsfuld julegave, der
+    beskytter havet og dyrene mod plastikforurening. Nu har du chancen for at
+    sprede juleglæde og samtidig støtte Plastic Change med en unik julegave, der
+    bidrager til bevarelse af vores miljø. Vælg blot den gave, du ønsker at
+    give, og vi tager os af resten.
+    <p class="placering2">
+      Et julestøttebevis fås allerede fra 100 kr. Ønsker du at inkludere et flot
+      krus, koster det 450 kr., og hele beløbet går direkte til kampen mod
+      plastikforurening i verdenshavene og naturen. Gør din julegave meningsfuld
+      og bæredygtig – vær med til at skabe en positiv forskel for vores planet.
+    </p>
+
+    <Image
+      class="Gavegiver_billede placering3"
+      src={plastic_gaver3}
+      alt="plastic_gaver"
+    />
+  </p>
+  <style>
+    @media (min-width: 1025px) {
+      p {
+        width: 500px;
+        margin: 0;
+        margin-top: var(--spacing-44);
+        margin-left: var(--spacing-128);
+      }
+      h3 {
+        width: 500px;
+        margin: 0;
+        margin-top: var(--spacing-44);
+        margin-left: var(--spacing-128);
+      }
+      .grid {
+        display: grid;
+      }
+      .placering {
+        display: grid;
+        grid-column: 3 / 1;
+        grid-row: 2 / 2;
+        margin-top: 50px;
+      }
+      .placering1 {
+        display: grid;
+        grid-column: 3 / 1;
+        grid-row: 2 / 2;
+        margin-top: 180px;
+        line-height: 30px;
+      }
+      .placering2 {
+        display: grid;
+        grid-column: 1 /2;
+        grid-row: 2 / 2;
+        margin-top: 420px;
+        line-height: 30px;
+      }
+      .placering3 {
+        display: grid;
+        grid-column: 2 / 4;
+        grid-row: 2 / 2;
+        width: 500px;
+        margin-left: 100px;
+        margin-top: var(--spacing-128);
+        margin-bottom: var(--spacing-128);
+      }
+    }
+
+    @media (max-width: 599px) {
+      p {
+        width: 300px;
+        margin: 0;
+        margin-top: var(--spacing-44);
+        margin-left: var(--spacing-64);
+      }
+      h3 {
+        width: 300px;
+        margin: 0;
+        margin-top: var(--spacing-44);
+        margin-left: var(--spacing-64);
+      }
+      .placering3 {
+        display: none;
+      }
+    }
+
+    @media (min-width: 600px) and (max-width: 1024px) {
+      p {
+        width: 500px;
+        margin: 0;
+        margin-top: var(--spacing-44);
+        margin-left: var(--spacing-252);
+      }
+      h3 {
+        width: 500px;
+        margin: 0;
+        margin-top: var(--spacing-44);
+        margin-left: var(--spacing-252);
+      }
+      .placering3 {
+        display: none;
+      }
+    }
+  </style>
 </section>
-<style>
-  @media (min-width: 1025px) {
-    p {
-      width: 500px;
-      margin: 0;
-      margin-top: var(--spacing-44);
-      margin-left: var(--spacing-128);
-    }
-    h3 {
-      width: 500px;
-      margin: 0;
-      margin-top: var(--spacing-44);
-      margin-left: var(--spacing-128);
-    }
-  }
-
-  @media (max-width: 599px) {
-    p {
-      width: 300px;
-      margin: 0;
-      margin-top: var(--spacing-44);
-      margin-left: var(--spacing-64);
-    }
-    h3 {
-      width: 300px;
-      margin: 0;
-      margin-top: var(--spacing-44);
-      margin-left: var(--spacing-64);
-    }
-  }
-
-  @media (min-width: 600px) and (max-width: 1024px) {
-    p {
-      width: 500px;
-      margin: 0;
-      margin-top: var(--spacing-44);
-      margin-left: var(--spacing-252);
-    }
-    h3 {
-      width: 500px;
-      margin: 0;
-      margin-top: var(--spacing-44);
-      margin-left: var(--spacing-252);
-    }
-  }
-</style>
