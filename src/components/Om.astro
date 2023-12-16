@@ -19,14 +19,16 @@ import omos3 from "../assets/images/omos3.png";
   <div>
     <h4>Plastic Change blev grundlagt i april 2014.</h4>
   </div>
-  <p class="text1">
-    Initiativet til at stifte Plastic Change blev taget af miljøbiolog Henrik Beha Pedersen i samarbejde med en række frivillige kræfter. Organisationen blev stiftet som en forening hjemme i Henriks dagligstue i Hellerup, hvor den holdt til de første år. I 2017 lykkedes det ved hjælp af fondsbevillinger at få råd til løn til en håndfuld medarbejdere og husleje i rigtige kontorlokaler. Baggrunden for Plastic Changes stiftelse er, at vi lever i en plastikkrise, hvor plastik definerer vores kultur, men hvor vi ikke må lade den defineres vores fremtid. I ly af de altoverskyggende
-    klimaforandringer, der med rette har krævet verdens opmærksomhed, er vores problem med plastik vokset og vokset, så det i dag kan fremstå som en uoverskuelig udfordring. Vi har haft en forbrugsfest med plastik, og nu kommer tømmermændene.
-    <p class="text2">Baggrunden for Plastic Changes stiftelse er, at vi lever i en plastikkrise, hvor plastik definerer vores kultur, men hvor vi ikke må lade den defineres vores fremtid. I ly af de altoverskyggende klimaforandringer, der med rette har krævet verdens opmærksomhed, er vores problem med plastik vokset og vokset, så det i dag kan fremstå som en uoverskuelig udfordring. Vi har haft en forbrugsfest med plastik, og nu kommer tømmermændene.</p>
+  <div class="artikel">
+    <p class="text1">
+      Initiativet til at stifte Plastic Change blev taget af miljøbiolog Henrik Beha Pedersen i samarbejde med en række frivillige kræfter. Organisationen blev stiftet som en forening hjemme i Henriks dagligstue i Hellerup, hvor den holdt til de første år. I 2017 lykkedes det ved hjælp af fondsbevillinger at få råd til løn til en håndfuld medarbejdere og husleje i rigtige kontorlokaler. Baggrunden for Plastic Changes stiftelse er, at vi lever i en plastikkrise, hvor plastik definerer vores kultur, men hvor vi ikke må lade den defineres vores fremtid. I ly af de altoverskyggende
+      klimaforandringer, der med rette har krævet verdens opmærksomhed, er vores problem med plastik vokset og vokset, så det i dag kan fremstå som en uoverskuelig udfordring. Vi har haft en forbrugsfest med plastik, og nu kommer tømmermændene.
+      <p class="text2">Baggrunden for Plastic Changes stiftelse er, at vi lever i en plastikkrise, hvor plastik definerer vores kultur, men hvor vi ikke må lade den defineres vores fremtid. I ly af de altoverskyggende klimaforandringer, der med rette har krævet verdens opmærksomhed, er vores problem med plastik vokset og vokset, så det i dag kan fremstå som en uoverskuelig udfordring. Vi har haft en forbrugsfest med plastik, og nu kommer tømmermændene.</p>
 
-    <p class="text3">
-      Det meste af den plastik, vi har udledt til naturen, siden vi begyndte at anvende materialet, er stadig at finde derude. Lige så anvendeligt materialet er på grund af sin styrke og holdbarhed, lige så problematisk er materialet, når det ender i naturen. I dag er en lang række af planetens miljøer plastificerede. Vi finder plastik på de dybeste steder i havet, og vi finder det i havfugle, fisk, muslinger og plankton og sågar i honning, vin og øl. Plastikken kommer tilbage til os mennesker gennem vores kost. En boomerang af vores produktionsmønster, der kræver et svar. Det svar skal
-      Plastic Change være en del af.
+      <p class="text3">
+        Det meste af den plastik, vi har udledt til naturen, siden vi begyndte at anvende materialet, er stadig at finde derude. Lige så anvendeligt materialet er på grund af sin styrke og holdbarhed, lige så problematisk er materialet, når det ender i naturen. I dag er en lang række af planetens miljøer plastificerede. Vi finder plastik på de dybeste steder i havet, og vi finder det i havfugle, fisk, muslinger og plankton og sågar i honning, vin og øl. Plastikken kommer tilbage til os mennesker gennem vores kost. En boomerang af vores produktionsmønster, der kræver et svar. Det svar skal
+        Plastic Change være en del af.
+      </p>
     </p>
     <section class="baggrund grid_1-1-1">
       <div class="baggrund1">
@@ -72,7 +74,7 @@ import omos3 from "../assets/images/omos3.png";
         <Image class="omos3" src={omos3} alt="omos3" />
       </div>
     </section>
-  </p>
+  </div>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -345,6 +347,12 @@ import omos3 from "../assets/images/omos3.png";
   }
 
   @media (min-width: 600px) and (max-width: 1024px) {
+    .artikel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     .text {
       text-align: left;
       margin-top: 20px;
@@ -395,22 +403,20 @@ import omos3 from "../assets/images/omos3.png";
       text-align: left;
       width: 350px;
       line-height: 25px;
-      margin-left: var(--spacing-64);
-      margin-right: var(--spacing-32);
-      /* animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both; */
     }
-
-    /* @keyframes fade-in-bottom {
+    .fade-in-bottom {
+      animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    }
+    @keyframes fade-in-bottom {
       0% {
-        transform: translateY(-50px);
+        transform: translateY(50px);
         opacity: 0;
       }
       100% {
         transform: translateY(0);
         opacity: 1;
       }
-    } */
-
+    }
     .baggrund1 {
       background-color: white;
       border-radius: var(--spacing-16);
@@ -419,14 +425,7 @@ import omos3 from "../assets/images/omos3.png";
       margin-left: var(--spacing-128);
       margin-right: var(--spacing-32);
     }
-    .text1 {
-      text-align: left;
-      width: 525px;
-      margin-left: var(--spacing-252);
-      line-height: 25px;
-      margin-top: var(--spacing-64);
-      margin-bottom: var(--spacing-64);
-    }
+
     .omos1 {
       margin-top: -50px;
       align-content: center;
@@ -555,18 +554,20 @@ import omos3 from "../assets/images/omos3.png";
       line-height: 20px;
       margin-top: 30px;
       margin-bottom: 30px;
-      /* animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both; */
     }
-    /* @keyframes fade-in-bottom {
+    .fade-in-bottom {
+      animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    }
+    @keyframes fade-in-bottom {
       0% {
-        transform: translateY(-50px);
+        transform: translateY(50px);
         opacity: 0;
       }
       100% {
         transform: translateY(0);
         opacity: 1;
       }
-    } */
+    }
     .omos1 {
       margin-top: -70px;
       align-content: center;
