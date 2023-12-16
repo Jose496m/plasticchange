@@ -20,7 +20,7 @@ import Prisbutton from "./Prisbutton.astro";
     <Prisbutton title="200" />
     <Prisbutton title="300" color="var(--border-accent)" />
   </div>
-  <input class="text_input" type="text" placeholder="Andet beløb" />
+  <input class="text_input" type="text" placeholder="Andet beløb" onfocus="this.placeholder=''" onblur="this.placeholder='Andet beløb'" />
   <Button variant="primary" title="STØT NU" link="/formular/step1" />
 </section>
 <style>
