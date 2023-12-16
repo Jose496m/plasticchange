@@ -151,19 +151,6 @@ import omos3 from "../assets/images/omos3.png";
           toggleClass: "fade-in-bottom",
         },
       });
-      gsap.from(".omos", {
-        xPercent: 50,
-        opacity: 3,
-        duration: 1,
-        // stagger: 0.5,
-        scrollTrigger: {
-          trigger: ".omos2",
-          start: "start 100%",
-          end: "bottom 50%",
-          scrub: true,
-          toggleClass: "fade-in-bottom",
-        },
-      });
       gsap.from(".overskrift1", {
         xPercent: 50,
         opacity: 3,
@@ -190,19 +177,45 @@ import omos3 from "../assets/images/omos3.png";
           toggleClass: "fade-in-bottom",
         },
       });
-      gsap.from(".grundlagt", {
+      gsap.from(".omsos", {
         xPercent: 50,
         opacity: 3,
         duration: 1,
         // stagger: 0.5,
         scrollTrigger: {
-          trigger: ".grundlagt",
+          trigger: ".omos",
           start: "start 100%",
           end: "bottom 50%",
           scrub: true,
           toggleClass: "fade-in-bottom",
         },
       });
+      // gsap.from(".container", {
+      //   xPercent: 50,
+      //   opacity: 3,
+      //   duration: 1,
+      //   // stagger: 0.5,
+      //   scrollTrigger: {
+      //     trigger: ".omos",
+      //     start: "start 100%",
+      //     end: "bottom 50%",
+      //     scrub: true,
+      //     toggleClass: "fade-in-bottom",
+      //   },
+      // });
+      // gsap.from(".baggrund2", {
+      //   xPercent: 50,
+      //   opacity: 3,
+      //   duration: 1,
+      //   // stagger: 0.5,
+      //   scrollTrigger: {
+      //     trigger: ".baggrund2",
+      //     start: "start 100%",
+      //     end: "bottom 50%",
+      //     scrub: true,
+      //     toggleClass: "fade-in-bottom",
+      //   },
+      // });
     });
   </script>
 </article>
