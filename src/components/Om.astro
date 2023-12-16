@@ -631,6 +631,12 @@ import omos3 from "../assets/images/omos3.png";
   }
 
   @media (max-width: 599px) {
+    .artikel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     .baggrund2 {
       background-color: var(--color-red-100);
       padding: 70px;
@@ -685,10 +691,13 @@ import omos3 from "../assets/images/omos3.png";
     .text3 {
       text-align: left;
       width: 325px;
-      margin-left: 60px;
       line-height: 20px;
       margin-top: 30px;
-      margin-bottom: 30px;
+      margin-bottom: var(--spacing-44);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     .fade-in-bottom {
       animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
