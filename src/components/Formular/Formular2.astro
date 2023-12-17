@@ -16,268 +16,278 @@ import FormOverskrift from "./FormOverskrift.astro";
   </div>
 </section>
 <FormOverskrift titel="Støt os i kampen mod plastikforurening" text="Vi udleder I dag 8 - 10 millioner ton plastik til havet om året" />
-<h4 class="overskrift_1">Fortæl os hvem gaven er fra</h4>
-<div class="inputs">
-  <Input label="Navn" placeholder="Liva" />
-  <Input label="Efternavn" placeholder="Sørensen" />
-  <Input label="Email" placeholder="liva@hej.dk" />
-  <Input label="Telefon" placeholder="24508236" />
-  <Input label="Adresse" placeholder="Hurlumhejvej 84" />
-  <Input label="Postnummer" placeholder="3300" />
-</div>
-<h4>Fortæl os hvem gaven er fra</h4>
-<div class="inputs">
-  <Input label="Navn" placeholder="John" />
-  <Input label="Efternavn" placeholder="Johnsen" />
-  <Input label="Email" placeholder="john@hej.dk" />
-  <Input label="Evt. en personlig hilsen" placeholder="Glædelig jul!" />
-</div>
-<section class="checkboxs">
-  <label id="checkbox">
-    <input type="checkbox" id="myCheckbox" />
-    Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores privatlivspolitik.
-  </label>
-  <label id="checkbox">
-    <input type="checkbox" id="myCheckbox" />
-    Jeg ønsker at modtage nyhedsbreve<span>*</span>
-  </label>
-</section>
-<div class="buttons">
-  <Button variant="secondary" title="← Tilbage" link="/formular/step1" />
-  <Button variant="arrow" title="Næste → " link="/formular/step3" />
-</div>
+<div class="overskrift">
+  <h4>Fortæl os hvem gaven er fra</h4>
+  <div class="inputs">
+    <Input label="Navn" placeholder="Liva" />
+    <Input label="Efternavn" placeholder="Sørensen" />
+    <Input label="Email" placeholder="liva@hej.dk" />
+    <Input label="Telefon" placeholder="24508236" />
+    <Input label="Adresse" placeholder="Hurlumhejvej 84" />
+    <Input label="Postnummer" placeholder="3300" />
+  </div>
 
-<style>
-  span {
-    color: var(--surface-brand);
-    margin-left: -0.5rem;
-  }
-  .checkboxs {
-    margin-top: var(--spacing-64);
-    margin-bottom: var(--spacing-64);
-  }
+  <div class="overskrift">
+    <h4>Fortæl os hvem gaven er fra</h4>
+    <div class="inputs">
+      <Input label="Navn" placeholder="John" />
+      <Input label="Efternavn" placeholder="Johnsen" />
+      <Input label="Email" placeholder="john@hej.dk" />
+      <Input label="Evt. en personlig hilsen" placeholder="Glædelig jul!" />
+    </div>
+  </div>
+  <section class="checkboxs">
+    <label id="checkbox">
+      <input type="checkbox" id="myCheckbox" />
+      Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores privatlivspolitik.
+    </label>
+    <label id="checkbox">
+      <input type="checkbox" id="myCheckbox" />
+      Jeg ønsker at modtage nyhedsbreve<span>*</span>
+    </label>
+  </section>
+  <div class="buttons">
+    <Button variant="secondary" title="← Tilbage" link="/formular/step1" />
+    <Button variant="arrow" title="Næste → " link="/formular/step3" />
+  </div>
 
-  #checkbox {
-    font-family: "rubikregular";
-    font-size: 14px;
-    font-weight: 200;
-    line-height: 20px;
-    color: var(--text-placeholder);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-16);
-    max-width: 750px;
-    margin-inline: var(--spacing-64);
-    padding-bottom: var(--spacing-16);
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  @media (max-width: 599px) {
-    h4 {
+  <style>
+    span {
+      color: var(--surface-brand);
+      margin-left: -0.5rem;
+    }
+    .checkboxs {
       margin-top: var(--spacing-64);
-      margin-bottom: var(--spacing-16);
-      display: flex;
-      align-self: flex-start;
-      margin-left: var(--spacing-44);
-    }
-    .overskrift_1 {
-      margin-top: 0;
-      margin-bottom: var(--spacing-16);
-    }
-    section {
-      margin-top: var(--spacing-44);
-      margin-bottom: var(--spacing-32);
-    }
-    .oval-container {
-      position: relative;
-      width: 340px;
-      height: 8px;
-      overflow: hidden;
-      border: var(--border-1) solid var(--border-dark);
+      margin-bottom: var(--spacing-64);
     }
 
-    .oval-section {
-      position: absolute;
-      height: 100%;
-    }
-
-    .section1 {
-      left: 10%;
-      width: 20%;
-      border: 1px solid var(--border-dark);
-      border-bottom-left-radius: var(--border-16);
-      border-top-left-radius: var(--border-16);
-    }
-    .section2 {
-      left: 30%;
-      width: 20%;
-      border: 1px solid var(--border-dark);
-      background-color: var(--color-red-300);
-    }
-    .section3 {
-      left: 50%;
-      width: 20%;
-      border: 1px solid var(--border-dark);
-    }
-    .section4 {
-      left: 70%;
-      width: 20%;
-      border: 1px solid var(--border-dark);
-      border-bottom-right-radius: var(--border-16);
-      border-top-right-radius: var(--border-16);
-    }
-    .inputs {
-      display: grid;
-      grid-column: 1fr;
-      row-gap: var(--spacing-24);
-    }
-    .buttons {
-      display: flex;
-      justify-content: space-between;
-      gap: var(--spacing-128);
-    }
     #checkbox {
       font-family: "rubikregular";
-      font-size: 11px;
+      font-size: 14px;
       font-weight: 200;
       line-height: 20px;
       color: var(--text-placeholder);
       display: flex;
       align-items: center;
       gap: var(--spacing-16);
-      max-width: 800px;
-      margin: var(--spacing-24);
-    }
-  }
-  @media (min-width: 1025px) {
-    h4 {
-      margin-top: var(--spacing-64);
-      margin-bottom: var(--spacing-16);
-      display: flex;
-      align-self: flex-start;
-      margin-left: var(--spacing-252);
-    }
-    .overskrift_1 {
-      margin-top: 0;
-      margin-bottom: var(--spacing-16);
-    }
-    section {
-      margin-top: var(--spacing-44);
-      margin-bottom: var(--spacing-32);
-    }
-    .oval-container {
-      position: relative;
-      width: 700px;
-      height: 16px;
-      overflow: hidden;
-      border: var(--border-1) solid var(--border-dark);
-    }
-
-    .oval-section {
-      position: absolute;
-      height: 100%;
-    }
-
-    .section1 {
-      left: 10%;
-      width: 20%;
-      border: 1px solid var(--border-dark);
-      border-bottom-left-radius: var(--border-16);
-      border-top-left-radius: var(--border-16);
-    }
-    .section2 {
-      left: 30%;
-      width: 20%;
-      border: 1px solid var(--border-dark);
-      background-color: var(--color-red-300);
-    }
-    .section3 {
-      left: 50%;
-      width: 20%;
-      border: 1px solid var(--border-dark);
-    }
-    .section4 {
-      left: 70%;
-      width: 20%;
-      border: 1px solid var(--border-dark);
-      border-bottom-right-radius: var(--border-16);
-      border-top-right-radius: var(--border-16);
-    }
-
-    .inputs {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: var(--spacing-128);
-      row-gap: var(--spacing-16);
-    }
-    .buttons {
-      display: flex;
-      justify-content: space-between;
+      max-width: 750px;
       margin-inline: var(--spacing-64);
-      max-width: 800px;
-      gap: var(--spacing-252);
+      padding-bottom: var(--spacing-16);
     }
-  }
-  @media (min-width: 600px) and (max-width: 1024px) {
-    .buttons {
+    body {
       display: flex;
-      justify-content: space-between;
-      margin-inline: var(--spacing-64);
-      margin-block: var(--spacing-64);
-      gap: var(--spacing-128);
-    }
-    .inputs {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      row-gap: var(--spacing-24);
-    }
-    section {
-      margin-top: var(--spacing-32);
-      margin-bottom: var(--spacing-32);
-    }
-    .oval-container {
-      position: relative;
-      width: 500px;
-      height: 13px;
-      border-radius: var(--border-16);
-      overflow: hidden;
-      border: var(--border-1) solid var(--border-dark);
+      flex-direction: column;
+      align-items: center;
     }
 
-    .oval-section {
-      position: absolute;
-      height: 100%;
+    @media (max-width: 599px) {
+      h4 {
+        margin-top: var(--spacing-24);
+        margin-bottom: var(--spacing-16);
+        margin-left: var(--spacing-32);
+      }
+      .overskrift {
+        margin-top: 0;
+        margin-bottom: var(--spacing-16);
+      }
+      section {
+        margin-top: var(--spacing-44);
+        margin-bottom: var(--spacing-32);
+      }
+      .oval-container {
+        position: relative;
+        width: 340px;
+        height: 8px;
+        overflow: hidden;
+        border: var(--border-1) solid var(--border-dark);
+      }
+
+      .oval-section {
+        position: absolute;
+        height: 100%;
+      }
+
+      .section1 {
+        left: 10%;
+        width: 20%;
+        border: 1px solid var(--border-dark);
+        border-bottom-left-radius: var(--border-16);
+        border-top-left-radius: var(--border-16);
+      }
+      .section2 {
+        left: 30%;
+        width: 20%;
+        border: 1px solid var(--border-dark);
+        background-color: var(--color-red-300);
+      }
+      .section3 {
+        left: 50%;
+        width: 20%;
+        border: 1px solid var(--border-dark);
+      }
+      .section4 {
+        left: 70%;
+        width: 20%;
+        border: 1px solid var(--border-dark);
+        border-bottom-right-radius: var(--border-16);
+        border-top-right-radius: var(--border-16);
+      }
+      .inputs {
+        display: grid;
+        grid-column: 1fr;
+        row-gap: var(--spacing-24);
+      }
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--spacing-128);
+      }
+      #checkbox {
+        font-family: "rubikregular";
+        font-size: 11px;
+        font-weight: 200;
+        line-height: 20px;
+        color: var(--text-placeholder);
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-16);
+        max-width: 800px;
+        margin: var(--spacing-24);
+      }
     }
 
-    .section1 {
-      left: 10%;
-      width: 20%;
-      border: 1px solid var(--border-dark);
-      border-bottom-left-radius: var(--border-16);
-      border-top-left-radius: var(--border-16);
-    }
-    .section2 {
-      left: 30%;
-      width: 20%;
-      border: 1px solid var(--border-dark);
-      background-color: var(--color-red-300);
-    }
-    .section3 {
-      left: 50%;
-      width: 20%;
-      border: 1px solid var(--border-dark);
-    }
-    .section4 {
-      left: 70%;
-      width: 20%;
-      border: 1px solid var(--border-dark);
+    @media (min-width: 600px) and (max-width: 1024px) {
+      h4 {
+        margin-top: var(--spacing-24);
+        margin-bottom: var(--spacing-16);
+      }
+      .overskrift {
+        margin-top: 0;
+        margin-bottom: var(--spacing-16);
+      }
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-inline: var(--spacing-64);
+        margin-block: var(--spacing-64);
+        gap: var(--spacing-128);
+      }
+      .inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: var(--spacing-24);
+      }
+      section {
+        margin-top: var(--spacing-32);
+        margin-bottom: var(--spacing-32);
+      }
+      .oval-container {
+        position: relative;
+        width: 500px;
+        height: 13px;
+        border-radius: var(--border-16);
+        overflow: hidden;
+        border: var(--border-1) solid var(--border-dark);
+      }
 
-      border-bottom-right-radius: var(--border-16);
-      border-top-right-radius: var(--border-16);
+      .oval-section {
+        position: absolute;
+        height: 100%;
+      }
+
+      .section1 {
+        left: 10%;
+        width: 20%;
+        border: 1px solid var(--border-dark);
+        border-bottom-left-radius: var(--border-16);
+        border-top-left-radius: var(--border-16);
+      }
+      .section2 {
+        left: 30%;
+        width: 20%;
+        border: 1px solid var(--border-dark);
+        background-color: var(--color-red-300);
+      }
+      .section3 {
+        left: 50%;
+        width: 20%;
+        border: 1px solid var(--border-dark);
+      }
+      .section4 {
+        left: 70%;
+        width: 20%;
+        border: 1px solid var(--border-dark);
+
+        border-bottom-right-radius: var(--border-16);
+        border-top-right-radius: var(--border-16);
+      }
     }
-  }
-</style>
+
+    @media (min-width: 1025px) {
+      h4 {
+        margin-top: var(--spacing-24);
+        margin-bottom: var(--spacing-16);
+      }
+      .overskrift {
+        margin-top: 0;
+        margin-bottom: var(--spacing-16);
+      }
+      section {
+        margin-top: var(--spacing-44);
+        margin-bottom: var(--spacing-32);
+      }
+      .oval-container {
+        position: relative;
+        width: 700px;
+        height: 16px;
+        overflow: hidden;
+        border: var(--border-1) solid var(--border-dark);
+      }
+
+      .oval-section {
+        position: absolute;
+        height: 100%;
+      }
+
+      .section1 {
+        left: 10%;
+        width: 20%;
+        border: 1px solid var(--border-dark);
+        border-bottom-left-radius: var(--border-16);
+        border-top-left-radius: var(--border-16);
+      }
+      .section2 {
+        left: 30%;
+        width: 20%;
+        border: 1px solid var(--border-dark);
+        background-color: var(--color-red-300);
+      }
+      .section3 {
+        left: 50%;
+        width: 20%;
+        border: 1px solid var(--border-dark);
+      }
+      .section4 {
+        left: 70%;
+        width: 20%;
+        border: 1px solid var(--border-dark);
+        border-bottom-right-radius: var(--border-16);
+        border-top-right-radius: var(--border-16);
+      }
+
+      .inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: var(--spacing-128);
+        row-gap: var(--spacing-16);
+      }
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-inline: var(--spacing-64);
+        max-width: 800px;
+        gap: var(--spacing-252);
+      }
+    }
+  </style>
+</div>
