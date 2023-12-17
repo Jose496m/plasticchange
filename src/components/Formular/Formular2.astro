@@ -15,10 +15,8 @@ import FormOverskrift from "./FormOverskrift.astro";
     <div class="oval-section section4"></div>
   </div>
 </section>
-<FormOverskrift
-  titel="Støt os i kampen mod plastikforurening"
-  text="Vi udleder I dag 8 - 10 millioner ton plastik til havet om året"
-/>
+<FormOverskrift titel="Støt os i kampen mod plastikforurening" text="Vi udleder I dag 8 - 10 millioner ton plastik til havet om året" />
+<h4 class="overskrift_1">Fortæl os hvem gaven er fra</h4>
 <div class="inputs">
   <Input label="Navn" placeholder="Liva" />
   <Input label="Efternavn" placeholder="Sørensen" />
@@ -27,15 +25,21 @@ import FormOverskrift from "./FormOverskrift.astro";
   <Input label="Adresse" placeholder="Hurlumhejvej 84" />
   <Input label="Postnummer" placeholder="3300" />
 </div>
+<h4>Fortæl os hvem gaven er fra</h4>
+<div class="inputs">
+  <Input label="Navn" placeholder="John" />
+  <Input label="Efternavn" placeholder="Johnsen" />
+  <Input label="Email" placeholder="john@hej.dk" />
+  <Input label="Evt. en personlig hilsen" placeholder="Glædelig jul!" />
+</div>
 <section class="checkboxs">
   <label id="checkbox">
     <input type="checkbox" id="myCheckbox" />
-    Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger
-    til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores privatlivspolitik.
+    Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores privatlivspolitik.
   </label>
   <label id="checkbox">
     <input type="checkbox" id="myCheckbox" />
-    Jeg ønsker at modtage nyhedsbreve
+    Jeg ønsker at modtage nyhedsbreve<span>*</span>
   </label>
 </section>
 <div class="buttons">
@@ -44,6 +48,10 @@ import FormOverskrift from "./FormOverskrift.astro";
 </div>
 
 <style>
+  span {
+    color: var(--surface-brand);
+    margin-left: -0.5rem;
+  }
   .checkboxs {
     margin-top: var(--spacing-64);
     margin-bottom: var(--spacing-64);
@@ -69,6 +77,17 @@ import FormOverskrift from "./FormOverskrift.astro";
   }
 
   @media (max-width: 599px) {
+    h4 {
+      margin-top: var(--spacing-64);
+      margin-bottom: var(--spacing-16);
+      display: flex;
+      align-self: flex-start;
+      margin-left: var(--spacing-44);
+    }
+    .overskrift_1 {
+      margin-top: 0;
+      margin-bottom: var(--spacing-16);
+    }
     section {
       margin-top: var(--spacing-44);
       margin-bottom: var(--spacing-32);
@@ -135,6 +154,17 @@ import FormOverskrift from "./FormOverskrift.astro";
     }
   }
   @media (min-width: 1025px) {
+    h4 {
+      margin-top: var(--spacing-64);
+      margin-bottom: var(--spacing-16);
+      display: flex;
+      align-self: flex-start;
+      margin-left: var(--spacing-252);
+    }
+    .overskrift_1 {
+      margin-top: 0;
+      margin-bottom: var(--spacing-16);
+    }
     section {
       margin-top: var(--spacing-44);
       margin-bottom: var(--spacing-32);

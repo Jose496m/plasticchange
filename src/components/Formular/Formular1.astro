@@ -23,21 +23,11 @@ import pic2 from "../../assets/images/støttebevis.png";
 <FormOverskrift titel="Giv støtte som en julegave." />
 <section>
   <div class="kort flex">
-    <Formularcard
-      class="card"
-      overskrift="Unikt emaljekrus fra Plastic Change"
-      text="- inklusive et print-selv støttebevis. (Bemærk: Ramme medfølger ikke.)"
-      pris="450.-"
-    >
+    <Formularcard class="card" overskrift="Unikt emaljekrus fra Plastic Change" text="- inklusive et print-selv støttebevis. (Bemærk: Ramme medfølger ikke.)" pris="450.-">
       <Image class="stoettebeviskop" src={pic1} alt="pic1" />
     </Formularcard>
 
-    <Formularcard
-      class="card"
-      overskrift="Et fint print-selv-støttebevis"
-      text="- der kan printes ud og lægges under juletræet (ramme medfølger ikke)."
-      pris="Minimum 100.-"
-    >
+    <Formularcard class="card" overskrift="Et fint print-selv-støttebevis" text="- der kan printes ud og lægges under juletræet (ramme medfølger ikke)." pris="Minimum 100.-">
       <Image class="stoettebevis" src={pic2} alt="pic1" />
     </Formularcard>
   </div>
@@ -112,14 +102,15 @@ import pic2 from "../../assets/images/støttebevis.png";
       margin-left: var(--spacing-64);
     }
     .ptag {
-      margin-bottom: var(--spacing-44);
+      margin-bottom: var(--spacing-24);
     }
 
     .buttons {
       display: flex;
       justify-content: space-between;
       gap: var(--spacing-252);
-      margin-block: var(--spacing-64);
+      margin-top: 5rem;
+      margin-bottom: var(--spacing-64);
     }
 
     .baggrund {
@@ -152,7 +143,7 @@ import pic2 from "../../assets/images/støttebevis.png";
     }
 
     .spacing {
-      margin-top: var(--spacing-32);
+      margin-top: var(--spacing-16);
     }
     .stoettebeviskop {
       border-top-right-radius: 13px;
