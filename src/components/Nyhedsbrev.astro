@@ -9,7 +9,7 @@ import Button from "./Button.astro";
       <p>Følg med i vores arbejde mod plastikforuening og hold dig opdateret med de seneste nyheder</p>
     </div>
     <div class="tekst_og_knap">
-      <li><input type="text" placeholder="hej@email.dk" /></li>
+      <li><input type="text" placeholder="hej@email.dk" onfocus="this.placeholder=''" onblur="this.placeholder='Andet beløb'" /></li>
       <li><Button variant="primary" link="/" title="Tilmeld" /></li>
     </div>
   </ul>
